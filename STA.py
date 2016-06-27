@@ -1,3 +1,5 @@
+import time
+
 def find_path(graph, start, end, reg_list, path=[]):
     path = path + [start]
     if start == end:
@@ -24,7 +26,33 @@ def find_all_paths(graph, start, end, reg_list, path=[]):
                 paths.append(newpath)
     return paths
 
+def lib_parser(filename):
+    design_name = ''
+    design_input_dict = {}
+    design_output_dict = {}
+    design_timing_dict = {}
+    with open(filename) as f:
+        for line in f.readlines():
+            if line.strip():
+                type, content = line.strip().split(' ', 1)
+                if type == 'module':
+                    design_name, port_list = content.strip().split(' ', 1)
+                    design_timing_dict[design_name] = {}
+                if type == 'input' and design_name:
+                    input_list = content.strip().split(',')
+                    design_input_dict[design_name] = [k.strip() for k in input_list]
+                if type == 'output' and design_name:
+                    output_list = content.strip().split(',')
+                    design_output_dict[design_name] = [k.strip() for k in output_list]
+                if type == 'timing' and design_name:
+                    path, time = content.strip().split(',', 1)
+                    design_timing_dict[design_name][path] = float(time)
+    return design_input_dict, design_output_dict, design_timing_dict
+
 if __name__ == '__main__':
+
+    design_input_dict, design_output_dict, design_timing_dict = lib_parser('7lib.v')
+
     module_wire_dict = {}
     module_design_dict = {}
     module_list = []
@@ -72,17 +100,20 @@ if __name__ == '__main__':
 
     reg_list = [ m for m in module_list if module_design_dict[m] == 'DFQD1']
     normal_module_list = list(set(module_list)-set(reg_list))
-    print normal_module_list
+    # print normal_module_list
     # print reg_list
     # print graph['I5']
     # print find_all_paths(graph, 'I0', 'I7', reg_list)
     # print find_all_paths(graph, 'ICI', 'I231', reg_list)
 
+    print 'input ----> reg'
     for reg in reg_list:
         for endpoint in [r for r in reg_list if r != reg]:
             print reg,'->',endpoint,find_all_paths(graph, reg, endpoint, reg_list)
 
     print '-------------------------------'
+    print '-------------------------------'
+    print 'reg ----> output'
 
     for reg in reg_list:
         for endpoint in normal_module_list:
