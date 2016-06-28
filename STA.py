@@ -47,13 +47,19 @@ def lib_parser(filename):
                     design_output_dict[design_name] = [k.strip() for k in output_list]
                 if type == 'timing' and design_name:
                     path, time = content.strip().split(',', 1)
-                    design_timing_dict[design_name][path] = float(time)
+                    input, output = path.split()
+                    if input in design_timing_dict[design_name].keys():
+                        design_timing_dict[design_name][input][output] = float(time)
+                    else:
+                        design_timing_dict[design_name][input]= {output: float(time)}
+
     return design_input_dict, design_output_dict, design_timing_dict
 
 if __name__ == '__main__':
 
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('7lib.v')
-
+    print design_timing_dict
+    time.sleep(100)
     module_wire_dict = {}
     module_port_arg_dict = {}
     module_design_dict = {}
