@@ -1,4 +1,4 @@
-
+import re
 import time
 
 def find_path(graph, start, end, reg_list=[], path=[]):
@@ -58,13 +58,14 @@ def lib_parser(filename):
 if __name__ == '__main__':
 
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('7lib.v')
-    print design_timing_dict
-    time.sleep(100)
+
     module_wire_dict = {}
     module_port_arg_dict = {}
     module_design_dict = {}
     module_list = []
     wire_list = []
+    raw_input_list = []
+    raw_output_list = []
     this_module = ''
     this_net = ''
     this_portarg = ''
@@ -74,6 +75,10 @@ if __name__ == '__main__':
                 content_list = line.strip().split()
                 type = content_list[0]
                 name = content_list[1]
+                if type == 'input':
+                    raw_input_list.append(name)
+                if type == 'output':
+                    raw_output_list.append(name)
                 if type == 'module':
                     this_module = name
                     module_design_dict[this_module] = content_list[2]
@@ -131,31 +136,70 @@ if __name__ == '__main__':
                         start_end_wire_dict[output].update({input:wire})
                     else:
                         start_end_wire_dict.update({output:{input:wire}})
-
     # print graph
     # print start_end_wire_dict
+    raw_input_wire_list = []
+    for raw_input in raw_input_list:
+        regex = raw_input+'_index_'
+        for wire in wire_list:
+            if wire == raw_input:
+                raw_input_wire_list.append(wire)
+            elif regex in wire:
+                raw_input_wire_list.append(wire)
+    raw_input_module_list = []
+    for raw_input_wire in raw_input_wire_list:
+        raw_input_module_list += wire_module_dict[raw_input_wire]
+    raw_input_module_list = list(set(raw_input_module_list))
 
-    # time.sleep(100)
-    # reg_list = [ m for m in module_list if module_design_dict[m] == 'DFQD1']
-    # normal_module_list = list(set(module_list)-set(reg_list))
-    # # print normal_module_list
-    # # print reg_list
-    # # print graph['I5']
-    # # print find_all_paths(graph, 'I0', 'I7', reg_list)
-    # # print find_all_paths(graph, 'ICI', 'I231', reg_list)
-    #
-    # print 'input ----> reg'
-    # for reg in reg_list:
-    #     for endpoint in [r for r in reg_list if r != reg]:
-    #         print reg,'->',endpoint,find_all_paths(graph, reg, endpoint, reg_list)
-    #
-    # print '-------------------------------'
-    # print '-------------------------------'
-    # print 'reg ----> output'
+    raw_output_wire_list = []
+    for raw_output in raw_output_list:
+        regex = raw_output+'_index'
+        for wire in wire_list:
+            if wire == raw_output:
+                raw_output_wire_list.append(wire)
+            elif regex in wire:
+                raw_output_wire_list.append(wire)
+    raw_output_module_list = []
+    for raw_output_wire in raw_output_wire_list:
+        raw_output_module_list += wire_module_dict[raw_output_wire]
+    raw_output_module_list = list(set(raw_output_module_list))
 
-    for startpoint in module_list:
-        for endpoint in module_list:
+    reg_module_list = [ m for m in module_list if module_design_dict[m] == 'DFQD1']
+
+    print raw_input_module_list
+    print raw_output_module_list
+    print reg_module_list
+
+
+    #input -> reg D
+    print '#input -> reg D'
+    for startpoint in raw_input_module_list:
+        for endpoint in reg_module_list:
             if startpoint != endpoint:
                 paths = find_all_paths(graph, startpoint, endpoint)
+                if paths:
+                    print startpoint,'->',endpoint,paths
+    #reg clk -> reg D
+    print '#reg clk -> reg D'
+    for startpoint in reg_module_list:
+        for endpoint in reg_module_list:
+            if startpoint != endpoint:
+                paths = find_all_paths(graph, startpoint, endpoint)
+                if paths:
+                    print startpoint,'->',endpoint,paths
+    #reg clk -> output
+    print '#reg clk -> output'
+    for startpoint in reg_module_list:
+        for endpoint in raw_output_module_list:
+            if startpoint != endpoint:
+                paths = find_all_paths(graph, startpoint, endpoint, reg_list=reg_module_list)
+                if paths:
+                    print startpoint,'->',endpoint,paths
+    #input -> output
+    print '#input -> output'
+    for startpoint in raw_input_module_list:
+        for endpoint in raw_output_module_list:
+            if startpoint != endpoint:
+                paths = find_all_paths(graph, startpoint, endpoint, reg_list=reg_module_list)
                 if paths:
                     print startpoint,'->',endpoint,paths
