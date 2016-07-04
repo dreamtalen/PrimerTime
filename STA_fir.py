@@ -214,48 +214,69 @@ if __name__ == '__main__':
                             print path_latency_dict[path_str]
                             # print path_latency_dict[path_str]
     #reg clk -> reg D
-    # print '#reg clk -> reg D'
-    # for startpoint in reg_module_list:
-    #     for endpoint in reg_module_list:
-    #         if startpoint != endpoint:
-    #             paths = find_all_paths(graph, startpoint, endpoint)
-    #             if paths:
-    #                 print startpoint,'->',endpoint,paths
+    print '#reg clk -> reg D'
+    for startpoint in reg_module_list:
+        for endpoint in reg_module_list:
+            if startpoint != endpoint:
+                paths = find_all_paths(graph, startpoint, endpoint)
+                if paths:
+                    print startpoint,'->',endpoint
+                    for path in paths:
+                        path_str = '->'.join(path)
+                        if path_latency_dict.has_key(path_str):
+                            pass
+                        else:
+                            path_latency_dict[path_str] = []
+                        latency = 0.0
+                        for index, module in enumerate(path):
+                            if index == 0:
+                                input_wire = 'CP'
+                                output_wire = start_end_wire_dict[module][path[index+1]]
+                                latency += design_timing_dict[module_design_dict[module]][input_wire][module_port_arg_dict[module][output_wire]]
+                            elif index < len(path) - 1:
+                                input_wire = start_end_wire_dict[path[index-1]][module]
+                                output_wire = start_end_wire_dict[module][path[index+1]]
+                                latency += design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
+                            else:
+                                path_latency_dict[path_str].append(latency)
+                                print path_str
+                                print path_latency_dict[path_str]
 
 
     #reg clk -> output
-    # print '#reg clk -> output'
-    # for startpoint in reg_module_list:
-    #     for endpoint in raw_output_module_list:
-    #         # if startpoint != endpoint:
-    #         paths = find_all_paths(graph, startpoint, endpoint, reg_list=reg_module_list)
-    #         if paths:
-    #             print startpoint,'->',endpoint
-    #             for path in paths:
-    #                 path_str = '->'.join(path)
-    #                 if path_latency_dict.has_key(path_str):
-    #                     pass
-    #                 else:
-    #                     path_latency_dict[path_str] = []
-    #                 latency = 0.0
-    #                 for index, module in enumerate(path):
-    #                     if index == 0:
-    #                         input_wire = 'CP' #clk port
-    #                         output_wire = start_end_wire_dict[module][path[index+1]]
-    #                         latency += design_timing_dict[module_design_dict[module]][input_wire][module_port_arg_dict[module][output_wire]]
-    #                     elif index < len(path) - 1:
-    #                         input_wire = start_end_wire_dict[path[index-1]][module]
-    #                         output_wire = start_end_wire_dict[module][path[index+1]]
-    #                         latency += design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
-    #                     else:
-    #                         input_wire = start_end_wire_dict[path[index-1]][module]
-    #                         ####raw output maybe a module input
-    #                         output_wire_list = [w for w in module_wire_dict[module] if w in raw_output_wire_list and module_port_arg_dict[module][w] in design_output_dict[module_design_dict[module]]]
-    #                         latency_backup = latency
-    #                         for output_wire in output_wire_list:
-    #                             latency = latency_backup + design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
-    #                             path_latency_dict[path_str].append(latency)
-    #                             print path_str, latency
+    print '#reg clk -> output'
+    for startpoint in reg_module_list:
+        for endpoint in raw_output_module_list:
+            # if startpoint != endpoint:
+            paths = find_all_paths(graph, startpoint, endpoint, reg_list=reg_module_list)
+            if paths:
+                print startpoint,'->',endpoint
+                for path in paths:
+                    path_str = '->'.join(path)
+                    if path_latency_dict.has_key(path_str):
+                        pass
+                    else:
+                        path_latency_dict[path_str] = []
+                    latency = 0.0
+                    for index, module in enumerate(path):
+                        if index == 0:
+                            input_wire = 'CP' #clk port
+                            output_wire = start_end_wire_dict[module][path[index+1]]
+                            latency += design_timing_dict[module_design_dict[module]][input_wire][module_port_arg_dict[module][output_wire]]
+                        elif index < len(path) - 1:
+                            input_wire = start_end_wire_dict[path[index-1]][module]
+                            output_wire = start_end_wire_dict[module][path[index+1]]
+                            latency += design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
+                        else:
+                            input_wire = start_end_wire_dict[path[index-1]][module]
+                            ####raw output maybe a module input
+                            output_wire_list = [w for w in module_wire_dict[module] if w in raw_output_wire_list and module_port_arg_dict[module][w] in design_output_dict[module_design_dict[module]]]
+                            latency_backup = latency
+                            for output_wire in output_wire_list:
+                                latency = latency_backup + design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
+                                path_latency_dict[path_str].append(latency)
+                            print path_str
+                            print path_latency_dict[path_str]
 
 
     # #input -> output
