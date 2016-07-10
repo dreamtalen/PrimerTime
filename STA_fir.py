@@ -186,7 +186,7 @@ if __name__ == '__main__':
         for endpoint in reg_module_list:
             paths = find_all_paths(graph, startpoint, endpoint)
             if paths:
-                print startpoint,'->',endpoint
+                # print startpoint,'->',endpoint
                 for path in paths:
                     path_str = '->'.join(path)
                     if path_latency_dict.has_key(path_str):
@@ -210,8 +210,8 @@ if __name__ == '__main__':
                                 path_latency_dict[path_str][index] = latency + design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
                             # print 'after', path_latency_dict[path_str]
                         else:
-                            print path_str
-                            print path_latency_dict[path_str]
+                            pass
+                            # print path_str
                             # print path_latency_dict[path_str]
     #reg clk -> reg D
     print '#reg clk -> reg D'
@@ -220,7 +220,7 @@ if __name__ == '__main__':
             if startpoint != endpoint:
                 paths = find_all_paths(graph, startpoint, endpoint)
                 if paths:
-                    print startpoint,'->',endpoint
+                    # print startpoint,'->',endpoint
                     for path in paths:
                         path_str = '->'.join(path)
                         if path_latency_dict.has_key(path_str):
@@ -239,9 +239,8 @@ if __name__ == '__main__':
                                 latency += design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
                             else:
                                 path_latency_dict[path_str].append(latency)
-                                print path_str
-                                print path_latency_dict[path_str]
-
+                                # print path_str
+                                # print path_latency_dict[path_str]
 
     #reg clk -> output
     print '#reg clk -> output'
@@ -250,7 +249,7 @@ if __name__ == '__main__':
             # if startpoint != endpoint:
             paths = find_all_paths(graph, startpoint, endpoint, reg_list=reg_module_list)
             if paths:
-                print startpoint,'->',endpoint
+                # print startpoint,'->',endpoint
                 for path in paths:
                     path_str = '->'.join(path)
                     if path_latency_dict.has_key(path_str):
@@ -275,9 +274,12 @@ if __name__ == '__main__':
                             for output_wire in output_wire_list:
                                 latency = latency_backup + design_timing_dict[module_design_dict[module]][module_port_arg_dict[module][input_wire]][module_port_arg_dict[module][output_wire]]
                                 path_latency_dict[path_str].append(latency)
-                            print path_str
-                            print path_latency_dict[path_str]
+                            # print path_str
+                            # print path_latency_dict[path_str]
 
+    longest_path = max(max(path_latency_dict.values(), key=lambda x: max(x)))
+    shortest_path = min(min(path_latency_dict.values(), key=lambda x: min(x)))
+    print longest_path, shortest_path
 
     # #input -> output
 
