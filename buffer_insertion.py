@@ -1,3 +1,19 @@
+import time
+
+def find_all_paths(graph, start, end, D_port_list=[], path=[]):
+    path = path + [start]
+    if start == end:
+        return [path]
+    if not graph.has_key(start):
+        return []
+    paths = []
+    for node in graph[start]:
+        if (node not in path and node not in D_port_list) or node == end :
+            newpaths = find_all_paths(graph, node, end, D_port_list, path)
+            for newpath in newpaths:
+                paths.append(newpath)
+    return paths
+
 def lib_parser(filename):
     design_name = ''
     design_input_dict = {}
@@ -84,8 +100,14 @@ def main_progress():
     port_design_dict = {}
     port_attr_dict = {}
     port_origin_name_dict = {}
+    directed_graph = {}
+    module_port_dict = {}
+    edge_attr_dict = {}
+    edge_delay_dict = {}
+    path_latency_dict = {}
 
     for m in module_list:
+        module_port_dict[m] = []
         for wire, port in module_port_arg_dict[m].items():
             port_name = m+'_port_'+port
             port_list.append(port_name)
@@ -98,7 +120,18 @@ def main_progress():
             else:
                 print 'error', port_name
             port_origin_name_dict[port_name] = port
-
+            module_port_dict[m].append(port_name)
+        m_input_port_list = [p for p in module_port_dict[m] if port_attr_dict[p] == 'input']
+        m_output_port_list = [p for p in module_port_dict[m] if port_attr_dict[p] == 'output']
+        for start_port in m_input_port_list:
+            for end_port in m_output_port_list:
+                if directed_graph.has_key(start_port):
+                    directed_graph[start_port].append(end_port)
+                else:
+                    directed_graph[start_port] = [end_port,]
+                edge_name = start_port+'=>'+end_port
+                edge_attr_dict[edge_name] = 'inner'
+                edge_delay_dict[edge_name] = design_timing_dict[module_design_dict[m]][port_origin_name_dict[start_port]][port_origin_name_dict[end_port]]
 
     raw_input_wire_list = []
     for raw_input in raw_input_list:
@@ -126,15 +159,73 @@ def main_progress():
     reset_port_list = [port for port in port_list if port_wire_dict[port] == 'reset']
     D_port_list = [port for port in port_list if port_origin_name_dict[port] == 'D']
 
-    directed_graph = {}
-    for start_port in port_list:
-        if port_attr_dict[start_port] == 'output':
+    output_port_list = [p for p in port_list if port_attr_dict[p] == 'output']
+    input_port_list = [p for p in port_list if port_attr_dict[p] == 'input']
+    for start_port in output_port_list:
             wire = port_wire_dict[start_port]
-            for end_port in port_list:
-                if port_attr_dict[end_port] == 'input' and port_wire_dict[end_port] == wire:
-                    directed_graph[start_port] = end_port
-    print directed_graph
+            for end_port in input_port_list:
+                if port_wire_dict[end_port] == wire:
+                    if directed_graph.has_key(start_port):
+                        directed_graph[start_port].append(end_port)
+                    else:
+                        directed_graph[start_port] = [end_port,]
+                    edge_name = start_port+'=>'+end_port
+                    edge_attr_dict[edge_name] = 'outer'
+                    edge_delay_dict[edge_name] = 0.0
 
+    #input -> reg D
+    for start_port in raw_input_port_list:
+        for end_port in D_port_list:
+            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
+            if paths:
+                for path in paths:
+                    path_name = '->'.join(path)
+                    path_latency_dict[path_name] = 0.0
+                    for index, port in enumerate(path):
+                        if index != len(path) - 1:
+                            edge_name = port+'=>'+path[index+1]
+                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
+
+    #reg clk -> reg D
+    for start_port in clock_port_list:
+        for end_port in D_port_list:
+            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
+            if paths:
+                for path in paths:
+                    path_name = '->'.join(path)
+                    path_latency_dict[path_name] = 0.0
+                    for index, port in enumerate(path):
+                        if index != len(path) - 1:
+                            edge_name = port+'=>'+path[index+1]
+                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
+
+    #reg clk -> output
+    for start_port in clock_port_list:
+        for end_port in raw_output_port_list:
+            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
+            if paths:
+                for path in paths:
+                    path_name = '->'.join(path)
+                    path_latency_dict[path_name] = 0.0
+                    for index, port in enumerate(path):
+                        if index != len(path) - 1:
+                            edge_name = port+'=>'+path[index+1]
+                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
+
+    # #input -> output
+    for start_port in raw_input_port_list:
+        for end_port in raw_output_port_list:
+            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
+            if paths:
+                for path in paths:
+                    path_name = '->'.join(path)
+                    path_latency_dict[path_name] = 0.0
+                    for index, port in enumerate(path):
+                        if index != len(path) - 1:
+                            edge_name = port+'=>'+path[index+1]
+                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
+
+    # print path_latency_dict
 
 if __name__ == '__main__':
     main_progress()
