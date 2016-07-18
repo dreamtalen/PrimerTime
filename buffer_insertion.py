@@ -1,5 +1,5 @@
 import time
-
+from pulp import *
 def find_all_paths(graph, start, end, D_port_list=[], path=[]):
     path = path + [start]
     if start == end:
@@ -173,48 +173,10 @@ def main_progress():
                     edge_attr_dict[edge_name] = 'outer'
                     edge_delay_dict[edge_name] = 0.0
 
-    #input -> reg D
-    for start_port in raw_input_port_list:
-        for end_port in D_port_list:
-            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
-            if paths:
-                for path in paths:
-                    path_name = '->'.join(path)
-                    path_latency_dict[path_name] = 0.0
-                    for index, port in enumerate(path):
-                        if index != len(path) - 1:
-                            edge_name = port+'=>'+path[index+1]
-                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
-
-    #reg clk -> reg D
-    for start_port in clock_port_list:
-        for end_port in D_port_list:
-            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
-            if paths:
-                for path in paths:
-                    path_name = '->'.join(path)
-                    path_latency_dict[path_name] = 0.0
-                    for index, port in enumerate(path):
-                        if index != len(path) - 1:
-                            edge_name = port+'=>'+path[index+1]
-                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
-
-    #reg clk -> output
-    for start_port in clock_port_list:
-        for end_port in raw_output_port_list:
-            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
-            if paths:
-                for path in paths:
-                    path_name = '->'.join(path)
-                    path_latency_dict[path_name] = 0.0
-                    for index, port in enumerate(path):
-                        if index != len(path) - 1:
-                            edge_name = port+'=>'+path[index+1]
-                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
-
-    # #input -> output
-    for start_port in raw_input_port_list:
-        for end_port in raw_output_port_list:
+    path_start_port_list = list(set(raw_input_port_list) | set(clock_port_list))
+    path_end_port_list = list(set(D_port_list) | set(raw_output_port_list))
+    for start_port in path_start_port_list:
+        for end_port in path_end_port_list:
             paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
             if paths:
                 for path in paths:
@@ -226,6 +188,68 @@ def main_progress():
                             path_latency_dict[path_name] += edge_delay_dict[edge_name]
 
     # print path_latency_dict
+    path_list = path_latency_dict.keys()
+    outer_edge_list = [edge for edge in edge_delay_dict.keys() if edge_attr_dict[edge] == 'outer']
+    inner_edge_list = [edge for edge in edge_delay_dict.keys() if edge_attr_dict[edge] == 'inner']
+    high_bound = max(path_latency_dict.values())
+    low_bound = high_bound/3
+    print high_bound, low_bound
+
+    prob = LpProblem("Buffer Insertion", LpMinimize)
+    outer_edge_vars = LpVariable.dicts("OutEdge", outer_edge_list, 0)
+    vars_edge_dict = {str(outer_edge_vars[i]):i for i in outer_edge_list}
+    prob += lpSum([outer_edge_vars[i] for i in outer_edge_list])
+    for path in path_list:
+        port_list = path.split('->')
+        inner_edges = []
+        outer_edges = []
+        for index, port in enumerate(port_list):
+            if index != len(port_list) - 1:
+                edge_name = port+'=>'+port_list[index+1]
+                if edge_attr_dict[edge_name] == 'inner':
+                    inner_edges.append(edge_name)
+                elif edge_attr_dict[edge_name] == 'outer':
+                    outer_edges.append(edge_name)
+                else:
+                    print 'wrong edge:', edge_name
+        inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
+        max_outer_delay = high_bound - inner_delay
+        min_outer_delay = 4 - inner_delay
+
+        prob += lpSum(outer_edge_vars[i] for i in outer_edges) <= max_outer_delay
+        prob += lpSum(outer_edge_vars[i] for i in outer_edges) >= min_outer_delay
+
+
+    prob.writeLP("BufferInsertion.lp")
+
+    prob.solve()
+
+    print "Status:", LpStatus[prob.status]
+
+
+    for v in prob.variables():
+        edge_name = vars_edge_dict[v.name]
+        edge_delay_dict[edge_name] = v.varValue
+
+    print "Total Button delay", value(prob.objective)
+
+    path_latency_dict_final = {}
+    for path in path_list:
+        port_list = path.split('->')
+        new_latency = 0.0
+        for index, port in enumerate(port_list):
+            if index != len(port_list) - 1:
+                edge_name = port+'=>'+port_list[index+1]
+                new_latency += edge_delay_dict[edge_name]
+        path_latency_dict_final[path] = new_latency
+        # if new_latency != path_latency_dict[path]:
+            # print path, new_latency, path_latency_dict[path]
+    print "Before buffer insertion"
+    print "Max path delay", max(path_latency_dict.values())
+    print "Min path delay", min(path_latency_dict.values())
+    print "After buffer insertion"
+    print "Max path delay", max(path_latency_dict_final.values())
+    print "Min path delay", min(path_latency_dict_final.values())
 
 if __name__ == '__main__':
     main_progress()
