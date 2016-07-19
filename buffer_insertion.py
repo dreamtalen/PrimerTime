@@ -188,13 +188,97 @@ def main_progress():
                             path_latency_dict[path_name] += edge_delay_dict[edge_name]
 
     # print path_latency_dict
+
     path_list = path_latency_dict.keys()
     outer_edge_list = [edge for edge in edge_delay_dict.keys() if edge_attr_dict[edge] == 'outer']
     inner_edge_list = [edge for edge in edge_delay_dict.keys() if edge_attr_dict[edge] == 'inner']
     high_bound = max(path_latency_dict.values())
     low_bound = high_bound/3
     print high_bound, low_bound
+    # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
+    discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
 
+def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict):
+    buffer_kinds = ['BUFFER', 'INVERT', 'NAND']
+    buffer_delay_dict = {'BUFFER':1.0, 'INVERT':1.5, 'NAND':2.5}
+    buffer_area_dict = {'BUFFER':1.0, 'INVERT':1.2, 'NAND':1.5}
+    all_buffer_list = []
+    buffer_kind_dict = {}
+    outer_edge_buffer_dict = {}
+    buffer_number_dict = {}
+    for buffer in buffer_kinds:
+        for outer_edge in outer_edge_list:
+            buffer_name = outer_edge+'_'+buffer
+            all_buffer_list.append(buffer_name)
+            buffer_kind_dict[buffer_name] = buffer
+            if outer_edge_buffer_dict.has_key(outer_edge):
+                outer_edge_buffer_dict[outer_edge].append(buffer_name)
+            else:
+                outer_edge_buffer_dict[outer_edge] = [buffer_name,]
+    time.sleep(100)
+    prob = LpProblem("Buffer Insertion", LpMinimize)
+    buffer_vars = LpVariable.dicts("Buffer", all_buffer_list, 0, None, LpInteger)
+    vars_buffer_dict = {str(buffer_vars[i]):i for i in all_buffer_list}
+
+    prob += lpSum([buffer_area_dict[buffer_kind_dict[i]]*buffer_vars[i] for i in all_buffer_list])
+
+    for path in path_list:
+        port_list = path.split('->')
+        inner_edges = []
+        outer_edges = []
+        for index, port in enumerate(port_list):
+            if index != len(port_list) - 1:
+                edge_name = port+'=>'+port_list[index+1]
+                if edge_attr_dict[edge_name] == 'inner':
+                    inner_edges.append(edge_name)
+                elif edge_attr_dict[edge_name] == 'outer':
+                    outer_edges.append(edge_name)
+                else:
+                    print 'wrong edge:', edge_name
+        inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
+        max_outer_delay = high_bound - inner_delay
+        min_outer_delay = 4.0 - inner_delay
+        path_buffer_list = []
+        for edge in outer_edges:
+            path_buffer_list += outer_edge_buffer_dict[edge]
+
+        prob += lpSum(buffer_delay_dict[buffer_kind_dict[i]]*buffer_vars[i] for i in path_buffer_list) <= max_outer_delay
+        prob += lpSum(buffer_delay_dict[buffer_kind_dict[i]]*buffer_vars[i] for i in path_buffer_list) >= min_outer_delay
+
+    prob.writeLP("BufferInsertion.lp")
+
+    prob.solve()
+
+    print "Status:", LpStatus[prob.status]
+
+    print "Total area cost", value(prob.objective)
+
+    for v in prob.variables():
+        buffer_name = vars_buffer_dict[v.name]
+        buffer_number_dict[buffer_name] = v.varValue
+
+    for outer_edge in outer_edge_list:
+        edge_delay_dict[outer_edge] = sum(buffer_number_dict[b]*buffer_delay_dict[buffer_kind_dict[b]] for b in outer_edge_buffer_dict[outer_edge])
+
+    path_latency_dict_final = {}
+    for path in path_list:
+        port_list = path.split('->')
+        new_latency = 0.0
+        for index, port in enumerate(port_list):
+            if index != len(port_list) - 1:
+                edge_name = port+'=>'+port_list[index+1]
+                new_latency += edge_delay_dict[edge_name]
+        path_latency_dict_final[path] = new_latency
+        # if new_latency != path_latency_dict[path]:
+            # print path, new_latency, path_latency_dict[path]
+    print "Before buffer insertion"
+    print "Max path delay", max(path_latency_dict.values())
+    print "Min path delay", min(path_latency_dict.values())
+    print "After buffer insertion"
+    print "Max path delay", max(path_latency_dict_final.values())
+    print "Min path delay", min(path_latency_dict_final.values())
+
+def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict):
     prob = LpProblem("Buffer Insertion", LpMinimize)
     outer_edge_vars = LpVariable.dicts("OutEdge", outer_edge_list, 0)
     vars_edge_dict = {str(outer_edge_vars[i]):i for i in outer_edge_list}
@@ -214,7 +298,7 @@ def main_progress():
                     print 'wrong edge:', edge_name
         inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
         max_outer_delay = high_bound - inner_delay
-        min_outer_delay = 4 - inner_delay
+        min_outer_delay = 4.0 - inner_delay
 
         prob += lpSum(outer_edge_vars[i] for i in outer_edges) <= max_outer_delay
         prob += lpSum(outer_edge_vars[i] for i in outer_edges) >= min_outer_delay
