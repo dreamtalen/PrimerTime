@@ -195,8 +195,13 @@ def main_progress():
     high_bound = max(path_latency_dict.values())
     low_bound = high_bound/3
 
+    for key, value in path_latency_dict.items():
+        if value == high_bound: print key
     print high_bound
     print min(path_latency_dict.values())
+    print len(path_list)
+    print len(outer_edge_list)
+    # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
     discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
 
@@ -205,6 +210,18 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1']
     buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202}
     buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44}
+    ###ALL
+    buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1',
+                    'BUFFD0HVT', 'BUFFD1HVT', 'INVD0HVT', 'INVD1HVT', 'ND2D0HVT', 'ND2D1HVT', 'NR2D0HVT', 'NR2D1HVT',
+                    'BUFFD0LVT', 'BUFFD1LVT', 'INVD0LVT', 'INVD1LVT', 'ND2D0LVT', 'ND2D1LVT', 'NR2D0LVT', 'NR2D1LVT']
+    buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202,
+                         'BUFFD0HVT':0.02731, 'BUFFD1HVT':0.02783, 'INVD0HVT':0.01120, 'INVD1HVT':0.008904, 'ND2D0HVT':0.01587, 'ND2D1HVT':0.01298, 'NR2D0HVT':0.01851, 'NR2D1HVT':0.01504,
+                         'BUFFD0LVT':0.01910, 'BUFFD1LVT':0.01938, 'INVD0LVT':0.00798, 'INVD1LVT':0.006234, 'ND2D0LVT':0.01118, 'ND2D1LVT':0.008956, 'NR2D0LVT':0.01292, 'NR2D1LVT':0.01029}
+    buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44,
+                        'BUFFD0HVT':1.44, 'BUFFD1HVT':1.44, 'INVD0HVT':1.08, 'INVD1HVT':1.08, 'ND2D0HVT':1.44, 'ND2D1HVT':1.44, 'NR2D0HVT':1.44, 'NR2D1HVT':1.44,
+                        'BUFFD0LVT':1.44, 'BUFFD1LVT':1.44, 'INVD0LVT':1.08, 'INVD1LVT':1.08, 'ND2D0LVT':1.44, 'ND2D1LVT':1.44, 'NR2D0LVT':1.44, 'NR2D1LVT':1.44}
+
+
     all_buffer_list = []
     buffer_kind_dict = {}
     outer_edge_buffer_dict = {}
@@ -238,8 +255,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                 else:
                     print 'wrong edge:', edge_name
         inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
-        max_outer_delay = 5.0
-        # max_outer_delay = high_bound - inner_delay
+        # max_outer_delay = 5.0
+        max_outer_delay = 1.00 - inner_delay
         min_outer_delay = low_bound - inner_delay
         path_buffer_list = []
         for edge in outer_edges:
