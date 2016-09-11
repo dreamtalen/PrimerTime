@@ -94,7 +94,7 @@ def ast_parser(filename):
 
 def main_progress():
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v')
-    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("c432_netlist.AST")
+    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s298.ast")
     port_list = []
     port_wire_dict = {}
     port_design_dict = {}
@@ -107,12 +107,18 @@ def main_progress():
     path_latency_dict = {}
 
     for m in module_list:
+        if module_design_dict[m] not in design_input_dict.keys():
+            print module_design_dict[m], m
+            time.sleep(100)
+
+    for m in module_list:
         module_port_dict[m] = []
         for wire, port in module_port_arg_dict[m].items():
             port_name = m+'_port_'+port
             port_list.append(port_name)
             port_wire_dict[port_name] = wire
             port_design_dict[port_name] = module_design_dict[m]
+
             if port in design_input_dict[module_design_dict[m]]:
                 port_attr_dict[port_name] = 'input'
             elif port in design_output_dict[module_design_dict[m]]:
@@ -162,30 +168,37 @@ def main_progress():
     output_port_list = [p for p in port_list if port_attr_dict[p] == 'output']
     input_port_list = [p for p in port_list if port_attr_dict[p] == 'input']
     for start_port in output_port_list:
-            wire = port_wire_dict[start_port]
-            for end_port in input_port_list:
-                if port_wire_dict[end_port] == wire:
-                    if directed_graph.has_key(start_port):
-                        directed_graph[start_port].append(end_port)
-                    else:
-                        directed_graph[start_port] = [end_port,]
-                    edge_name = start_port+'=>'+end_port
-                    edge_attr_dict[edge_name] = 'outer'
-                    edge_delay_dict[edge_name] = 0.0
+        wire = port_wire_dict[start_port]
+        for end_port in input_port_list:
+            if port_wire_dict[end_port] == wire:
+                if directed_graph.has_key(start_port):
+                    directed_graph[start_port].append(end_port)
+                else:
+                    directed_graph[start_port] = [end_port,]
+                edge_name = start_port+'=>'+end_port
+                edge_attr_dict[edge_name] = 'outer'
+                edge_delay_dict[edge_name] = 0.0
 
     path_start_port_list = list(set(raw_input_port_list) | set(clock_port_list))
     path_end_port_list = list(set(D_port_list) | set(raw_output_port_list))
+    path_num = 0
+
+
     for start_port in path_start_port_list:
         for end_port in path_end_port_list:
-            paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
-            if paths:
-                for path in paths:
-                    path_name = '->'.join(path)
-                    path_latency_dict[path_name] = 0.0
-                    for index, port in enumerate(path):
-                        if index != len(path) - 1:
-                            edge_name = port+'=>'+path[index+1]
-                            path_latency_dict[path_name] += edge_delay_dict[edge_name]
+            print start_port, end_port
+            if start_port!=end_port:
+                paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
+                if paths:
+                    for path in paths:
+                        path_num+=1
+                        print path_num
+                        path_name = '->'.join(path)
+                        path_latency_dict[path_name] = 0.0
+                        for index, port in enumerate(path):
+                            if index != len(path) - 1:
+                                edge_name = port+'=>'+path[index+1]
+                                path_latency_dict[path_name] += edge_delay_dict[edge_name]
 
     # print path_latency_dict
 
@@ -195,12 +208,19 @@ def main_progress():
     high_bound = max(path_latency_dict.values())
     low_bound = high_bound/3
 
-    for key, value in path_latency_dict.items():
-        if value == high_bound: print key
+    ###critical paths
+    # for key, value in path_latency_dict.items():
+    #     if value == high_bound: print key
+
     print high_bound
     print min(path_latency_dict.values())
     print len(path_list)
+    for path in path_list:
+        if path_latency_dict[path] == min(path_latency_dict.values()):
+            print path, path_latency_dict[path]
     print len(outer_edge_list)
+
+    # time.sleep(10)
     # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
     discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
@@ -210,7 +230,7 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1']
     buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202}
     buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44}
-    ###ALL
+    # ###ALL
     buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1',
                     'BUFFD0HVT', 'BUFFD1HVT', 'INVD0HVT', 'INVD1HVT', 'ND2D0HVT', 'ND2D1HVT', 'NR2D0HVT', 'NR2D1HVT',
                     'BUFFD0LVT', 'BUFFD1LVT', 'INVD0LVT', 'INVD1LVT', 'ND2D0LVT', 'ND2D1LVT', 'NR2D0LVT', 'NR2D1LVT']
@@ -256,7 +276,9 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                     print 'wrong edge:', edge_name
         inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
         # max_outer_delay = 5.0
-        max_outer_delay = 1.00 - inner_delay
+        high_bound = 10.0
+        low_bound = 0.0938
+        max_outer_delay = high_bound - inner_delay
         min_outer_delay = low_bound - inner_delay
         path_buffer_list = []
         for edge in outer_edges:
@@ -274,8 +296,9 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     print "Total area cost", value(prob.objective)
 
     for v in prob.variables():
-        buffer_name = vars_buffer_dict[v.name]
-        buffer_number_dict[buffer_name] = v.varValue
+        if v.name != '__dummy':
+            buffer_name = vars_buffer_dict[v.name]
+            buffer_number_dict[buffer_name] = v.varValue
 
     for outer_edge in outer_edge_list:
         edge_delay_dict[outer_edge] = sum(buffer_number_dict[b]*buffer_delay_dict[buffer_kind_dict[b]] for b in outer_edge_buffer_dict[outer_edge])
@@ -289,6 +312,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                 edge_name = port+'=>'+port_list[index+1]
                 new_latency += edge_delay_dict[edge_name]
         path_latency_dict_final[path] = new_latency
+        if new_latency == 0.09387:
+            print path
         # if new_latency != path_latency_dict[path]:
             # print path, new_latency, path_latency_dict[path]
     print "Before buffer insertion"
@@ -317,8 +342,8 @@ def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_
                 else:
                     print 'wrong edge:', edge_name
         inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
-        max_outer_delay = high_bound - inner_delay
-        min_outer_delay = 4.0 - inner_delay
+        max_outer_delay = 10.0 - inner_delay
+        min_outer_delay = 0.1 - inner_delay
 
         prob += lpSum(outer_edge_vars[i] for i in outer_edges) <= max_outer_delay
         prob += lpSum(outer_edge_vars[i] for i in outer_edges) >= min_outer_delay
@@ -332,8 +357,9 @@ def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_
 
 
     for v in prob.variables():
-        edge_name = vars_edge_dict[v.name]
-        edge_delay_dict[edge_name] = v.varValue
+        if v.name != '__dummy':
+            edge_name = vars_edge_dict[v.name]
+            edge_delay_dict[edge_name] = v.varValue
 
     print "Total Button delay", value(prob.objective)
 

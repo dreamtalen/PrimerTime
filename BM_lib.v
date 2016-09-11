@@ -256,3 +256,403 @@ timing A1 ZN, 0.04384
 timing A2 ZN, 0.04344
 timing B1 ZN, 0.02782
 timing B2 ZN, 0.02974
+
+module IAO21HSV0 ( ZN, A1, A2, B)
+input A1, A2, B
+output ZN
+
+timing A1 ZN, 0.04392
+timing A2 ZN, 0.04646
+timing B ZN, 0.02016
+
+module IOA22HSV0 ( ZN, A1, A2, B1, B2) 
+input A1, A2, B1, B2
+output ZN
+
+timing A1 ZN, 0.04438
+timing A2 ZN, 0.04689
+timing B1 ZN, 0.02847
+timing B2 ZN, 0.03082
+
+module XOR2HSV0 ( Z, A1, A2)
+input A1, A2
+output Z
+
+timing A1 Z, 0.03643
+timing A2 Z, 0.06438
+
+module XNOR2HSV0 ( ZN, A1, A2) 
+input A1, A2
+output ZN
+
+timing A1 ZN, 0.04043
+timing A2 ZN, 0.07143
+
+module OA221HSV0 ( Z, A1, A2, B1, B2, C) 
+input A1, A2, B1, B2, C
+output Z
+
+timing A1 Z, 0.06454
+timing A2 Z, 0.06810
+timing B1 Z, 0.07293
+timing B2 Z, 0.07939
+timing C Z, 0.06931
+
+module AND3HSV0 ( Z, A1, A2, A3) 
+input A1, A2, A3
+output Z
+
+timing A1 Z, 0.04357
+timing A2 Z, 0.04586
+timing A3 Z, 0.04588
+
+module INOR3HSV0 ( ZN, A1, B1, B2) 
+input A1, B1, B2
+output ZN
+
+timing A1 ZN, 0.04212
+timing B1 ZN, 0.03010
+timing B2 ZN, 0.03151
+
+module MUX2NHSV0 ( ZN, I0, I1, S)
+input I0, I1, S
+output ZN
+
+timing I0 ZN, 0.02742
+timing I1 ZN, 0.02521
+timing S ZN, 0.01731
+
+module INAND2HSV0 ( ZN, A1, B1)
+input A1, B1
+output ZN
+
+timing A1 ZN, 0.03337
+timing B1 ZN, 0.01735
+
+module AOI22HSV0 ( ZN, A1, A2, B1, B2)
+input A1, A2, B1, B2
+output ZN
+
+timing A1 ZN, 0.03092
+timing A2 ZN, 0.03180
+timing B1 ZN, 0.02046
+timing B2 ZN, 0.02332
+
+module OAOAOAI211111HSV0 ( ZN, A1, A2, B, C, D, E, F)
+input A1, A2, B, C, D, E, F
+output ZN
+
+timing A1 ZN, 0.09860
+timing A2 ZN, 0.10000
+timing B ZN, 0.07604
+timing C ZN, 0.05488
+timing D ZN, 0.04080
+timing E ZN, 0.02573
+timing F ZN, 0.01694
+
+module AND5HSV0 ( Z, A1, A2, A3, A4, A5)
+input A1, A2, A3, A4, A5
+output Z
+
+timing A1 Z, 0.04506
+timing A2 Z, 0.04679
+timing A3 Z, 0.05334
+timing A4 Z, 0.05790
+timing A5 Z, 0.06057
+
+module OAOI211HSV0 ( ZN, A1, A2, B, C)
+input A1, A2, B, C
+output ZN
+
+timing A1 ZN, 0.04533
+timing A2 ZN, 0.04643
+timing B ZN, 0.02980
+timing C ZN, 0.01722
+
+module AOAOI2111HSV0 ( ZN, A1, A2, B, C, D)
+input A1, A2, B, C, D
+output ZN
+
+timing A1 ZN, 0.05750
+timing A2 ZN, 0.06073
+timing B ZN, 0.04141
+timing C ZN, 0.03008
+timing D ZN, 0.01836
+
+module AO211HSV0 ( Z, A1, A2, B, C)
+input A1, A2, B, C
+output Z
+
+timing A1 Z, 0.06431
+timing A2 Z, 0.06945
+timing B Z, 0.04640
+timing C Z, 0.04361
+
+module AOAI211HSV0 ( ZN, A1, A2, B, C)
+input A1, A2, B, C
+output ZN
+
+timing A1 ZN, 0.03991
+timing A2 ZN, 0.04200
+timing B ZN, 0.02434
+timing C ZN, 0.01668
+
+module OR3HSV0 ( Z, A1, A2, A3)
+input A1, A2, A3
+output Z
+
+timing A1 Z, 0.04821
+timing A2 Z, 0.05198
+timing A3 Z, 0.05489
+
+module AO31HSV0 ( Z, A1, A2, A3, B)
+input A1, A2, A3, B
+output Z
+
+timing A1 Z, 0.05809
+timing A2 Z, 0.06257
+timing A3 Z, 0.06619
+timing B Z, 0.03259
+
+module OA31HSV0 ( Z, A1, A2, A3, B)
+input A1, A2, A3, B
+output Z
+timing A1 Z, 0.05873
+timing A2 Z, 0.06367
+timing A3 Z, 0.06705
+timing B Z, 0.05058
+
+module INOR4HSV0 ( ZN, A1, B1, B2, B3)
+input A1, B1, B2, B3
+output ZN
+
+timing A1 ZN, 0.05096
+timing B1 ZN, 0.03966
+timing B2 ZN, 0.04332
+timing B3 ZN, 0.04410
+
+module MUX2HSV0 ( Z, I0, I1, S)
+input I0, I1, S
+output Z
+
+timing I0 Z, 0.04939
+timing I1 Z, 0.04830
+timing S Z, 0.05106
+
+module OA21HSV0 ( Z, A1, A2, B)
+input A1, A2, B
+output Z
+
+timing A1 Z, 0.05117
+timing A2 Z, 0.05469
+timing B Z, 0.03988
+
+module OA22HSV0 ( Z, A1, A2, B1, B2)
+input A1, A2, B1, B2
+output Z
+
+timing A1 Z, 0.04531
+timing A2 Z, 0.05298
+timing B1 Z, 0.05701
+timing B2 Z, 0.06148
+
+module INAND4HSV0 ( ZN, A1, B1, B2, B3) 
+input A1, B1, B2, B3
+output ZN
+
+timing A1 ZN, 0.04716
+timing B1 ZN, 0.03324
+timing B2 ZN, 0.03684
+timing B3 ZN, 0.03822
+
+module AOA211HSV0 ( Z, A1, A2, B, C);
+input A1, A2, B, C
+output Z
+
+timing A1 Z, 0.06854
+timing A2 Z, 0.07248
+timing B Z, 0.04819
+timing C Z, 0.03863
+
+module OAI32HSV0 ( ZN, A1, A2, A3, B1, B2) 
+input A1, A2, A3, B1, B2
+output ZN
+
+timing A1 ZN, 0.03532
+timing A2 ZN, 0.04169
+timing A3 ZN, 0.04467
+timing B1 ZN, 0.03891
+timing B2 ZN, 0.04188
+
+module INAND3HSV0 ( ZN, A1, B1, B2)
+input A1, B1, B2
+output ZN
+
+timing A1 ZN, 0.04007
+timing B1 ZN, 0.02663
+timing B2 ZN, 0.02904
+
+module OAO211HSV0 ( Z, A1, A2, B, C)
+input A1, A2, B, C
+output Z
+
+timing A1 Z, 0.07327
+timing A2 Z, 0.07450
+timing B Z, 0.05372
+timing C Z, 0.03685
+
+module IOA21HSV0 ( ZN, A1, A2, B)
+input A1, A2, B
+output ZN
+
+timing A1 ZN, 0.04062
+timing A2 ZN, 0.04238
+timing B ZN, 0.01820
+
+module OR2HSV0 ( Z, A1, A2)
+input A1, A2
+output Z
+
+timing A1 Z, 0.03643
+timing A2 Z, 0.03883
+
+module OA32HSV0 ( Z, A1, A2, A3, B1, B2)
+input A1, A2, A3, B1, B2
+output Z
+
+timing A1 Z, 0.06629
+timing A2 Z, 0.07213
+timing A3 Z, 0.07517
+timing B1 Z, 0.06760
+timing B2 Z, 0.07236
+
+module AO32HSV0 ( Z, A1, A2, A3, B1, B2)
+input A1, A2, A3, B1, B2
+output Z
+
+timing A1 Z, 0.06111
+timing A2 Z, 0.06462
+timing A3 Z, 0.06822
+timing B1 Z, 0.03990
+timing B2 Z, 0.04191
+
+module AO221HSV0 ( Z, A1, A2, B1, B2, C)
+input A1, A2, B1, B2, C
+output Z
+
+timing A1 Z, 0.06673
+timing A2 Z, 0.07158
+timing B1 Z, 0.05899
+timing B2 Z, 0.06235
+timing C Z, 0.04056
+
+module MAJ23HSV0 ( Z, A1, A2, A3)
+input A1, A2, A3
+output Z
+
+timing A1 Z, 0.06434
+timing A2 Z, 0.06157
+timing A3 Z, 0.04965
+
+module AO22HSV0 ( Z, A1, A2, B1, B2)
+input A1, A2, B1, B2
+output Z
+
+timing A1 Z, 0.05060
+timing A2 Z, 0.05329
+timing B1 Z, 0.03924
+timing B2 Z, 0.04752
+
+module OR5HSV0RD ( Z, A1, A2, A3, A4, A5)
+input A1, A2, A3, A4, A5
+output Z
+
+timing A1 Z, 0.04614
+timing A2 Z, 0.04854
+timing A3 Z, 0.05628
+timing A4 Z, 0.06084
+timing A5 Z, 0.06379
+
+module MUX4HSV0 ( Z, I0, I1, I2, I3, S0, S1)
+input I0, I1, I2, I3, S0, S1
+output Z
+
+timing I0 Z, 0.08126
+timing I1 Z, 0.08149
+timing I2 Z, 0.07595
+timing I3 Z, 0.07666
+timing S0 Z, 0.08579
+timing S1 Z, 0.05636
+
+module AND6HSV0 ( Z, A1, A2, A3, A4, A5, A6)
+input A1, A2, A3, A4, A5, A6
+output Z
+
+timing A1 Z, 0.05075
+timing A2 Z, 0.05471
+timing A3 Z, 0.05863
+timing A4 Z, 0.05350
+timing A5 Z, 0.05715
+timing A6 Z, 0.06102
+
+module OA222HSV0 ( Z, A1, A2, B1, B2, C1, C2)
+input A1, A2, B1, B2, C1, C2
+output Z
+
+timing A1 Z, 0.06830
+timing A2 Z, 0.07272
+timing B1 Z, 0.08725
+timing B2 Z, 0.08979
+timing C1 Z, 0.07699
+timing C2 Z, 0.08315
+
+module MUX4NHSV0 ( ZN, I0, I1, I2, I3, S0, S1)
+input I0, I1, I2, I3, S0, S1
+output ZN
+
+timing I0 ZN, 0.09610
+timing I1 ZN, 0.09690
+timing I2 ZN, 0.09158
+timing I3 ZN, 0.09238
+timing S0 ZN, 0.08891
+timing S1 ZN, 0.05233
+
+module OR4HSV0 ( Z, A1, A2, A3, A4)
+input A1, A2, A3, A4
+output Z
+
+timing A1 Z, 0.05972
+timing A2 Z, 0.06471
+timing A3 Z, 0.06885
+timing A4 Z, 0.07188
+
+module DHSV1 ( Q, CK, D)
+input CK, D
+output Q
+
+timing CK Q, 0.09387
+timing D Q, 0.0
+
+module I2NAND4HSV0 ( ZN, A1, A2, B1, B2)
+input A1, A2, B1, B2
+output ZN
+
+timing A1 ZN, 0.04621
+timing A2 ZN, 0.04894
+timing B1 ZN, 0.03451
+timing B2 ZN, 0.03625
+
+module AO222HSV0 ( Z, A1, A2, B1, B2, C1, C2)
+input A1, A2, B1, B2, C1, C2
+output Z
+
+timing A1 Z, 0.07279
+timing A2 Z, 0.07487
+timing B1 Z, 0.06484
+timing B2 Z, 0.06734
+timing C1 Z, 0.05128
+timing C2 Z, 0.05405
+
+
+
+
