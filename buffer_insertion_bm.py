@@ -140,6 +140,7 @@ def main_progress():
                 edge_delay_dict[edge_name] = design_timing_dict[module_design_dict[m]][port_origin_name_dict[start_port]][port_origin_name_dict[end_port]]
 
     raw_input_wire_list = []
+    # print raw_input_list
     for raw_input in raw_input_list:
         regex = raw_input+'_index_'
         for wire in wire_list:
@@ -147,8 +148,19 @@ def main_progress():
                 raw_input_wire_list.append(wire)
             elif regex in wire:
                 raw_input_wire_list.append(wire)
+    # print raw_input_wire_list
     # raw_input_wire_list.remove('clock')
     # raw_input_wire_list.remove('reset')
+    module_input_port_list = []
+    for w in raw_input_wire_list:
+        new_port = 'module_port_'+w
+        port_list.append(new_port)
+        port_attr_dict[new_port] = 'output' #The top module input port seems like a output port to the next module
+        port_wire_dict[new_port] = w
+        module_input_port_list.append(new_port)
+        port_origin_name_dict[new_port] = new_port
+
+    print module_input_port_list
 
     raw_output_wire_list = []
     for raw_output in raw_output_list:
@@ -158,7 +170,21 @@ def main_progress():
                 raw_output_wire_list.append(wire)
             elif regex in wire:
                 raw_output_wire_list.append(wire)
+    # print raw_output_list
+    # print raw_output_wire_list
+    module_output_port_list = []
+    for w in raw_output_wire_list:
+        new_port = 'module_port_'+w
+        port_list.append(new_port)
+        port_attr_dict[new_port] = 'input' #The top module output port seems like a input port to the previous module
+        port_wire_dict[new_port] = w
+        module_output_port_list.append(new_port)
+        port_origin_name_dict[new_port] = new_port
 
+
+    print module_output_port_list
+
+    # time.sleep(10)
     raw_input_port_list = [port for port in port_list if port_wire_dict[port] in raw_input_wire_list and port_attr_dict[port] == 'input']
     raw_output_port_list = [port for port in port_list if port_wire_dict[port] in raw_output_wire_list and port_attr_dict[port] == 'output']
     clock_port_list = [port for port in port_list if port_wire_dict[port] == 'clock']
@@ -179,20 +205,25 @@ def main_progress():
                 edge_attr_dict[edge_name] = 'outer'
                 edge_delay_dict[edge_name] = 0.0
 
-    path_start_port_list = list(set(raw_input_port_list) | set(clock_port_list))
-    path_end_port_list = list(set(D_port_list) | set(raw_output_port_list))
+    print directed_graph
+
+    # path_start_port_list = list(set(raw_input_port_list) | set(clock_port_list))
+    # path_end_port_list = list(set(D_port_list) | set(raw_output_port_list))
+    path_start_port_list = module_input_port_list
+    path_end_port_list = list(set(D_port_list)|set(module_output_port_list))
+
     path_num = 0
 
 
     for start_port in path_start_port_list:
         for end_port in path_end_port_list:
-            print start_port, end_port
+            # print start_port, end_port
             if start_port!=end_port:
                 paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
                 if paths:
                     for path in paths:
                         path_num+=1
-                        print path_num
+                        # print path_num
                         path_name = '->'.join(path)
                         path_latency_dict[path_name] = 0.0
                         for index, port in enumerate(path):
@@ -217,7 +248,9 @@ def main_progress():
     print len(path_list)
     for path in path_list:
         if path_latency_dict[path] == min(path_latency_dict.values()):
-            print path, path_latency_dict[path]
+            print 'min_path',path, path_latency_dict[path]
+        if path_latency_dict[path] == max(path_latency_dict.values()):
+            print 'max_path',path, path_latency_dict[path]
     print len(outer_edge_list)
 
     # time.sleep(10)
@@ -276,8 +309,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                     print 'wrong edge:', edge_name
         inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
         # max_outer_delay = 5.0
-        high_bound = 10.0
-        low_bound = 0.0938
+        high_bound = high_bound
+        low_bound = low_bound
         max_outer_delay = high_bound - inner_delay
         min_outer_delay = low_bound - inner_delay
         path_buffer_list = []
