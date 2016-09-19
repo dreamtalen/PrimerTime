@@ -94,7 +94,7 @@ def ast_parser(filename):
 
 def main_progress():
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v')
-    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("c432.ast")
+    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s298.ast")
     port_list = []
     port_wire_dict = {}
     port_design_dict = {}
@@ -189,7 +189,7 @@ def main_progress():
     raw_output_port_list = [port for port in port_list if port_wire_dict[port] in raw_output_wire_list and port_attr_dict[port] == 'output']
     clock_port_list = [port for port in port_list if port_wire_dict[port] == 'clock']
     reset_port_list = [port for port in port_list if port_wire_dict[port] == 'reset']
-    D_port_list = [port for port in port_list if port_origin_name_dict[port] == 'D']
+    D_port_list = [port for port in port_list if port_origin_name_dict[port] == 'D' and port_design_dict[port] == 'DHSV1']
 
     output_port_list = [p for p in port_list if port_attr_dict[p] == 'output']
     input_port_list = [p for p in port_list if port_attr_dict[p] == 'input']
@@ -252,7 +252,6 @@ def main_progress():
     #     if path_latency_dict[path] == max(path_latency_dict.values()):
     #         print 'max_path',path, path_latency_dict[path]
     print len(outer_edge_list)
-
     # time.sleep(10)
     # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
