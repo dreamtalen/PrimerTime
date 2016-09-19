@@ -94,7 +94,7 @@ def ast_parser(filename):
 
 def main_progress():
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v')
-    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s298.ast")
+    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("c432.ast")
     port_list = []
     port_wire_dict = {}
     port_design_dict = {}
@@ -160,7 +160,7 @@ def main_progress():
         module_input_port_list.append(new_port)
         port_origin_name_dict[new_port] = new_port
 
-    print module_input_port_list
+    # print module_input_port_list
 
     raw_output_wire_list = []
     for raw_output in raw_output_list:
@@ -182,7 +182,7 @@ def main_progress():
         port_origin_name_dict[new_port] = new_port
 
 
-    print module_output_port_list
+    # print module_output_port_list
 
     # time.sleep(10)
     raw_input_port_list = [port for port in port_list if port_wire_dict[port] in raw_input_wire_list and port_attr_dict[port] == 'input']
@@ -205,7 +205,7 @@ def main_progress():
                 edge_attr_dict[edge_name] = 'outer'
                 edge_delay_dict[edge_name] = 0.0
 
-    print directed_graph
+    # print directed_graph
 
     # path_start_port_list = list(set(raw_input_port_list) | set(clock_port_list))
     # path_end_port_list = list(set(D_port_list) | set(raw_output_port_list))
@@ -246,11 +246,11 @@ def main_progress():
     print high_bound
     print min(path_latency_dict.values())
     print len(path_list)
-    for path in path_list:
-        if path_latency_dict[path] == min(path_latency_dict.values()):
-            print 'min_path',path, path_latency_dict[path]
-        if path_latency_dict[path] == max(path_latency_dict.values()):
-            print 'max_path',path, path_latency_dict[path]
+    # for path in path_list:
+    #     if path_latency_dict[path] == min(path_latency_dict.values()):
+    #         print 'min_path',path, path_latency_dict[path]
+    #     if path_latency_dict[path] == max(path_latency_dict.values()):
+    #         print 'max_path',path, path_latency_dict[path]
     print len(outer_edge_list)
 
     # time.sleep(10)
