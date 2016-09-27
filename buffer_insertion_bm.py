@@ -94,7 +94,7 @@ def ast_parser(filename):
 
 def main_progress():
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v')
-    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s298.ast")
+    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s526.ast")
     port_list = []
     port_wire_dict = {}
     port_design_dict = {}
@@ -255,7 +255,10 @@ def main_progress():
     # time.sleep(10)
     # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
+    start_time = time.time()
     discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    end_time = time.time()
+    print end_time - start_time
 
 def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
     ###RVT
@@ -272,6 +275,10 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44,
                         'BUFFD0HVT':1.44, 'BUFFD1HVT':1.44, 'INVD0HVT':1.08, 'INVD1HVT':1.08, 'ND2D0HVT':1.44, 'ND2D1HVT':1.44, 'NR2D0HVT':1.44, 'NR2D1HVT':1.44,
                         'BUFFD0LVT':1.44, 'BUFFD1LVT':1.44, 'INVD0LVT':1.08, 'INVD1LVT':1.08, 'ND2D0LVT':1.44, 'ND2D1LVT':1.44, 'NR2D0LVT':1.44, 'NR2D1LVT':1.44}
+    #
+    # buffer_kinds = ['INVD0HVT', 'BUFFD1HVT']
+    # buffer_delay_dict = {'INVD0HVT':0.01120, 'BUFFD1HVT':0.02783}
+    # buffer_area_dict = {'INVD0HVT':1.08, 'BUFFD1HVT':1.44}
 
 
     all_buffer_list = []
@@ -327,10 +334,17 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
 
     print "Total area cost", value(prob.objective)
 
+
+    buffer_count_dict = {}
     for v in prob.variables():
         if v.name != '__dummy':
             buffer_name = vars_buffer_dict[v.name]
             buffer_number_dict[buffer_name] = v.varValue
+            buffer_kind = buffer_kind_dict[buffer_name]
+            if buffer_count_dict.has_key(buffer_kind):
+                buffer_count_dict[buffer_kind] += v.varValue
+            else:
+                buffer_count_dict[buffer_kind] = v.varValue
 
     for outer_edge in outer_edge_list:
         edge_delay_dict[outer_edge] = sum(buffer_number_dict[b]*buffer_delay_dict[buffer_kind_dict[b]] for b in outer_edge_buffer_dict[outer_edge])
@@ -344,8 +358,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                 edge_name = port+'=>'+port_list[index+1]
                 new_latency += edge_delay_dict[edge_name]
         path_latency_dict_final[path] = new_latency
-        if new_latency == 0.09387:
-            print path
+        # if new_latency == 0.09387:
+        #     print path
         # if new_latency != path_latency_dict[path]:
             # print path, new_latency, path_latency_dict[path]
     print "Before buffer insertion"
@@ -354,6 +368,10 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     print "After buffer insertion"
     print "Max path delay", max(path_latency_dict_final.values())
     print "Min path delay", min(path_latency_dict_final.values())
+    for k,v in buffer_count_dict.items():
+        if v:
+            print k,v
+
 
 def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict):
     prob = LpProblem("Buffer Insertion", LpMinimize)
