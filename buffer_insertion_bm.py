@@ -94,7 +94,7 @@ def ast_parser(filename):
 
 def main_progress():
     design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v')
-    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("s526.ast")
+    module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("c499.ast")
     port_list = []
     port_wire_dict = {}
     port_design_dict = {}
@@ -255,12 +255,6 @@ def main_progress():
     # time.sleep(10)
     # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
-    start_time = time.time()
-    discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-    end_time = time.time()
-    print end_time - start_time
-
-def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
     ###RVT
     buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1']
     buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202}
@@ -276,11 +270,49 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                         'BUFFD0HVT':1.44, 'BUFFD1HVT':1.44, 'INVD0HVT':1.08, 'INVD1HVT':1.08, 'ND2D0HVT':1.44, 'ND2D1HVT':1.44, 'NR2D0HVT':1.44, 'NR2D1HVT':1.44,
                         'BUFFD0LVT':1.44, 'BUFFD1LVT':1.44, 'INVD0LVT':1.08, 'INVD1LVT':1.08, 'ND2D0LVT':1.44, 'ND2D1LVT':1.44, 'NR2D0LVT':1.44, 'NR2D1LVT':1.44}
     #
-    # buffer_kinds = ['INVD0HVT', 'BUFFD1HVT']
-    # buffer_delay_dict = {'INVD0HVT':0.01120, 'BUFFD1HVT':0.02783}
-    # buffer_area_dict = {'INVD0HVT':1.08, 'BUFFD1HVT':1.44}
+    buffer_kinds = ['INVD0HVT', 'BUFFD1HVT', 'DEL01']
+    buffer_delay_dict = {'INVD0HVT':0.01120, 'BUFFD1HVT':0.02783, 'DEL01':0.09317}
+    buffer_area_dict = {'INVD0HVT':1.08, 'BUFFD1HVT':1.44, 'DEL01':3.96}
+    # start_time = time.time()
+    # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    # end_time = time.time()
+    # print end_time - start_time
+    # time.sleep(10)
+
+    buffer_kinds = ['DEL01']
+    buffer_delay_dict = {'DEL01':0.09317}
+    buffer_area_dict = {'DEL01':3.96}
+    low_bound = high_bound/3 - 0.09317
+
+    start_time = time.time()
+    edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    end_time = time.time()
+    print end_time - start_time
 
 
+    buffer_kinds = ['BUFFD1HVT']
+    buffer_delay_dict = {'BUFFD1HVT':0.02783}
+    buffer_area_dict = {'BUFFD1HVT':1.44}
+    low_bound = high_bound/3 - 0.02783
+
+    start_time = time.time()
+    edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    end_time = time.time()
+    print end_time - start_time
+
+
+    buffer_kinds = ['INVD0HVT']
+    buffer_delay_dict = {'INVD0HVT':0.01120}
+    buffer_area_dict = {'INVD0HVT':1.08}
+    low_bound = high_bound/3
+
+    start_time = time.time()
+    edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    end_time = time.time()
+    print end_time - start_time
+
+
+def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
     all_buffer_list = []
     buffer_kind_dict = {}
     outer_edge_buffer_dict = {}
@@ -313,12 +345,13 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                     outer_edges.append(edge_name)
                 else:
                     print 'wrong edge:', edge_name
-        inner_delay = sum(edge_delay_dict[e] for e in inner_edges)
+        initial_delay = sum(edge_delay_dict[e] for e in inner_edges)
+        initial_delay += sum(edge_delay_dict[e] for e in outer_edges)
         # max_outer_delay = 5.0
         high_bound = high_bound
         low_bound = low_bound
-        max_outer_delay = high_bound - inner_delay
-        min_outer_delay = low_bound - inner_delay
+        max_outer_delay = high_bound - initial_delay
+        min_outer_delay = low_bound - initial_delay
         path_buffer_list = []
         for edge in outer_edges:
             path_buffer_list += outer_edge_buffer_dict[edge]
@@ -334,6 +367,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
 
     print "Total area cost", value(prob.objective)
 
+    print prob.numConstraints()
+    print prob.numVariables()
 
     buffer_count_dict = {}
     for v in prob.variables():
@@ -347,7 +382,7 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
                 buffer_count_dict[buffer_kind] = v.varValue
 
     for outer_edge in outer_edge_list:
-        edge_delay_dict[outer_edge] = sum(buffer_number_dict[b]*buffer_delay_dict[buffer_kind_dict[b]] for b in outer_edge_buffer_dict[outer_edge])
+        edge_delay_dict[outer_edge] += sum(buffer_number_dict[b]*buffer_delay_dict[buffer_kind_dict[b]] for b in outer_edge_buffer_dict[outer_edge])
 
     path_latency_dict_final = {}
     for path in path_list:
@@ -371,6 +406,8 @@ def discrete_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_di
     for k,v in buffer_count_dict.items():
         if v:
             print k,v
+
+    return edge_delay_dict, path_latency_dict_final
 
 
 def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict):
