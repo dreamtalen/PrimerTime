@@ -95,7 +95,7 @@ def ast_parser(filename):
     return module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list
 
 def main_progress():
-    design_input_dict, design_output_dict, design_timing_dict = lib_parser('BM_lib.v') #BM_lib.v
+    design_input_dict, design_output_dict, design_timing_dict = lib_parser('LV_lib.v') #BM_lib.v
     module_wire_dict, module_port_arg_dict, module_design_dict, module_list, wire_list, raw_input_list, raw_output_list = ast_parser("multiplier.ast")
     port_list = []
     port_wire_dict = {}
@@ -108,10 +108,13 @@ def main_progress():
     edge_delay_dict = {}
     path_latency_dict = {}
 
+    # a_list = []
     for m in module_list:
         if module_design_dict[m] not in design_input_dict.keys():
             print module_design_dict[m], m
-    time.sleep(100)
+            # a_list.append(module_design_dict[m])
+    # print len(set(a_list))
+            time.sleep(100)
 
     for m in module_list:
         module_port_dict[m] = []
@@ -155,7 +158,7 @@ def main_progress():
     # raw_input_wire_list.remove('reset')
     module_input_port_list = []
     for w in raw_input_wire_list:
-        if w not in ['GND', 'VDD', 'CK']:
+        if w not in ['GND', 'VDD', 'CK', 'clk']:
             new_port = 'module_port_'+w
             port_list.append(new_port)
             port_attr_dict[new_port] = 'output' #The top module input port seems like a output port to the next module
@@ -192,8 +195,8 @@ def main_progress():
     raw_output_port_list = [port for port in port_list if port_wire_dict[port] in raw_output_wire_list and port_attr_dict[port] == 'output']
     clock_port_list = [port for port in port_list if port_wire_dict[port] == 'clock']
     reset_port_list = [port for port in port_list if port_wire_dict[port] == 'reset']
-    D_port_list = [port for port in port_list if port_origin_name_dict[port] == 'D' and port_design_dict[port] == 'DHSV1']
-    DFF_CK_port_list = [port for port in port_list if port_origin_name_dict[port] == 'CK' and port_design_dict[port] == 'DHSV1']
+    D_port_list = [port for port in port_list if port_origin_name_dict[port] == 'D' and port_design_dict[port] == 'DFQD1']
+    DFF_CK_port_list = [port for port in port_list if port_origin_name_dict[port] == 'CP' and port_design_dict[port] == 'DFQD1']
 
     output_port_list = [p for p in port_list if port_attr_dict[p] == 'output']
     input_port_list = [p for p in port_list if port_attr_dict[p] == 'input']
@@ -218,11 +221,13 @@ def main_progress():
 
     path_num = 0
 
+    first_stage_dff_list = ['I214', 'I215', 'I216', 'I217', 'I218', 'I219', 'I220', 'I221', 'I230', 'I231', 'I232', 'I233', 'I234', 'I235', 'I236', 'I237']
+    first_stage_dff_start_port_list = [i+'_port_CP' for i in first_stage_dff_list]
 
     for start_port in path_start_port_list:
         for end_port in path_end_port_list:
             # print start_port, end_port
-            if start_port!=end_port:
+            if start_port!=end_port and (start_port not in first_stage_dff_start_port_list or 'module_port' not in end_port):
                 paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
                 if paths:
                     for path in paths:
@@ -261,113 +266,102 @@ def main_progress():
     #         print 'min_path',path, path_latency_dict[path]
     #     if path_latency_dict[path] == max(path_latency_dict.values()):
     #         print 'max_path',path, path_latency_dict[path]
-    print len(outer_edge_list)
+
     # time.sleep(10)
     # print outer_edge_list
     # continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict)
-    ###RVT
-    buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1']
-    buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202}
-    buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44}
-    # ###ALL
-    buffer_kinds = ['BUFFD0', 'BUFFD1', 'INVD0', 'INVD1', 'ND2D0', 'ND2D1', 'NR2D0', 'NR2D1',
-                    'BUFFD0HVT', 'BUFFD1HVT', 'INVD0HVT', 'INVD1HVT', 'ND2D0HVT', 'ND2D1HVT', 'NR2D0HVT', 'NR2D1HVT',
-                    'BUFFD0LVT', 'BUFFD1LVT', 'INVD0LVT', 'INVD1LVT', 'ND2D0LVT', 'ND2D1LVT', 'NR2D0LVT', 'NR2D1LVT']
-    buffer_delay_dict = {'BUFFD0':0.02229, 'BUFFD1':0.02261, 'INVD0':0.009212, 'INVD1':0.007224, 'ND2D0':0.01299, 'ND2D1':0.01049, 'NR2D0':0.01514, 'NR2D1':0.01202,
-                         'BUFFD0HVT':0.02731, 'BUFFD1HVT':0.02783, 'INVD0HVT':0.01120, 'INVD1HVT':0.008904, 'ND2D0HVT':0.01587, 'ND2D1HVT':0.01298, 'NR2D0HVT':0.01851, 'NR2D1HVT':0.01504,
-                         'BUFFD0LVT':0.01910, 'BUFFD1LVT':0.01938, 'INVD0LVT':0.00798, 'INVD1LVT':0.006234, 'ND2D0LVT':0.01118, 'ND2D1LVT':0.008956, 'NR2D0LVT':0.01292, 'NR2D1LVT':0.01029}
-    buffer_area_dict = {'BUFFD0':1.44, 'BUFFD1':1.44, 'INVD0':1.08, 'INVD1':1.08, 'ND2D0':1.44, 'ND2D1':1.44, 'NR2D0':1.44, 'NR2D1':1.44,
-                        'BUFFD0HVT':1.44, 'BUFFD1HVT':1.44, 'INVD0HVT':1.08, 'INVD1HVT':1.08, 'ND2D0HVT':1.44, 'ND2D1HVT':1.44, 'NR2D0HVT':1.44, 'NR2D1HVT':1.44,
-                        'BUFFD0LVT':1.44, 'BUFFD1LVT':1.44, 'INVD0LVT':1.08, 'INVD1LVT':1.08, 'ND2D0LVT':1.44, 'ND2D1LVT':1.44, 'NR2D0LVT':1.44, 'NR2D1LVT':1.44}
-    #
     edge_delay_dict_bak = dict.copy(edge_delay_dict)
     path_latency_dict_bak = dict.copy(path_latency_dict)
 
-    buffer_kinds = ['INVD0HVT', 'BUFFD1HVT', 'DEL01']
-    buffer_delay_dict = {'INVD0HVT':0.01120, 'BUFFD1HVT':0.02783, 'DEL01':0.09317}
-    buffer_area_dict = {'INVD0HVT':1.08, 'BUFFD1HVT':1.44, 'DEL01':3.96}
-    edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+
+    ######### Original version
+    buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1']
+    buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL1':17.2656825}
+    buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL1':6.12}
+    edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+    original_area = total_area
+    original_time = time_cost
+
     # time.sleep(10)
 
-    edge_delay_dict = edge_delay_dict_bak
-    path_latency_dict = path_latency_dict_bak
+    edge_delay_dict = dict.copy(edge_delay_dict_bak)
+    path_latency_dict = dict.copy(path_latency_dict_bak)
 
     print "Before buffer insertion"
     print "Max path delay", max(path_latency_dict.values())
     print "Min path delay", min(path_latency_dict.values())
 
-    part_path_list_list = []
-    outer_edge_list_list = []
-    outer_edge_path_dict = {}
-    # random.shuffle(path_list)
-    # for i in range(0, len(path_list), len(path_list)/3):
-    #     j = i + len(path_list)/3
-    #     if j < len(path_list):
-    #         part_path_list = path_list[i:j]
-    #     else:
-    #         part_path_list = path_list[i:]
-    #     print i, j
-    #     outer_edges = []
-    #     for path in part_path_list:
-    #         port_list = path.split('->')
-    #         for index, port in enumerate(port_list):
-    #             if index != len(port_list) - 1:
-    #                 edge_name = port+'=>'+port_list[index+1]
-    #                 if edge_attr_dict[edge_name] == 'outer':
-    #                     outer_edges.append(edge_name)
-    #                     if outer_edge_path_dict.has_key(edge_name):
-    #                         outer_edge_path_dict[edge_name].append(path)
-    #                     else:
-    #                         outer_edge_path_dict[edge_name] = [path,]
-    #     part_path_list_list.append(part_path_list)
-    #     outer_edge_list = list(set(outer_edges))
-    #     outer_edge_list_list.append(outer_edge_list)
-    #
-    # print "split finish"
-    # for k,v in outer_edge_path_dict.items():
-    #     print k, len(v)
-
     #Pipeline buffer insertion
+    module_port_input_start_path_list = []
+    first_stage_dff_start_path_list = []
+    second_stage_dff_start_path_list = []
+    first_stage_dff_list = ['I214', 'I215', 'I216', 'I217', 'I218', 'I219', 'I220', 'I221', 'I230', 'I231', 'I232', 'I233', 'I234', 'I235', 'I236', 'I237']
+    first_stage_dff_start_port_list = [i+'_port_CP' for i in first_stage_dff_list]
+    path_end_list1 = []
+    path_end_list2 = []
+    for p in path_list:
+        port_list = p.split('->')
+        path_start = port_list[0]
+        path_end = port_list[-1]
+        if 'module_port_' in path_start:
+            module_port_input_start_path_list.append(p)
+        elif path_start in first_stage_dff_start_port_list:
+            first_stage_dff_start_path_list.append(p)
+        else:
+            second_stage_dff_start_path_list.append(p)
+    print len(module_port_input_start_path_list)
+    print len(first_stage_dff_start_path_list)
+    print len(second_stage_dff_start_path_list)
 
+    # time.sleep(100)
 
+    part_path_list_list = [module_port_input_start_path_list, first_stage_dff_start_path_list, second_stage_dff_start_path_list]
+    outer_edge_list_list = []
 
-    part_path_list = path_list[:]
-    outer_edges = []
-    for path in part_path_list:
-        port_list = path.split('->')
-        for index, port in enumerate(port_list):
-            if index != len(port_list) - 1:
-                edge_name = port+'=>'+port_list[index+1]
-                if edge_attr_dict[edge_name] == 'outer':
-                    outer_edges.append(edge_name)
-    part_path_list_list.append(part_path_list)
-    outer_edge_list = list(set(outer_edges))
-    outer_edge_list_list.append(outer_edge_list)
+    for part_path_list in part_path_list_list:
+        outer_edges = []
+        for path in part_path_list:
+            port_list = path.split('->')
+            for index, port in enumerate(port_list):
+                if index != len(port_list) - 1:
+                    edge_name = port+'=>'+port_list[index+1]
+                    if edge_attr_dict[edge_name] == 'outer':
+                        outer_edges.append(edge_name)
+        outer_edge_list = list(set(outer_edges))
+        outer_edge_list_list.append(outer_edge_list)
 
+    area_list = []
+    time_list = []
     for part_path_list, outer_edge_list in itertools.izip(part_path_list_list, outer_edge_list_list):
 
         print 'Loop', outer_edge_list_list.index(outer_edge_list)+1
         print '##########################'
 
-        buffer_kinds = ['DEL01']
-        buffer_delay_dict = {'DEL01':0.09317}
-        buffer_area_dict = {'DEL01':3.96}
-        low_bound = high_bound/3 - 0.09317
-        edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-
-
-        buffer_kinds = ['BUFFD1HVT']
-        buffer_delay_dict = {'BUFFD1HVT':0.02783}
-        buffer_area_dict = {'BUFFD1HVT':1.44}
-        low_bound = high_bound/3 - 0.02783
-        edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-
-
-        buffer_kinds = ['INVD0HVT']
-        buffer_delay_dict = {'INVD0HVT':0.01120}
-        buffer_area_dict = {'INVD0HVT':1.08}
-        low_bound = high_bound/3
-        edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1']
+        buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL1':17.2656825}
+        buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL1':6.12}
+        edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        area_list.append(total_area)
+        time_list.append(time_cost)
+        # buffer_kinds = ['DEL1']
+        # buffer_delay_dict = {'DEL1':17.2656825}
+        # buffer_area_dict = {'DEL1':6.12}
+        # low_bound = high_bound/3 - 17.2656825
+        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        #
+        #
+        # buffer_kinds = ['BUFFD0']
+        # buffer_delay_dict = {'BUFFD0':1.396066}
+        # buffer_area_dict = {'BUFFD0':1.44}
+        # low_bound = high_bound/3 - 1.396066
+        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        #
+        #
+        # buffer_kinds = ['INVD0']
+        # buffer_delay_dict = {'INVD0':0.643122}
+        # buffer_area_dict = {'INVD0':1.08}
+        # low_bound = high_bound/3
+        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
 
 
     print "Final result"
@@ -375,6 +369,8 @@ def main_progress():
     print "After buffer insertion"
     print "Max path delay", max(path_latency_dict.values())
     print "Min path delay", min(path_latency_dict.values())
+    print "Time acceleration", 1.0 - sum(time_list)/original_time
+    print "Area exceed", sum(area_list)/original_area
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
 
@@ -488,7 +484,7 @@ def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_
 
     print "\n"
 
-    return edge_delay_dict, path_latency_dict
+    return edge_delay_dict, path_latency_dict, value(prob.objective), end_time-start_time
 
 
 def continuous_insertion(outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, path_latency_dict):

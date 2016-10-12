@@ -653,6 +653,49 @@ timing B2 Z, 0.06734
 timing C1 Z, 0.05128
 timing C2 Z, 0.05405
 
+module INHSV2 ( ZN, I)
+input I
+output ZN
 
+timing I ZN, 0.01018
+
+module INAND3HSV2 ( ZN, A1, B1, B2)
+input A1, B1, B2
+output ZN
+
+timing A1 ZN, 0.04053
+timing B1 ZN, 0.02281
+timing B2 ZN, 0.02503
+
+module BUFHSV2 ( Z, I)
+input I
+output Z
+
+timing I Z, 0.03104
+
+module CLKBUFHSV0 ( Z, I)
+input I
+output Z
+
+timing I Z, 0.02751
+
+module I2NOR4HSV0 ( ZN, A1, A2, B1, B2)
+input A1, A2, B1, B2
+output ZN
+
+timing A1 ZN, 0.06053
+timing A2 ZN, 0.06342
+timing B1 ZN, 0.03951
+timing B2 ZN, 0.03288
+
+module MUX3HSV0 ( Z, I0, I1, I2, S0, S1)
+input I0, I1, I2, S0, S1
+output Z
+
+timing I0 Z, 0.08875
+timing I1 Z, 0.08772
+timing I2 Z, 0.05221
+timing S0 Z, 0.08760
+timing S1 Z, 0.05968
 
 
