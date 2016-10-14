@@ -295,12 +295,14 @@ def main_progress():
 
 
     ######## Original version
-    buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1']
-    buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL1':17.2656825}
-    buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL1':6.12}
+    buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1','DEL0']
+    buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL0':9.4457185, 'DEL1':17.2656825}
+    buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL0':4.68,'DEL1':6.12}
     edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
     original_area = total_area
     original_time = time_cost
+    # original_area = 276.12
+    # original_time = 514.016638994
 
     # time.sleep(10)
 
@@ -341,32 +343,44 @@ def main_progress():
         print 'Loop', outer_edge_list_list.index(outer_edge_list)+1
         print '##########################'
 
-        buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1']
-        buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL1':17.2656825}
-        buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL1':6.12}
+        # buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1','DEL0']
+        # buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL0':9.4457185, 'DEL1':17.2656825}
+        # buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL0':4.68,'DEL1':6.12}
+        # edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        # area_list.append(total_area)
+        # time_list.append(time_cost)
+
+        buffer_kinds = ['DEL1']
+        buffer_delay_dict = {'DEL1':17.2656825}
+        buffer_area_dict = {'DEL1':6.12}
+        low_bound = high_bound/3 - 17.2656825
+        edge_delay_dict, path_latency_dict, total_area, time_cost= discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        area_list.append(total_area)
+        time_list.append(time_cost)
+        #
+        buffer_kinds = ['DEL0']
+        buffer_delay_dict = {'DEL0':9.4457185}
+        buffer_area_dict = {'DEL0':4.68}
+        low_bound = high_bound/3 - 9.4457185
         edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
         area_list.append(total_area)
         time_list.append(time_cost)
-        # buffer_kinds = ['DEL1']
-        # buffer_delay_dict = {'DEL1':17.2656825}
-        # buffer_area_dict = {'DEL1':6.12}
-        # low_bound = high_bound/3 - 17.2656825
-        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
         #
+        buffer_kinds = ['BUFFD0']
+        buffer_delay_dict = {'BUFFD0':1.396066}
+        buffer_area_dict = {'BUFFD0':1.44}
+        low_bound = high_bound/3 - 1.396066
+        edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        area_list.append(total_area)
+        time_list.append(time_cost)
         #
-        # buffer_kinds = ['BUFFD0']
-        # buffer_delay_dict = {'BUFFD0':1.396066}
-        # buffer_area_dict = {'BUFFD0':1.44}
-        # low_bound = high_bound/3 - 1.396066
-        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-        #
-        #
-        # buffer_kinds = ['INVD0']
-        # buffer_delay_dict = {'INVD0':0.643122}
-        # buffer_area_dict = {'INVD0':1.08}
-        # low_bound = high_bound/3
-        # edge_delay_dict, path_latency_dict = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-
+        buffer_kinds = ['INVD0']
+        buffer_delay_dict = {'INVD0':0.643122}
+        buffer_area_dict = {'INVD0':1.08}
+        low_bound = high_bound/3
+        edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+        area_list.append(total_area)
+        time_list.append(time_cost)
 
     print "Final result"
     print "##########################"
@@ -374,7 +388,7 @@ def main_progress():
     print "Max path delay", max(path_latency_dict.values())
     print "Min path delay", min(path_latency_dict.values())
     print "Time acceleration", 1.0 - sum(time_list)/original_time
-    print "Area exceed", sum(area_list)/original_area
+    print "Area exceed", sum(area_list)/original_area - 1.0
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
 
