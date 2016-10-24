@@ -196,3 +196,54 @@ timing A1 ZN, 1.270133
 timing A2 ZN, 1.4422855
 timing B1 ZN, 2.1256305
 timing B2 ZN, 2.2049545
+
+
+module XOR4D1 (A1, A2, A3, A4, Z)
+input A1, A2, A3, A4
+output Z
+
+timing A1 Z, 6.2737035
+timing A2 Z, 6.539095
+timing A3 Z, 6.488074
+timing A4 Z, 5.9022865
+
+module BUFFD1 (I, Z)
+input I
+output Z
+
+timing I Z, 1.438696
+
+module NR2D2 (A1, A2, ZN)
+input A1, A2
+output ZN
+
+timing A1 ZN, 0.6748165
+timing A2 ZN, 0.8203675
+
+module BUFFD2 (I, Z)
+input I
+output Z
+
+timing I Z, 1.2963915
+
+module CKAN2D0 (A1, A2, Z)
+input A1, A2
+output Z
+
+timing A1 Z, 1.8282275
+timing A2 Z, 1.945969
+
+module ND2D2 (A1, A2, ZN)
+input A1, A2
+output ZN
+
+timing A1 ZN, 0.5640225
+timing A2 ZN, 0.6667065
+
+module OAI21D1 (A1, A2, B, ZN)
+input A1, A2, B
+output ZN
+
+timing A1 ZN, 1.0190875
+timing A2 ZN, 1.1698495
+timing B ZN, 0.8797345
