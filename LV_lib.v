@@ -247,3 +247,74 @@ output ZN
 timing A1 ZN, 1.0190875
 timing A2 ZN, 1.1698495
 timing B ZN, 0.8797345
+
+module ND2D1 (A1, A2, ZN)
+input A1, A2
+output ZN
+
+timing A1 ZN, 0.7169115
+timing A2 ZN, 0.7915985
+
+module CKBD1 (I, Z)
+input I
+output Z
+
+timing I Z, 1.2199855
+
+module OR2D1 (A1, A2, Z)
+input A1, A2
+output Z
+
+timing A1 Z, 1.8076425
+timing A2 Z, 1.9552815
+
+module CKND1 (I, ZN)
+input I
+output ZN
+
+timing I ZN, 0.5560075
+
+module INVD2 (I, ZN)
+input I
+output ZN
+
+timing I ZN, 0.4735345
+
+module AN2XD1 (A1, A2, Z)
+input A1, A2
+output Z
+
+timing A1 Z, 1.466989
+timing A2 Z, 1.584859
+
+module NR2XD1 (A1, A2, ZN)
+input A1, A2
+output ZN
+
+timing A1 ZN, 0.643466
+timing A2 ZN, 0.8141785
+
+module MUX4D1 (I0, I1, I2, I3, S0, S1, Z)
+input I0, I1, I2, I3, S0, S1
+output Z
+
+timing I0 Z, 5.464088
+timing I1 Z, 4.5712725
+timing I2 Z, 5.7099275
+timing I3 Z, 4.6643495
+timing S0 Z, 4.7700715
+timing S1 Z, 3.0733095
+
+module INVD3 (I, ZN)
+input I
+output ZN
+
+timing I ZN, 0.4568515
+
+module AOI21D1 (A1, A2, B, ZN)
+input A1, A2, B
+output ZN
+
+timing A1 ZN, 1.009721
+timing A2 ZN, 1.1561905
+timing B ZN, 1.0921565
