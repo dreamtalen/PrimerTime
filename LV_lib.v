@@ -318,3 +318,11 @@ output ZN
 timing A1 ZN, 1.009721
 timing A2 ZN, 1.1561905
 timing B ZN, 1.0921565
+
+module MUX2ND1 (I0, I1, S, ZN)
+input I0, I1, S
+output ZN
+
+timing I0 ZN, 3.762141
+timing I1 ZN, 3.2643635
+timing S ZN, 3.7771195
