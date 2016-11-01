@@ -1,0 +1,7187 @@
+moduleDef s5378
+input GND
+input VDD
+input CK
+input n3065gat
+input n3066gat
+input n3067gat
+input n3068gat
+input n3069gat
+input n3070gat
+input n3071gat
+input n3072gat
+input n3073gat
+input n3074gat
+input n3075gat
+input n3076gat
+input n3077gat
+input n3078gat
+input n3079gat
+input n3080gat
+input n3081gat
+input n3082gat
+input n3083gat
+input n3084gat
+input n3085gat
+input n3086gat
+input n3087gat
+input n3088gat
+input n3089gat
+input n3090gat
+input n3091gat
+input n3092gat
+input n3093gat
+input n3094gat
+input n3095gat
+input n3097gat
+input n3098gat
+input n3099gat
+input n3100gat
+output n3104gat
+output n3105gat
+output n3106gat
+output n3107gat
+output n3108gat
+output n3109gat
+output n3110gat
+output n3111gat
+output n3112gat
+output n3113gat
+output n3114gat
+output n3115gat
+output n3116gat
+output n3117gat
+output n3118gat
+output n3119gat
+output n3120gat
+output n3121gat
+output n3122gat
+output n3123gat
+output n3124gat
+output n3125gat
+output n3126gat
+output n3127gat
+output n3128gat
+output n3129gat
+output n3130gat
+output n3131gat
+output n3132gat
+output n3133gat
+output n3134gat
+output n3135gat
+output n3136gat
+output n3137gat
+output n3138gat
+output n3139gat
+output n3140gat
+output n3141gat
+output n3142gat
+output n3143gat
+output n3144gat
+output n3145gat
+output n3146gat
+output n3147gat
+output n3148gat
+output n3149gat
+output n3150gat
+output n3151gat
+output n3152gat
+net n673gat
+net n2897gat
+net n398gat
+net n402gat
+net n919gat
+net n846gat
+net n394gat
+net n703gat
+net n722gat
+net n726gat
+net n2510gat
+net n748gat
+net n271gat
+net n160gat
+net n337gat
+net n842gat
+net n341gat
+net n2522gat
+net n43gat
+net n2472gat
+net n1620gat
+net n2319gat
+net n1821gat
+net n1827gat
+net n1825gat
+net n2029gat
+net n1829gat
+net n283gat
+net n165gat
+net n279gat
+net n1026gat
+net n275gat
+net n2476gat
+net n55gat
+net n1068gat
+net n2914gat
+net n957gat
+net n2928gat
+net n861gat
+net n2927gat
+net n1294gat
+net n2896gat
+net n1241gat
+net n2922gat
+net n1298gat
+net n865gat
+net n2894gat
+net n1080gat
+net n2921gat
+net n1148gat
+net n2895gat
+net n2468gat
+net n933gat
+net n618gat
+net n491gat
+net n622gat
+net n626gat
+net n834gat
+net n707gat
+net n838gat
+net n830gat
+net n614gat
+net n2526gat
+net n680gat
+net n2913gat
+net n816gat
+net n2920gat
+net n580gat
+net n2905gat
+net n824gat
+net n820gat
+net n883gat
+net n584gat
+net n2898gat
+net n684gat
+net n699gat
+net n2464gat
+net n2399gat
+net n2343gat
+net n2203gat
+net n2562gat
+net n2207gat
+net n2626gat
+net n2490gat
+net n2622gat
+net n2630gat
+net n2543gat
+net n2102gat
+net n1606gat
+net n1880gat
+net n1763gat
+net n1610gat
+net n2155gat
+net n1035gat
+net n2918gat
+net n1121gat
+net n2952gat
+net n1072gat
+net n2919gat
+net n1282gat
+net n2910gat
+net n1226gat
+net n2907gat
+net n931gat
+net n2911gat
+net n1135gat
+net n2912gat
+net n1045gat
+net n2909gat
+net n1197gat
+net n2908gat
+net n2518gat
+net n2971gat
+net n667gat
+net n2904gat
+net n659gat
+net n2891gat
+net n553gat
+net n2903gat
+net n777gat
+net n2915gat
+net n561gat
+net n2901gat
+net n366gat
+net n2890gat
+net n322gat
+net n2888gat
+net n318gat
+net n2887gat
+net n314gat
+net n2886gat
+net n2599gat
+net n3010gat
+net n2588gat
+net n3016gat
+net n2640gat
+net n2658gat
+net n2579gat
+net n2495gat
+net n2390gat
+net n2270gat
+net n2339gat
+net n2502gat
+net n2646gat
+net n2634gat
+net n2506gat
+net n2613gat
+net n1834gat
+net n1625gat
+net n1767gat
+net n1626gat
+net n2084gat
+net n2143gat
+net n2061gat
+net n2139gat
+net n1899gat
+net n1850gat
+net n2403gat
+net n2394gat
+net n2440gat
+net n2407gat
+net n2347gat
+net n1389gat
+net n1793gat
+net n2021gat
+net n1394gat
+net n1516gat
+net n1496gat
+net n2091gat
+net n1332gat
+net n1565gat
+net n1740gat
+net n2179gat
+net n2190gat
+net n2135gat
+net n2262gat
+net n2182gat
+net n1433gat
+net n2983gat
+net n1316gat
+net n1363gat
+net n1312gat
+net n1775gat
+net n1696gat
+net n1871gat
+net n2009gat
+net n2592gat
+net n1508gat
+net n1636gat
+net n1678gat
+net n2095gat
+net n2176gat
+net n2169gat
+net n2454gat
+net n2163gat
+net n2040gat
+net n2044gat
+net n2015gat
+net n2037gat
+net n2025gat
+net n2099gat
+net n2266gat
+net n2033gat
+net n2110gat
+net n2125gat
+net n2121gat
+net n2117gat
+net n1975gat
+net n2644gat
+net n156gat
+net n152gat
+net n331gat
+net n388gat
+net n463gat
+net n327gat
+net n384gat
+net n256gat
+net n470gat
+net n148gat
+net n2458gat
+net n2514gat
+net n1771gat
+net n1613gat
+net n1336gat
+net n1391gat
+net n1748gat
+net n1927gat
+net n1675gat
+net n1807gat
+net n1340gat
+net n1567gat
+net n1456gat
+net n1564gat
+net n1525gat
+net n1462gat
+net n1915gat
+net n1596gat
+net n1800gat
+net n1588gat
+net n1593gat
+net n2989gat
+net n2194gat
+net n2057gat
+net n2556gat
+net n2436gat
+net n2387gat
+net n2330gat
+net n2396gat
+net n2198gat
+net n2197gat
+net n2196gat
+net n1882gat
+net n2917gat
+net n2892gat
+net n2900gat
+net n2929gat
+net n2925gat
+net n2916gat
+net n2899gat
+net n2926gat
+net n2924gat
+net n2923gat
+net n56
+net n57
+net n58
+net n62
+net n68
+net n80
+net n83
+net n92
+net n93
+net n94
+net n95
+net n96
+net n97
+net n98
+net n99
+net n100
+net n101
+net n102
+net n103
+net n104
+net n107
+net n108
+net n109
+net n110
+net n111
+net n112
+net n113
+net n114
+net n115
+net n121
+net n122
+net n126
+net n127
+net n128
+net n143
+net n144
+net n147
+net n148
+net n149
+net n151
+net n153
+net n157
+net n158
+net n160
+net n161
+net n162
+net n163
+net n164
+net n165
+net n166
+net n170
+net n596
+net n597
+net n598
+net n599
+net n600
+net n601
+net n602
+net n603
+net n604
+net n605
+net n606
+net n607
+net n621
+net n622
+net n623
+net n624
+net n625
+net n626
+net n627
+net n628
+net n629
+net n630
+net n631
+net n632
+net n633
+net n634
+net n635
+net n636
+net n637
+net n638
+net n639
+net n640
+net n641
+net n642
+net n643
+net n644
+net n645
+net n646
+net n647
+net n648
+net n649
+net n650
+net n651
+net n652
+net n653
+net n654
+net n655
+net n656
+net n657
+net n658
+net n659
+net n660
+net n661
+net n662
+net n663
+net n664
+net n665
+net n666
+net n667
+net n668
+net n669
+net n670
+net n671
+net n672
+net n673
+net n674
+net n675
+net n676
+net n677
+net n678
+net n679
+net n680
+net n681
+net n682
+net n683
+net n684
+net n685
+net n686
+net n687
+net n688
+net n689
+net n690
+net n691
+net n692
+net n693
+net n694
+net n695
+net n696
+net n697
+net n698
+net n699
+net n700
+net n701
+net n702
+net n703
+net n704
+net n705
+net n706
+net n707
+net n708
+net n709
+net n710
+net n711
+net n712
+net n713
+net n714
+net n715
+net n716
+net n717
+net n718
+net n719
+net n720
+net n721
+net n722
+net n723
+net n724
+net n725
+net n726
+net n727
+net n728
+net n729
+net n730
+net n731
+net n732
+net n733
+net n734
+net n735
+net n736
+net n737
+net n738
+net n739
+net n740
+net n741
+net n742
+net n743
+net n744
+net n745
+net n746
+net n747
+net n748
+net n749
+net n750
+net n751
+net n752
+net n753
+net n754
+net n755
+net n756
+net n757
+net n758
+net n759
+net n760
+net n761
+net n762
+net n763
+net n764
+net n765
+net n766
+net n767
+net n768
+net n769
+net n770
+net n771
+net n772
+net n773
+net n774
+net n775
+net n776
+net n777
+net n778
+net n779
+net n780
+net n781
+net n782
+net n783
+net n784
+net n785
+net n786
+net n787
+net n788
+net n789
+net n790
+net n791
+net n792
+net n793
+net n794
+net n795
+net n796
+net n797
+net n798
+net n799
+net n800
+net n801
+net n802
+net n803
+net n804
+net n805
+net n806
+net n807
+net n808
+net n809
+net n810
+net n811
+net n812
+net n813
+net n814
+net n815
+net n816
+net n817
+net n818
+net n819
+net n820
+net n821
+net n822
+net n823
+net n824
+net n825
+net n826
+net n827
+net n828
+net n829
+net n830
+net n831
+net n832
+net n833
+net n834
+net n835
+net n836
+net n837
+net n838
+net n839
+net n840
+net n841
+net n842
+net n843
+net n844
+net n845
+net n846
+net n847
+net n848
+net n849
+net n850
+net n851
+net n852
+net n853
+net n854
+net n855
+net n856
+net n857
+net n858
+net n859
+net n860
+net n861
+net n862
+net n863
+net n864
+net n865
+net n866
+net n867
+net n868
+net n869
+net n870
+net n871
+net n872
+net n873
+net n874
+net n875
+net n876
+net n877
+net n878
+net n879
+net n880
+net n881
+net n882
+net n883
+net n884
+net n885
+net n886
+net n887
+net n888
+net n889
+net n890
+net n891
+net n892
+net n893
+net n894
+net n895
+net n896
+net n897
+net n898
+net n899
+net n900
+net n901
+net n902
+net n903
+net n904
+net n905
+net n906
+net n907
+net n908
+net n909
+net n910
+net n911
+net n912
+net n913
+net n914
+net n915
+net n916
+net n917
+net n918
+net n919
+net n920
+net n921
+net n922
+net n923
+net n924
+net n925
+net n926
+net n927
+net n928
+net n929
+net n930
+net n931
+net n932
+net n933
+net n934
+net n935
+net n936
+net n937
+net n938
+net n939
+net n940
+net n941
+net n942
+net n943
+net n944
+net n945
+net n946
+net n947
+net n948
+net n949
+net n950
+net n951
+net n952
+net n953
+net n954
+net n955
+net n956
+net n957
+net n958
+net n959
+net n960
+net n961
+net n962
+net n963
+net n964
+net n965
+net n966
+net n967
+net n968
+net n969
+net n970
+net n971
+net n972
+net n973
+net n974
+net n975
+net n976
+net n977
+net n978
+net n979
+net n980
+net n981
+net n982
+net n983
+net n984
+net n985
+net n986
+net n987
+net n988
+net n989
+net n990
+net n991
+net n992
+net n993
+net n994
+net n995
+net n996
+net n997
+net n998
+net n999
+net n1000
+net n1001
+net n1002
+net n1003
+net n1004
+net n1005
+net n1006
+net n1007
+net n1008
+net n1009
+net n1010
+net n1011
+net n1012
+net n1013
+net n1014
+net n1015
+net n1016
+net n1017
+net n1018
+net n1019
+net n1020
+net n1021
+net n1022
+net n1023
+net n1024
+net n1025
+net n1026
+net n1027
+net n1028
+net n1029
+net n1030
+net n1031
+net n1032
+net n1033
+net n1034
+net n1035
+net n1036
+net n1037
+net n1038
+net n1039
+net n1040
+net n1041
+net n1042
+net n1043
+net n1044
+net n1045
+net n1046
+net n1047
+net n1048
+net n1049
+net n1050
+net n1051
+net n1052
+net n1053
+net n1054
+net n1055
+net n1056
+net n1057
+net n1058
+net n1059
+net n1060
+net n1061
+net n1062
+net n1063
+net n1064
+net n1065
+net n1066
+net n1067
+net n1068
+net n1069
+net n1070
+net n1071
+net n1072
+net n1073
+net n1074
+net n1075
+net n1076
+net n1077
+net n1078
+net n1079
+net n1080
+net n1081
+net n1082
+net n1083
+net n1084
+net n1085
+net n1086
+net n1087
+net n1088
+net n1089
+net n1090
+net n1091
+net n1092
+net n1093
+net n1094
+net n1095
+net n1096
+net n1097
+net n1098
+net n1099
+net n1100
+net n1101
+net n1102
+net n1103
+net n1104
+net n1105
+net n1106
+net n1107
+net n1108
+module DFF_0_dff_org DFQD1
+PortArg D
+port n2897gat
+PortArg CP
+port CK
+PortArg Q
+port n673gat
+module DFF_1_dff_org DFQD1
+PortArg D
+port n3069gat
+PortArg CP
+port CK
+PortArg Q
+port n398gat
+module DFF_2_dff_org DFQD1
+PortArg D
+port n3070gat
+PortArg CP
+port CK
+PortArg Q
+port n402gat
+module DFF_3_dff_org DFQD1
+PortArg D
+port n3072gat
+PortArg CP
+port CK
+PortArg Q
+port n919gat
+module DFF_4_dff_org DFQD1
+PortArg D
+port n3071gat
+PortArg CP
+port CK
+PortArg Q
+port n846gat
+module DFF_5_dff_org DFQD1
+PortArg D
+port n3069gat
+PortArg CP
+port CK
+PortArg Q
+port n394gat
+module DFF_6_dff_org DFQD1
+PortArg D
+port n3070gat
+PortArg CP
+port CK
+PortArg Q
+port n703gat
+module DFF_7_dff_org DFQD1
+PortArg D
+port n3072gat
+PortArg CP
+port CK
+PortArg Q
+port n722gat
+module DFF_8_dff_org DFQD1
+PortArg D
+port n3071gat
+PortArg CP
+port CK
+PortArg Q
+port n726gat
+module DFF_9_dff_org DFQD1
+PortArg D
+port n748gat
+PortArg CP
+port CK
+PortArg Q
+port n2510gat
+module DFF_10_dff_org DFQD1
+PortArg D
+port n3065gat
+PortArg CP
+port CK
+PortArg Q
+port n271gat
+module DFF_11_dff_org DFQD1
+PortArg D
+port n3067gat
+PortArg CP
+port CK
+PortArg Q
+port n160gat
+module DFF_12_dff_org DFQD1
+PortArg D
+port n3066gat
+PortArg CP
+port CK
+PortArg Q
+port n337gat
+module DFF_13_dff_org DFQD1
+PortArg D
+port n3073gat
+PortArg CP
+port CK
+PortArg Q
+port n842gat
+module DFF_14_dff_org DFQD1
+PortArg D
+port n3068gat
+PortArg CP
+port CK
+PortArg Q
+port n341gat
+module DFF_15_dff_org DFQD1
+PortArg D
+port n43gat
+PortArg CP
+port CK
+PortArg Q
+port n2522gat
+module DFF_16_dff_org DFQD1
+PortArg D
+port n1620gat
+PortArg CP
+port CK
+PortArg Q
+port n2472gat
+module DFF_17_dff_org DFQD1
+PortArg D
+port n80
+PortArg CP
+port CK
+PortArg Q
+port n2319gat
+module DFF_18_dff_org DFQD1
+PortArg D
+port n1827gat
+PortArg CP
+port CK
+PortArg Q
+port n1821gat
+module DFF_19_dff_org DFQD1
+PortArg D
+port n1827gat
+PortArg CP
+port CK
+PortArg Q
+port n1825gat
+module DFF_20_dff_org DFQD1
+PortArg D
+port n605
+PortArg CP
+port CK
+PortArg Q
+port n2029gat
+module DFF_21_dff_org DFQD1
+PortArg D
+port n83
+PortArg CP
+port CK
+PortArg Q
+port n1829gat
+module DFF_22_dff_org DFQD1
+PortArg D
+port n3065gat
+PortArg CP
+port CK
+PortArg Q
+port n283gat
+module DFF_23_dff_org DFQD1
+PortArg D
+port n3067gat
+PortArg CP
+port CK
+PortArg Q
+port n165gat
+module DFF_24_dff_org DFQD1
+PortArg D
+port n3066gat
+PortArg CP
+port CK
+PortArg Q
+port n279gat
+module DFF_25_dff_org DFQD1
+PortArg D
+port n3073gat
+PortArg CP
+port CK
+PortArg Q
+port n1026gat
+module DFF_26_dff_org DFQD1
+PortArg D
+port n3068gat
+PortArg CP
+port CK
+PortArg Q
+port n275gat
+module DFF_27_dff_org DFQD1
+PortArg D
+port n55gat
+PortArg CP
+port CK
+PortArg Q
+port n2476gat
+module DFF_28_dff_org DFQD1
+PortArg D
+port n2914gat
+PortArg CP
+port CK
+PortArg Q
+port n1068gat
+module DFF_29_dff_org DFQD1
+PortArg D
+port n2928gat
+PortArg CP
+port CK
+PortArg Q
+port n957gat
+module DFF_30_dff_org DFQD1
+PortArg D
+port n2927gat
+PortArg CP
+port CK
+PortArg Q
+port n861gat
+module DFF_31_dff_org DFQD1
+PortArg D
+port n2896gat
+PortArg CP
+port CK
+PortArg Q
+port n1294gat
+module DFF_32_dff_org DFQD1
+PortArg D
+port n2922gat
+PortArg CP
+port CK
+PortArg Q
+port n1241gat
+module DFF_33_dff_org DFQD1
+PortArg D
+port n2897gat
+PortArg CP
+port CK
+PortArg Q
+port n1298gat
+module DFF_34_dff_org DFQD1
+PortArg D
+port n2894gat
+PortArg CP
+port CK
+PortArg Q
+port n865gat
+module DFF_35_dff_org DFQD1
+PortArg D
+port n2921gat
+PortArg CP
+port CK
+PortArg Q
+port n1080gat
+module DFF_36_dff_org DFQD1
+PortArg D
+port n2895gat
+PortArg CP
+port CK
+PortArg Q
+port n1148gat
+module DFF_37_dff_org DFQD1
+PortArg D
+port n933gat
+PortArg CP
+port CK
+PortArg Q
+port n2468gat
+module DFF_38_dff_org DFQD1
+PortArg D
+port n3070gat
+PortArg CP
+port CK
+PortArg Q
+port n618gat
+module DFF_39_dff_org DFQD1
+PortArg D
+port n3069gat
+PortArg CP
+port CK
+PortArg Q
+port n491gat
+module DFF_40_dff_org DFQD1
+PortArg D
+port n3071gat
+PortArg CP
+port CK
+PortArg Q
+port n622gat
+module DFF_41_dff_org DFQD1
+PortArg D
+port n3072gat
+PortArg CP
+port CK
+PortArg Q
+port n626gat
+module DFF_42_dff_org DFQD1
+PortArg D
+port n2923gat
+PortArg CP
+port CK
+PortArg Q
+port n834gat
+module DFF_43_dff_org DFQD1
+PortArg D
+port n2917gat
+PortArg CP
+port CK
+PortArg Q
+port n707gat
+module DFF_44_dff_org DFQD1
+PortArg D
+port n2924gat
+PortArg CP
+port CK
+PortArg Q
+port n838gat
+module DFF_45_dff_org DFQD1
+PortArg D
+port n2926gat
+PortArg CP
+port CK
+PortArg Q
+port n830gat
+module DFF_46_dff_org DFQD1
+PortArg D
+port n2892gat
+PortArg CP
+port CK
+PortArg Q
+port n614gat
+module DFF_47_dff_org DFQD1
+PortArg D
+port n92
+PortArg CP
+port CK
+PortArg Q
+port n2526gat
+module DFF_48_dff_org DFQD1
+PortArg D
+port n2913gat
+PortArg CP
+port CK
+PortArg Q
+port n680gat
+module DFF_49_dff_org DFQD1
+PortArg D
+port n2920gat
+PortArg CP
+port CK
+PortArg Q
+port n816gat
+module DFF_50_dff_org DFQD1
+PortArg D
+port n2905gat
+PortArg CP
+port CK
+PortArg Q
+port n580gat
+module DFF_51_dff_org DFQD1
+PortArg D
+port n2900gat
+PortArg CP
+port CK
+PortArg Q
+port n824gat
+module DFF_52_dff_org DFQD1
+PortArg D
+port n2925gat
+PortArg CP
+port CK
+PortArg Q
+port n820gat
+module DFF_53_dff_org DFQD1
+PortArg D
+port n2929gat
+PortArg CP
+port CK
+PortArg Q
+port n883gat
+module DFF_54_dff_org DFQD1
+PortArg D
+port n2898gat
+PortArg CP
+port CK
+PortArg Q
+port n584gat
+module DFF_55_dff_org DFQD1
+PortArg D
+port n2916gat
+PortArg CP
+port CK
+PortArg Q
+port n684gat
+module DFF_56_dff_org DFQD1
+PortArg D
+port n2899gat
+PortArg CP
+port CK
+PortArg Q
+port n699gat
+module DFF_57_dff_org DFQD1
+PortArg D
+port n98
+PortArg CP
+port CK
+PortArg Q
+port n2464gat
+module DFF_58_dff_org DFQD1
+PortArg D
+port n2396gat
+PortArg CP
+port CK
+PortArg Q
+port n2399gat
+module DFF_59_dff_org DFQD1
+PortArg D
+port n2198gat
+PortArg CP
+port CK
+PortArg Q
+port n2343gat
+module DFF_60_dff_org DFQD1
+PortArg D
+port n2196gat
+PortArg CP
+port CK
+PortArg Q
+port n2203gat
+module DFF_61_dff_org DFQD1
+PortArg D
+port n57
+PortArg CP
+port CK
+PortArg Q
+port n2562gat
+module DFF_62_dff_org DFQD1
+PortArg D
+port n2197gat
+PortArg CP
+port CK
+PortArg Q
+port n2207gat
+module DFF_63_dff_org DFQD1
+PortArg D
+port n56
+PortArg CP
+port CK
+PortArg Q
+port n2626gat
+module DFF_64_dff_org DFQD1
+PortArg D
+port n2330gat
+PortArg CP
+port CK
+PortArg Q
+port n2490gat
+module DFF_65_dff_org DFQD1
+PortArg D
+port n2387gat
+PortArg CP
+port CK
+PortArg Q
+port n2622gat
+module DFF_66_dff_org DFQD1
+PortArg D
+port n2556gat
+PortArg CP
+port CK
+PortArg Q
+port n2630gat
+module DFF_67_dff_org DFQD1
+PortArg D
+port n2436gat
+PortArg CP
+port CK
+PortArg Q
+port n2543gat
+module DFF_68_dff_org DFQD1
+PortArg D
+port n1606gat
+PortArg CP
+port CK
+PortArg Q
+port n2102gat
+module DFF_69_dff_org DFQD1
+PortArg D
+port n1882gat
+PortArg CP
+port CK
+PortArg Q
+port n1880gat
+module DFF_70_dff_org DFQD1
+PortArg D
+port n1610gat
+PortArg CP
+port CK
+PortArg Q
+port n1763gat
+module DFF_71_dff_org DFQD1
+PortArg D
+port n2989gat
+PortArg CP
+port CK
+PortArg Q
+port n2155gat
+module DFF_72_dff_org DFQD1
+PortArg D
+port n2918gat
+PortArg CP
+port CK
+PortArg Q
+port n1035gat
+module DFF_73_dff_org DFQD1
+PortArg D
+port n2952gat
+PortArg CP
+port CK
+PortArg Q
+port n1121gat
+module DFF_74_dff_org DFQD1
+PortArg D
+port n2919gat
+PortArg CP
+port CK
+PortArg Q
+port n1072gat
+module DFF_75_dff_org DFQD1
+PortArg D
+port n2910gat
+PortArg CP
+port CK
+PortArg Q
+port n1282gat
+module DFF_76_dff_org DFQD1
+PortArg D
+port n2907gat
+PortArg CP
+port CK
+PortArg Q
+port n1226gat
+module DFF_77_dff_org DFQD1
+PortArg D
+port n2911gat
+PortArg CP
+port CK
+PortArg Q
+port n931gat
+module DFF_78_dff_org DFQD1
+PortArg D
+port n2912gat
+PortArg CP
+port CK
+PortArg Q
+port n1135gat
+module DFF_79_dff_org DFQD1
+PortArg D
+port n2909gat
+PortArg CP
+port CK
+PortArg Q
+port n1045gat
+module DFF_80_dff_org DFQD1
+PortArg D
+port n2908gat
+PortArg CP
+port CK
+PortArg Q
+port n1197gat
+module DFF_81_dff_org DFQD1
+PortArg D
+port n2971gat
+PortArg CP
+port CK
+PortArg Q
+port n2518gat
+module DFF_82_dff_org DFQD1
+PortArg D
+port n2904gat
+PortArg CP
+port CK
+PortArg Q
+port n667gat
+module DFF_83_dff_org DFQD1
+PortArg D
+port n2891gat
+PortArg CP
+port CK
+PortArg Q
+port n659gat
+module DFF_84_dff_org DFQD1
+PortArg D
+port n2903gat
+PortArg CP
+port CK
+PortArg Q
+port n553gat
+module DFF_85_dff_org DFQD1
+PortArg D
+port n2915gat
+PortArg CP
+port CK
+PortArg Q
+port n777gat
+module DFF_86_dff_org DFQD1
+PortArg D
+port n2901gat
+PortArg CP
+port CK
+PortArg Q
+port n561gat
+module DFF_87_dff_org DFQD1
+PortArg D
+port n2890gat
+PortArg CP
+port CK
+PortArg Q
+port n366gat
+module DFF_88_dff_org DFQD1
+PortArg D
+port n2888gat
+PortArg CP
+port CK
+PortArg Q
+port n322gat
+module DFF_89_dff_org DFQD1
+PortArg D
+port n2887gat
+PortArg CP
+port CK
+PortArg Q
+port n318gat
+module DFF_90_dff_org DFQD1
+PortArg D
+port n2886gat
+PortArg CP
+port CK
+PortArg Q
+port n314gat
+module DFF_91_dff_org DFQD1
+PortArg D
+port n3010gat
+PortArg CP
+port CK
+PortArg Q
+port n2599gat
+module DFF_92_dff_org DFQD1
+PortArg D
+port n3016gat
+PortArg CP
+port CK
+PortArg Q
+port n2588gat
+module DFF_93_dff_org DFQD1
+PortArg D
+port n597
+PortArg CP
+port CK
+PortArg Q
+port n2640gat
+module DFF_94_dff_org DFQD1
+PortArg D
+port n2579gat
+PortArg CP
+port CK
+PortArg Q
+port n2658gat
+module DFF_95_dff_org DFQD1
+PortArg D
+port n599
+PortArg CP
+port CK
+PortArg Q
+port n2495gat
+module DFF_96_dff_org DFQD1
+PortArg D
+port n58
+PortArg CP
+port CK
+PortArg Q
+port n2390gat
+module DFF_97_dff_org DFQD1
+PortArg D
+port n2194gat
+PortArg CP
+port CK
+PortArg Q
+port n2270gat
+module DFF_98_dff_org DFQD1
+PortArg D
+port n2057gat
+PortArg CP
+port CK
+PortArg Q
+port n2339gat
+module DFF_99_dff_org DFQD1
+PortArg D
+port n2646gat
+PortArg CP
+port CK
+PortArg Q
+port n2502gat
+module DFF_100_dff_org DFQD1
+PortArg D
+port n598
+PortArg CP
+port CK
+PortArg Q
+port n2634gat
+module DFF_101_dff_org DFQD1
+PortArg D
+port n2613gat
+PortArg CP
+port CK
+PortArg Q
+port n2506gat
+module DFF_102_dff_org DFQD1
+PortArg D
+port n1625gat
+PortArg CP
+port CK
+PortArg Q
+port n1834gat
+module DFF_103_dff_org DFQD1
+PortArg D
+port n1626gat
+PortArg CP
+port CK
+PortArg Q
+port n1767gat
+module DFF_104_dff_org DFQD1
+PortArg D
+port n3149gat
+PortArg CP
+port CK
+PortArg Q
+port n2084gat
+module DFF_105_dff_org DFQD1
+PortArg D
+port n115
+PortArg CP
+port CK
+PortArg Q
+port n2143gat
+module DFF_106_dff_org DFQD1
+PortArg D
+port n113
+PortArg CP
+port CK
+PortArg Q
+port n2061gat
+module DFF_107_dff_org DFQD1
+PortArg D
+port n112
+PortArg CP
+port CK
+PortArg Q
+port n2139gat
+module DFF_108_dff_org DFQD1
+PortArg D
+port n111
+PortArg CP
+port CK
+PortArg Q
+port n1899gat
+module DFF_109_dff_org DFQD1
+PortArg D
+port n114
+PortArg CP
+port CK
+PortArg Q
+port n1850gat
+module DFF_110_dff_org DFQD1
+PortArg D
+port n104
+PortArg CP
+port CK
+PortArg Q
+port n2403gat
+module DFF_111_dff_org DFQD1
+PortArg D
+port n107
+PortArg CP
+port CK
+PortArg Q
+port n2394gat
+module DFF_112_dff_org DFQD1
+PortArg D
+port n109
+PortArg CP
+port CK
+PortArg Q
+port n2440gat
+module DFF_113_dff_org DFQD1
+PortArg D
+port n110
+PortArg CP
+port CK
+PortArg Q
+port n2407gat
+module DFF_114_dff_org DFQD1
+PortArg D
+port n108
+PortArg CP
+port CK
+PortArg Q
+port n2347gat
+module DFF_115_dff_org DFQD1
+PortArg D
+port n1793gat
+PortArg CP
+port CK
+PortArg Q
+port n1389gat
+module DFF_116_dff_org DFQD1
+PortArg D
+port n602
+PortArg CP
+port CK
+PortArg Q
+port n2021gat
+module DFF_117_dff_org DFQD1
+PortArg D
+port n1516gat
+PortArg CP
+port CK
+PortArg Q
+port n1394gat
+module DFF_118_dff_org DFQD1
+PortArg D
+port n143
+PortArg CP
+port CK
+PortArg Q
+port n1496gat
+module DFF_119_dff_org DFQD1
+PortArg D
+port n601
+PortArg CP
+port CK
+PortArg Q
+port n2091gat
+module DFF_120_dff_org DFQD1
+PortArg D
+port n1565gat
+PortArg CP
+port CK
+PortArg Q
+port n1332gat
+module DFF_121_dff_org DFQD1
+PortArg D
+port n144
+PortArg CP
+port CK
+PortArg Q
+port n1740gat
+module DFF_122_dff_org DFQD1
+PortArg D
+port n603
+PortArg CP
+port CK
+PortArg Q
+port n2179gat
+module DFF_123_dff_org DFQD1
+PortArg D
+port n3127gat
+PortArg CP
+port CK
+PortArg Q
+port n2190gat
+module DFF_124_dff_org DFQD1
+PortArg D
+port n3126gat
+PortArg CP
+port CK
+PortArg Q
+port n2135gat
+module DFF_125_dff_org DFQD1
+PortArg D
+port n3128gat
+PortArg CP
+port CK
+PortArg Q
+port n2262gat
+module DFF_126_dff_org DFQD1
+PortArg D
+port n600
+PortArg CP
+port CK
+PortArg Q
+port n2182gat
+module DFF_127_dff_org DFQD1
+PortArg D
+port n2983gat
+PortArg CP
+port CK
+PortArg Q
+port n1433gat
+module DFF_128_dff_org DFQD1
+PortArg D
+port n147
+PortArg CP
+port CK
+PortArg Q
+port n1316gat
+module DFF_129_dff_org DFQD1
+PortArg D
+port n148
+PortArg CP
+port CK
+PortArg Q
+port n1363gat
+module DFF_130_dff_org DFQD1
+PortArg D
+port n149
+PortArg CP
+port CK
+PortArg Q
+port n1312gat
+module DFF_131_dff_org DFQD1
+PortArg D
+port n1696gat
+PortArg CP
+port CK
+PortArg Q
+port n1775gat
+module DFF_132_dff_org DFQD1
+PortArg D
+port n2009gat
+PortArg CP
+port CK
+PortArg Q
+port n1871gat
+module DFF_133_dff_org DFQD1
+PortArg D
+port n151
+PortArg CP
+port CK
+PortArg Q
+port n2592gat
+module DFF_134_dff_org DFQD1
+PortArg D
+port n1636gat
+PortArg CP
+port CK
+PortArg Q
+port n1508gat
+module DFF_135_dff_org DFQD1
+PortArg D
+port n128
+PortArg CP
+port CK
+PortArg Q
+port n1678gat
+module DFF_139_dff_org DFQD1
+PortArg D
+port n596
+PortArg CP
+port CK
+PortArg Q
+port n2095gat
+module DFF_140_dff_org DFQD1
+PortArg D
+port n157
+PortArg CP
+port CK
+PortArg Q
+port n2176gat
+module DFF_141_dff_org DFQD1
+PortArg D
+port n158
+PortArg CP
+port CK
+PortArg Q
+port n2169gat
+module DFF_142_dff_org DFQD1
+PortArg D
+port n2163gat
+PortArg CP
+port CK
+PortArg Q
+port n2454gat
+module DFF_143_dff_org DFQD1
+PortArg D
+port n68
+PortArg CP
+port CK
+PortArg Q
+port n2040gat
+module DFF_144_dff_org DFQD1
+PortArg D
+port n2015gat
+PortArg CP
+port CK
+PortArg Q
+port n2044gat
+module DFF_145_dff_org DFQD1
+PortArg D
+port n160
+PortArg CP
+port CK
+PortArg Q
+port n2037gat
+module DFF_146_dff_org DFQD1
+PortArg D
+port n62
+PortArg CP
+port CK
+PortArg Q
+port n2025gat
+module DFF_147_dff_org DFQD1
+PortArg D
+port n162
+PortArg CP
+port CK
+PortArg Q
+port n2099gat
+module DFF_148_dff_org DFQD1
+PortArg D
+port n122
+PortArg CP
+port CK
+PortArg Q
+port n2266gat
+module DFF_149_dff_org DFQD1
+PortArg D
+port n161
+PortArg CP
+port CK
+PortArg Q
+port n2033gat
+module DFF_150_dff_org DFQD1
+PortArg D
+port n163
+PortArg CP
+port CK
+PortArg Q
+port n2110gat
+module DFF_151_dff_org DFQD1
+PortArg D
+port n164
+PortArg CP
+port CK
+PortArg Q
+port n2125gat
+module DFF_152_dff_org DFQD1
+PortArg D
+port n165
+PortArg CP
+port CK
+PortArg Q
+port n2121gat
+module DFF_153_dff_org DFQD1
+PortArg D
+port n166
+PortArg CP
+port CK
+PortArg Q
+port n2117gat
+module DFF_154_dff_org DFQD1
+PortArg D
+port n126
+PortArg CP
+port CK
+PortArg Q
+port n1975gat
+module DFF_155_dff_org DFQD1
+PortArg D
+port n121
+PortArg CP
+port CK
+PortArg Q
+port n2644gat
+module DFF_156_dff_org DFQD1
+PortArg D
+port n97
+PortArg CP
+port CK
+PortArg Q
+port n156gat
+module DFF_157_dff_org DFQD1
+PortArg D
+port n94
+PortArg CP
+port CK
+PortArg Q
+port n152gat
+module DFF_158_dff_org DFQD1
+PortArg D
+port n99
+PortArg CP
+port CK
+PortArg Q
+port n331gat
+module DFF_159_dff_org DFQD1
+PortArg D
+port n101
+PortArg CP
+port CK
+PortArg Q
+port n388gat
+module DFF_160_dff_org DFQD1
+PortArg D
+port n100
+PortArg CP
+port CK
+PortArg Q
+port n463gat
+module DFF_161_dff_org DFQD1
+PortArg D
+port n102
+PortArg CP
+port CK
+PortArg Q
+port n327gat
+module DFF_162_dff_org DFQD1
+PortArg D
+port n103
+PortArg CP
+port CK
+PortArg Q
+port n384gat
+module DFF_163_dff_org DFQD1
+PortArg D
+port n95
+PortArg CP
+port CK
+PortArg Q
+port n256gat
+module DFF_164_dff_org DFQD1
+PortArg D
+port n96
+PortArg CP
+port CK
+PortArg Q
+port n470gat
+module DFF_165_dff_org DFQD1
+PortArg D
+port n93
+PortArg CP
+port CK
+PortArg Q
+port n148gat
+module DFF_166_dff_org DFQD1
+PortArg D
+port n153
+PortArg CP
+port CK
+PortArg Q
+port n2458gat
+module DFF_167_dff_org DFQD1
+PortArg D
+port n170
+PortArg CP
+port CK
+PortArg Q
+port n2514gat
+module DFF_168_dff_org DFQD1
+PortArg D
+port n1613gat
+PortArg CP
+port CK
+PortArg Q
+port n1771gat
+module DFF_169_dff_org DFQD1
+PortArg D
+port n1391gat
+PortArg CP
+port CK
+PortArg Q
+port n1336gat
+module DFF_170_dff_org DFQD1
+PortArg D
+port n1927gat
+PortArg CP
+port CK
+PortArg Q
+port n1748gat
+module DFF_171_dff_org DFQD1
+PortArg D
+port n607
+PortArg CP
+port CK
+PortArg Q
+port n1675gat
+module DFF_172_dff_org DFQD1
+PortArg D
+port n127
+PortArg CP
+port CK
+PortArg Q
+port n1807gat
+module DFF_173_dff_org DFQD1
+PortArg D
+port n1567gat
+PortArg CP
+port CK
+PortArg Q
+port n1340gat
+module DFF_174_dff_org DFQD1
+PortArg D
+port n1564gat
+PortArg CP
+port CK
+PortArg Q
+port n1456gat
+module DFF_175_dff_org DFQD1
+PortArg D
+port n606
+PortArg CP
+port CK
+PortArg Q
+port n1525gat
+module DFF_176_dff_org DFQD1
+PortArg D
+port n1915gat
+PortArg CP
+port CK
+PortArg Q
+port n1462gat
+module DFF_177_dff_org DFQD1
+PortArg D
+port n1800gat
+PortArg CP
+port CK
+PortArg Q
+port n1596gat
+module DFF_178_dff_org DFQD1
+PortArg D
+port n1593gat
+PortArg CP
+port CK
+PortArg Q
+port n1588gat
+module U734 INVD1
+PortArg I
+width 1'b0
+PortArg ZN
+port n3152gat
+module U736 INVD1
+PortArg I
+width 1'b0
+PortArg ZN
+port n3148gat
+module U738 INVD1
+PortArg I
+width 1'b0
+PortArg ZN
+port n3147gat
+module U740 INVD1
+PortArg I
+width 1'b0
+PortArg ZN
+port n3115gat
+module U742 INVD1
+PortArg I
+width 1'b0
+PortArg ZN
+port n3112gat
+module U744 OAI21D0
+PortArg A1
+port n604
+PortArg A2
+width 1'b0
+PortArg B
+port n1049
+PortArg ZN
+port n1035
+module U745 NR2D2
+PortArg A1
+port n1089
+PortArg A2
+port n1090
+PortArg ZN
+port n696
+module U746 OAI21D1
+PortArg A1
+port n1880gat
+PortArg A2
+port n1763gat
+PortArg B
+port n2102gat
+PortArg ZN
+port n2989gat
+module U747 CKBD1
+PortArg I
+port n3141gat
+PortArg Z
+port n3142gat
+module U748 CKBD1
+PortArg I
+port n3140gat
+PortArg Z
+port n3139gat
+module U752 CKND0
+PortArg I
+port n2029gat
+PortArg ZN
+port n83
+module U753 CKND0
+PortArg I
+port n621
+PortArg ZN
+port n62
+module U754 CKND0
+PortArg I
+port n622
+PortArg ZN
+port n607
+module U755 NR2D0
+PortArg A1
+port n623
+PortArg A2
+port n624
+PortArg ZN
+port n606
+module U756 CKND2D0
+PortArg A1
+port n1899gat
+PortArg A2
+port n2061gat
+PortArg ZN
+port n624
+module U757 CKND2D0
+PortArg A1
+port n625
+PortArg A2
+port n626
+PortArg ZN
+port n623
+module U758 CKND2D0
+PortArg A1
+port n627
+PortArg A2
+port n628
+PortArg ZN
+port n602
+module U759 NR2D0
+PortArg A1
+port n603
+PortArg A2
+port n629
+PortArg ZN
+port n628
+module U760 NR2D0
+PortArg A1
+port n630
+PortArg A2
+port n631
+PortArg ZN
+port n627
+module U761 CKND2D0
+PortArg A1
+port n632
+PortArg A2
+port n58
+PortArg ZN
+port n599
+module U762 XOR2D0
+PortArg A1
+port n633
+PortArg A2
+port n2266gat
+PortArg Z
+port n632
+module U763 CKND2D0
+PortArg A1
+port n2190gat
+PortArg A2
+port n634
+PortArg ZN
+port n633
+module U764 CKND2D0
+PortArg A1
+port n635
+PortArg A2
+port n56
+PortArg ZN
+port n598
+module U765 XOR2D0
+PortArg A1
+port n636
+PortArg A2
+port n1975gat
+PortArg Z
+port n635
+module U766 AO21D0
+PortArg A1
+port n626
+PortArg A2
+port n637
+PortArg B
+port n1899gat
+PortArg Z
+port n636
+module U767 CKND2D0
+PortArg A1
+port n638
+PortArg A2
+port n57
+PortArg ZN
+port n597
+module U768 XOR2D0
+PortArg A1
+port n639
+PortArg A2
+port n2644gat
+PortArg Z
+port n638
+module U769 OAI21D0
+PortArg A1
+port n2394gat
+PortArg A2
+port n640
+PortArg B
+port n641
+PortArg ZN
+port n639
+module U770 NR2D0
+PortArg A1
+port n2403gat
+PortArg A2
+port n642
+PortArg ZN
+port n640
+module U771 MUX2ND0
+PortArg I0
+port n643
+PortArg I1
+port n644
+PortArg S
+port n645
+PortArg ZN
+port n596
+module U772 CKND2D0
+PortArg A1
+port n646
+PortArg A2
+port n647
+PortArg ZN
+port n644
+module U773 NR2D0
+PortArg A1
+port n648
+PortArg A2
+port n649
+PortArg ZN
+port n646
+module U774 CKND2D0
+PortArg A1
+port n650
+PortArg A2
+port n651
+PortArg ZN
+port n643
+module U775 CKND0
+PortArg I
+port n652
+PortArg ZN
+port n57
+module U776 CKND0
+PortArg I
+port n653
+PortArg ZN
+port n56
+module U777 CKND2D0
+PortArg A1
+port n654
+PortArg A2
+port n655
+PortArg ZN
+port n3151gat
+module U778 AOI21D0
+PortArg A1
+port n656
+PortArg A2
+port n657
+PortArg B
+port n658
+PortArg ZN
+port n654
+module U779 OAI21D0
+PortArg A1
+port n337gat
+PortArg A2
+port n2454gat
+PortArg B
+port n659
+PortArg ZN
+port n3150gat
+module U780 NR2D0
+PortArg A1
+port n660
+PortArg A2
+port n661
+PortArg ZN
+port n3146gat
+module U781 CKND2D0
+PortArg A1
+port n662
+PortArg A2
+port n2169gat
+PortArg ZN
+port n661
+module U782 AOI21D0
+PortArg A1
+port n663
+PortArg A2
+port n1871gat
+PortArg B
+port n157
+PortArg ZN
+port n662
+module U783 CKND2D0
+PortArg A1
+port n664
+PortArg A2
+port n665
+PortArg ZN
+port n660
+module U784 NR2D0
+PortArg A1
+port n164
+PortArg A2
+port n163
+PortArg ZN
+port n665
+module U785 NR2D0
+PortArg A1
+port n161
+PortArg A2
+port n158
+PortArg ZN
+port n664
+module U786 NR2D0
+PortArg A1
+port n68
+PortArg A2
+port n663
+PortArg ZN
+port n3145gat
+module U787 AN2D0
+PortArg A1
+port n2514gat
+PortArg A2
+port n666
+PortArg Z
+port n663
+module U788 OR2D0
+PortArg A1
+port n600
+PortArg A2
+port n603
+PortArg Z
+port n68
+module U789 AN2D0
+PortArg A1
+port n667
+PortArg A2
+port n703gat
+PortArg Z
+port n600
+module U790 NR2D0
+PortArg A1
+port n2454gat
+PortArg A2
+port n668
+PortArg ZN
+port n667
+module U791 XNR2D0
+PortArg A1
+port n669
+PortArg A2
+port n670
+PortArg ZN
+port n668
+module U792 CKND2D0
+PortArg A1
+port n671
+PortArg A2
+port n2579gat
+PortArg ZN
+port n3144gat
+module U793 CKND2D0
+PortArg A1
+port n2613gat
+PortArg A2
+port n671
+PortArg ZN
+port n3143gat
+module U794 AN2D0
+PortArg A1
+port n672
+PortArg A2
+port n673
+PortArg Z
+port n671
+module U795 MUX2D0
+PortArg I0
+port n674
+PortArg I1
+port n675
+PortArg S
+port n110
+PortArg Z
+port n673
+module U796 CKND2D0
+PortArg A1
+port n676
+PortArg A2
+port n677
+PortArg ZN
+port n675
+module U797 MUX4D1
+PortArg I0
+port n678
+PortArg I1
+port n679
+PortArg I2
+port n680
+PortArg I3
+port n681
+PortArg S0
+port n109
+PortArg S1
+port n2399gat
+PortArg Z
+port n677
+module U798 OAI22D0
+PortArg A1
+port n777gat
+PortArg A2
+port n682
+PortArg B1
+port n322gat
+PortArg B2
+port n683
+PortArg ZN
+port n681
+module U799 OAI21D0
+PortArg A1
+port n659gat
+PortArg A2
+port n682
+PortArg B
+port n684
+PortArg ZN
+port n680
+module U800 OA22D0
+PortArg A1
+port n685
+PortArg A2
+port n686
+PortArg B1
+port n683
+PortArg B2
+port n553gat
+PortArg Z
+port n684
+module U801 XNR2D0
+PortArg A1
+port n687
+PortArg A2
+port n688
+PortArg ZN
+port n685
+module U802 OAI22D0
+PortArg A1
+port n318gat
+PortArg A2
+port n682
+PortArg B1
+port n366gat
+PortArg B2
+port n683
+PortArg ZN
+port n679
+module U803 OAI22D0
+PortArg A1
+port n314gat
+PortArg A2
+port n682
+PortArg B1
+port n561gat
+PortArg B2
+port n683
+PortArg ZN
+port n678
+module U804 CKND2D0
+PortArg A1
+port n1389gat
+PortArg A2
+port n689
+PortArg ZN
+port n674
+module U805 MUX2ND0
+PortArg I0
+port n690
+PortArg I1
+port n691
+PortArg S
+port n104
+PortArg ZN
+port n689
+module U806 MUX4D1
+PortArg I0
+port n692
+PortArg I1
+port n693
+PortArg I2
+port n694
+PortArg I3
+port n695
+PortArg S0
+port n109
+PortArg S1
+port n696
+PortArg Z
+port n691
+module U807 AOI21D0
+PortArg A1
+port n697
+PortArg A2
+port n698
+PortArg B
+port n699
+PortArg ZN
+port n695
+module U808 OAI22D0
+PortArg A1
+port n684gat
+PortArg A2
+port n683
+PortArg B1
+port n614gat
+PortArg B2
+port n686
+PortArg ZN
+port n699
+module U809 AOI21D0
+PortArg A1
+port n697
+PortArg A2
+port n700
+PortArg B
+port n701
+PortArg ZN
+port n694
+module U810 OAI22D0
+PortArg A1
+port n699gat
+PortArg A2
+port n683
+PortArg B1
+port n707gat
+PortArg B2
+port n686
+PortArg ZN
+port n701
+module U811 AOI21D0
+PortArg A1
+port n697
+PortArg A2
+port n702
+PortArg B
+port n703
+PortArg ZN
+port n693
+module U812 OAI22D0
+PortArg A1
+port n1080gat
+PortArg A2
+port n683
+PortArg B1
+port n275gat
+PortArg B2
+port n686
+PortArg ZN
+port n703
+module U813 AOI21D0
+PortArg A1
+port n697
+PortArg A2
+port n704
+PortArg B
+port n705
+PortArg ZN
+port n692
+module U814 OAI22D0
+PortArg A1
+port n1148gat
+PortArg A2
+port n683
+PortArg B1
+port n165gat
+PortArg B2
+port n686
+PortArg ZN
+port n705
+module U815 CKND0
+PortArg I
+port n706
+PortArg ZN
+port n683
+module U816 AOI21D0
+PortArg A1
+port n707
+PortArg A2
+port n706
+PortArg B
+port n708
+PortArg ZN
+port n690
+module U817 OAI22D0
+PortArg A1
+port n709
+PortArg A2
+port n682
+PortArg B1
+port n2203gat
+PortArg B2
+port n710
+PortArg ZN
+port n708
+module U818 MUX2ND0
+PortArg I0
+port n711
+PortArg I1
+port n712
+PortArg S
+port n109
+PortArg ZN
+port n710
+module U819 MUX4D1
+PortArg I0
+port n713
+PortArg I1
+port n714
+PortArg I2
+port n101
+PortArg I3
+port n95
+PortArg S0
+port n107
+PortArg S1
+port n696
+PortArg Z
+port n712
+module U820 CKND0
+PortArg I
+port n838gat
+PortArg ZN
+port n95
+module U821 MUX4D1
+PortArg I0
+port n715
+PortArg I1
+port n716
+PortArg I2
+port n99
+PortArg I3
+port n93
+PortArg S0
+port n107
+PortArg S1
+port n696
+PortArg Z
+port n711
+module U822 CKND0
+PortArg I
+port n834gat
+PortArg ZN
+port n93
+module U823 CKND0
+PortArg I
+port n697
+PortArg ZN
+port n682
+module U824 NR2D0
+PortArg A1
+port n630
+PortArg A2
+port n717
+PortArg ZN
+port n709
+module U825 MUX2ND0
+PortArg I0
+port n2084gat
+PortArg I1
+port n718
+PortArg S
+port n109
+PortArg ZN
+port n717
+module U826 NR2D0
+PortArg A1
+port n108
+PortArg A2
+port n2343gat
+PortArg ZN
+port n706
+module U827 MUX4D1
+PortArg I0
+port n719
+PortArg I1
+port n720
+PortArg I2
+port n721
+PortArg I3
+port n722
+PortArg S0
+port n109
+PortArg S1
+port n696
+PortArg Z
+port n707
+module U828 AOI22D0
+PortArg A1
+port n723
+PortArg A2
+port n724
+PortArg B1
+port n725
+PortArg B2
+port n1871gat
+PortArg ZN
+port n672
+module U829 NR2D0
+PortArg A1
+port n673gat
+PortArg A2
+port n2592gat
+PortArg ZN
+port n725
+module U830 MUX2ND0
+PortArg I0
+port n1678gat
+PortArg I1
+port n1508gat
+PortArg S
+port n2989gat
+PortArg ZN
+port n724
+module U831 NR2D0
+PortArg A1
+port n1394gat
+PortArg A2
+port n696
+PortArg ZN
+port n723
+module U832 MUX2ND0
+PortArg I0
+port n726
+PortArg I1
+port n727
+PortArg S
+port n2989gat
+PortArg ZN
+port n3141gat
+module U833 OA22D0
+PortArg A1
+port n1456gat
+PortArg A2
+port n728
+PortArg B1
+port n1807gat
+PortArg B2
+port n729
+PortArg Z
+port n727
+module U834 AOI21D0
+PortArg A1
+port n730
+PortArg A2
+port n729
+PortArg B
+port n3149gat
+PortArg ZN
+port n728
+module U835 CKND0
+PortArg I
+port n696
+PortArg ZN
+port n3149gat
+module U836 MAOI22D0
+PortArg A1
+port n731
+PortArg A2
+port n601
+PortArg B1
+port n1748gat
+PortArg B2
+port n732
+PortArg ZN
+port n726
+module U837 AOI21D0
+PortArg A1
+port n1336gat
+PortArg A2
+port n601
+PortArg B
+port n733
+PortArg ZN
+port n732
+module U838 CKND2D0
+PortArg A1
+port n718
+PortArg A2
+port n696
+PortArg ZN
+port n733
+module U839 NR2D0
+PortArg A1
+port n1675gat
+PortArg A2
+port n1394gat
+PortArg ZN
+port n731
+module U840 AO21D0
+PortArg A1
+port n734
+PortArg A2
+port n735
+PortArg B
+port n736
+PortArg Z
+port n3140gat
+module U841 MUX2ND0
+PortArg I0
+port n737
+PortArg I1
+port n738
+PortArg S
+port n2989gat
+PortArg ZN
+port n736
+module U842 AOI22D0
+PortArg A1
+port n739
+PortArg A2
+port n740
+PortArg B1
+port n1462gat
+PortArg B2
+port n741
+PortArg ZN
+port n738
+module U843 CKND0
+PortArg I
+port n1508gat
+PortArg ZN
+port n740
+module U844 OAI22D0
+PortArg A1
+port n696
+PortArg A2
+port n742
+PortArg B1
+port n743
+PortArg B2
+port n744
+PortArg ZN
+port n739
+module U845 CKND2D0
+PortArg A1
+port n730
+PortArg A2
+port n729
+PortArg ZN
+port n744
+module U846 CKND0
+PortArg I
+port n1340gat
+PortArg ZN
+port n729
+module U847 OR2D0
+PortArg A1
+port n676
+PortArg A2
+port n601
+PortArg Z
+port n730
+module U848 NR2D0
+PortArg A1
+port n745
+PortArg A2
+port n746
+PortArg ZN
+port n743
+module U849 CKND2D0
+PortArg A1
+port n2399gat
+PortArg A2
+port n2562gat
+PortArg ZN
+port n746
+module U850 CKND2D0
+PortArg A1
+port n747
+PortArg A2
+port n108
+PortArg ZN
+port n745
+module U851 NR2D0
+PortArg A1
+port n2343gat
+PortArg A2
+port n2207gat
+PortArg ZN
+port n747
+module U852 OR2D0
+PortArg A1
+port n143
+PortArg A2
+port n1462gat
+PortArg Z
+port n742
+module U853 AOI21D0
+PortArg A1
+port n748
+PortArg A2
+port n601
+PortArg B
+port n749
+PortArg ZN
+port n737
+module U854 MUX2ND0
+PortArg I0
+port n750
+PortArg I1
+port n1588gat
+PortArg S
+port n1596gat
+PortArg ZN
+port n749
+module U855 OAI21D0
+PortArg A1
+port n676
+PortArg A2
+port n1394gat
+PortArg B
+port n741
+PortArg ZN
+port n750
+module U856 CKND0
+PortArg I
+port n1678gat
+PortArg ZN
+port n741
+module U857 CKND0
+PortArg I
+port n718
+PortArg ZN
+port n676
+module U858 CKND2D0
+PortArg A1
+port n629
+PortArg A2
+port n703gat
+PortArg ZN
+port n718
+module U859 NR2D0
+PortArg A1
+port n1525gat
+PortArg A2
+port n1394gat
+PortArg ZN
+port n748
+module U860 NR2D0
+PortArg A1
+port n3098gat
+PortArg A2
+port n1775gat
+PortArg ZN
+port n735
+module U861 AOI21D0
+PortArg A1
+port n1825gat
+PortArg A2
+port n751
+PortArg B
+port n3106gat
+PortArg ZN
+port n734
+module U862 CKND2D0
+PortArg A1
+port n752
+PortArg A2
+port n3097gat
+PortArg ZN
+port n751
+module U863 AOI21D0
+PortArg A1
+port n1821gat
+PortArg A2
+port n753
+PortArg B
+port n754
+PortArg ZN
+port n752
+module U864 CKND0
+PortArg I
+port n1829gat
+PortArg ZN
+port n753
+module U865 NR2D0
+PortArg A1
+port n755
+PortArg A2
+port n756
+PortArg ZN
+port n3138gat
+module U866 OR2D0
+PortArg A1
+port n757
+PortArg A2
+port n686
+PortArg Z
+port n756
+module U867 CKND2D0
+PortArg A1
+port n2343gat
+PortArg A2
+port n108
+PortArg ZN
+port n686
+module U868 CKND2D0
+PortArg A1
+port n603
+PortArg A2
+port n109
+PortArg ZN
+port n755
+module U869 OAI22D0
+PortArg A1
+port n758
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n761
+PortArg ZN
+port n3137gat
+module U870 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n763
+PortArg B
+port n764
+PortArg ZN
+port n761
+module U871 OAI22D0
+PortArg A1
+port n626gat
+PortArg A2
+port n765
+PortArg B1
+port n1226gat
+PortArg B2
+port n766
+PortArg ZN
+port n764
+module U872 OAI22D0
+PortArg A1
+port n767
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n768
+PortArg ZN
+port n3136gat
+module U873 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n769
+PortArg B
+port n770
+PortArg ZN
+port n768
+module U874 OAI22D0
+PortArg A1
+port n622gat
+PortArg A2
+port n765
+PortArg B1
+port n1282gat
+PortArg B2
+port n766
+PortArg ZN
+port n770
+module U875 OAI22D0
+PortArg A1
+port n771
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n772
+PortArg ZN
+port n3135gat
+module U876 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n773
+PortArg B
+port n774
+PortArg ZN
+port n772
+module U877 OAI22D0
+PortArg A1
+port n618gat
+PortArg A2
+port n765
+PortArg B1
+port n1135gat
+PortArg B2
+port n766
+PortArg ZN
+port n774
+module U878 OAI22D0
+PortArg A1
+port n775
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n776
+PortArg ZN
+port n3134gat
+module U879 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n777
+PortArg B
+port n778
+PortArg ZN
+port n776
+module U880 OAI22D0
+PortArg A1
+port n491gat
+PortArg A2
+port n765
+PortArg B1
+port n1045gat
+PortArg B2
+port n766
+PortArg ZN
+port n778
+module U881 OAI22D0
+PortArg A1
+port n779
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n780
+PortArg ZN
+port n3133gat
+module U882 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n781
+PortArg B
+port n782
+PortArg ZN
+port n780
+module U883 OAI22D0
+PortArg A1
+port n614gat
+PortArg A2
+port n765
+PortArg B1
+port n931gat
+PortArg B2
+port n766
+PortArg ZN
+port n782
+module U884 OAI22D0
+PortArg A1
+port n783
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n784
+PortArg ZN
+port n3132gat
+module U885 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n785
+PortArg B
+port n786
+PortArg ZN
+port n784
+module U886 OAI22D0
+PortArg A1
+port n707gat
+PortArg A2
+port n765
+PortArg B1
+port n1121gat
+PortArg B2
+port n766
+PortArg ZN
+port n786
+module U887 CKND0
+PortArg I
+port n165gat
+PortArg ZN
+port n785
+module U888 OAI22D0
+PortArg A1
+port n787
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n788
+PortArg ZN
+port n3131gat
+module U889 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n714
+PortArg B
+port n789
+PortArg ZN
+port n788
+module U890 OAI22D0
+PortArg A1
+port n838gat
+PortArg A2
+port n765
+PortArg B1
+port n1072gat
+PortArg B2
+port n766
+PortArg ZN
+port n789
+module U891 CKND0
+PortArg I
+port n279gat
+PortArg ZN
+port n714
+module U892 OAI22D0
+PortArg A1
+port n790
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n791
+PortArg ZN
+port n3130gat
+module U893 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n716
+PortArg B
+port n792
+PortArg ZN
+port n791
+module U894 OAI22D0
+PortArg A1
+port n834gat
+PortArg A2
+port n765
+PortArg B1
+port n1035gat
+PortArg B2
+port n766
+PortArg ZN
+port n792
+module U895 OAI22D0
+PortArg A1
+port n793
+PortArg A2
+port n759
+PortArg B1
+port n760
+PortArg B2
+port n794
+PortArg ZN
+port n3129gat
+module U896 AOI21D0
+PortArg A1
+port n762
+PortArg A2
+port n795
+PortArg B
+port n796
+PortArg ZN
+port n794
+module U897 AO22D0
+PortArg A1
+port n96
+PortArg A2
+port n797
+PortArg B1
+port n798
+PortArg B2
+port n3116gat
+PortArg Z
+port n796
+module U898 CKND0
+PortArg I
+port n1026gat
+PortArg ZN
+port n795
+module U899 OA21D0
+PortArg A1
+port n799
+PortArg A2
+port n800
+PortArg B
+port n801
+PortArg Z
+port n760
+module U900 CKND2D0
+PortArg A1
+port n802
+PortArg A2
+port n3088gat
+PortArg ZN
+port n800
+module U901 CKND2D0
+PortArg A1
+port n803
+PortArg A2
+port n804
+PortArg ZN
+port n759
+module U902 MUX2ND0
+PortArg I0
+port n805
+PortArg I1
+port n799
+PortArg S
+port n645
+PortArg ZN
+port n804
+module U903 CKND2D0
+PortArg A1
+port n651
+PortArg A2
+port n806
+PortArg ZN
+port n805
+module U904 AOI21D0
+PortArg A1
+port n806
+PortArg A2
+port n807
+PortArg B
+port n808
+PortArg ZN
+port n803
+module U905 OAI21D0
+PortArg A1
+port n793
+PortArg A2
+port n801
+PortArg B
+port n2646gat
+PortArg ZN
+port n3125gat
+module U906 AN2D0
+PortArg A1
+port n809
+PortArg A2
+port n810
+PortArg Z
+port n793
+module U907 MUX2ND0
+PortArg I0
+port n811
+PortArg I1
+port n812
+PortArg S
+port n813
+PortArg ZN
+port n810
+module U908 OAI22D0
+PortArg A1
+port n687
+PortArg A2
+port n814
+PortArg B1
+port n815
+PortArg B2
+port n816
+PortArg ZN
+port n812
+module U909 CKND0
+PortArg I
+port n817
+PortArg ZN
+port n816
+module U910 NR2D0
+PortArg A1
+port n100
+PortArg A2
+port n818
+PortArg ZN
+port n815
+module U911 NR2D0
+PortArg A1
+port n819
+PortArg A2
+port n820
+PortArg ZN
+port n811
+module U912 OA22D0
+PortArg A1
+port n821
+PortArg A2
+port n1241gat
+PortArg B1
+port n822
+PortArg B2
+port n842gat
+PortArg Z
+port n809
+module U913 OAI21D0
+PortArg A1
+port n758
+PortArg A2
+port n801
+PortArg B
+port n2971gat
+PortArg ZN
+port n3124gat
+module U914 AN2D0
+PortArg A1
+port n823
+PortArg A2
+port n824
+PortArg Z
+port n758
+module U915 AOI21D0
+PortArg A1
+port n798
+PortArg A2
+port n825
+PortArg B
+port n826
+PortArg ZN
+port n824
+module U916 OAI22D0
+PortArg A1
+port n722gat
+PortArg A2
+port n822
+PortArg B1
+port n813
+PortArg B2
+port n827
+PortArg ZN
+port n826
+module U917 CKND2D0
+PortArg A1
+port n828
+PortArg A2
+port n820
+PortArg ZN
+port n827
+module U918 CKND0
+PortArg I
+port n673gat
+PortArg ZN
+port n820
+module U919 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n101
+PortArg B1
+port n762
+PortArg B2
+port n713
+PortArg ZN
+port n823
+module U920 OAI21D0
+PortArg A1
+port n767
+PortArg A2
+port n801
+PortArg B
+port n3010gat
+PortArg ZN
+port n3123gat
+module U921 AN2D0
+PortArg A1
+port n829
+PortArg A2
+port n830
+PortArg Z
+port n767
+module U922 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n726gat
+PortArg B1
+port n766
+PortArg B2
+port n561gat
+PortArg Z
+port n830
+module U923 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n99
+PortArg B1
+port n762
+PortArg B2
+port n715
+PortArg ZN
+port n829
+module U924 CKND0
+PortArg I
+port n824gat
+PortArg ZN
+port n99
+module U925 OAI21D0
+PortArg A1
+port n771
+PortArg A2
+port n801
+PortArg B
+port n92
+PortArg ZN
+port n3122gat
+module U926 XOR4D1
+PortArg A1
+port n831
+PortArg A2
+port n832
+PortArg A3
+port n491gat
+PortArg A4
+port n833
+PortArg Z
+port n92
+module U927 XOR4D1
+PortArg A1
+port n96
+PortArg A2
+port n94
+PortArg A3
+port n838gat
+PortArg A4
+port n834gat
+PortArg Z
+port n833
+module U928 CKND0
+PortArg I
+port n707gat
+PortArg ZN
+port n94
+module U929 CKND0
+PortArg I
+port n830gat
+PortArg ZN
+port n96
+module U930 XNR2D0
+PortArg A1
+port n618gat
+PortArg A2
+port n97
+PortArg ZN
+port n832
+module U931 CKND0
+PortArg I
+port n614gat
+PortArg ZN
+port n97
+module U932 XOR2D0
+PortArg A1
+port n626gat
+PortArg A2
+port n622gat
+PortArg Z
+port n831
+module U933 AN2D0
+PortArg A1
+port n834
+PortArg A2
+port n835
+PortArg Z
+port n771
+module U934 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n703gat
+PortArg B1
+port n766
+PortArg B2
+port n318gat
+PortArg Z
+port n835
+module U935 MAOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n102
+PortArg B1
+port n821
+PortArg B2
+port n1080gat
+PortArg ZN
+port n834
+module U936 OAI21D0
+PortArg A1
+port n775
+PortArg A2
+port n801
+PortArg B
+port n98
+PortArg ZN
+port n3121gat
+module U937 XOR4D1
+PortArg A1
+port n836
+PortArg A2
+port n837
+PortArg A3
+port n580gat
+PortArg A4
+port n838
+PortArg Z
+port n98
+module U938 XOR4D1
+PortArg A1
+port n100
+PortArg A2
+port n700
+PortArg A3
+port n883gat
+PortArg A4
+port n824gat
+PortArg Z
+port n838
+module U939 XNR2D0
+PortArg A1
+port n721
+PortArg A2
+port n584gat
+PortArg ZN
+port n837
+module U940 XNR2D0
+PortArg A1
+port n103
+PortArg A2
+port n684gat
+PortArg ZN
+port n836
+module U941 AN2D0
+PortArg A1
+port n839
+PortArg A2
+port n840
+PortArg Z
+port n775
+module U942 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n394gat
+PortArg B1
+port n766
+PortArg B2
+port n314gat
+PortArg Z
+port n840
+module U943 MAOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n103
+PortArg B1
+port n821
+PortArg B2
+port n1148gat
+PortArg ZN
+port n839
+module U944 OAI21D0
+PortArg A1
+port n779
+PortArg A2
+port n801
+PortArg B
+port n55gat
+PortArg ZN
+port n3120gat
+module U945 XOR4D1
+PortArg A1
+port n841
+PortArg A2
+port n842
+PortArg A3
+port n1026gat
+PortArg A4
+port n843
+PortArg Z
+port n55gat
+module U946 XOR4D1
+PortArg A1
+port n773
+PortArg A2
+port n777
+PortArg A3
+port n919gat
+PortArg A4
+port n846gat
+PortArg Z
+port n843
+module U947 CKND0
+PortArg I
+port n398gat
+PortArg ZN
+port n777
+module U948 CKND0
+PortArg I
+port n402gat
+PortArg ZN
+port n773
+module U949 XNR2D0
+PortArg A1
+port n781
+PortArg A2
+port n165gat
+PortArg ZN
+port n842
+module U950 CKND0
+PortArg I
+port n275gat
+PortArg ZN
+port n781
+module U951 XNR2D0
+PortArg A1
+port n716
+PortArg A2
+port n279gat
+PortArg ZN
+port n841
+module U952 CKND0
+PortArg I
+port n283gat
+PortArg ZN
+port n716
+module U953 AN2D0
+PortArg A1
+port n844
+PortArg A2
+port n845
+PortArg Z
+port n779
+module U954 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n341gat
+PortArg B1
+port n766
+PortArg B2
+port n322gat
+PortArg Z
+port n845
+module U955 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n698
+PortArg B1
+port n762
+PortArg B2
+port n702
+PortArg ZN
+port n844
+module U956 CKND0
+PortArg I
+port n865gat
+PortArg ZN
+port n702
+module U957 CKND0
+PortArg I
+port n584gat
+PortArg ZN
+port n698
+module U958 OAI21D0
+PortArg A1
+port n783
+PortArg A2
+port n801
+PortArg B
+port n933gat
+PortArg ZN
+port n3119gat
+module U959 XOR4D1
+PortArg A1
+port n846
+PortArg A2
+port n847
+PortArg A3
+port n1068gat
+PortArg A4
+port n848
+PortArg Z
+port n933gat
+module U960 XOR4D1
+PortArg A1
+port n720
+PortArg A2
+port n713
+PortArg A3
+port n957gat
+PortArg A4
+port n865gat
+PortArg Z
+port n848
+module U961 CKND0
+PortArg I
+port n1298gat
+PortArg ZN
+port n713
+module U962 XOR2D0
+PortArg A1
+port n1148gat
+PortArg A2
+port n1080gat
+PortArg Z
+port n847
+module U963 XNR2D0
+PortArg A1
+port n715
+PortArg A2
+port n1241gat
+PortArg ZN
+port n846
+module U964 CKND0
+PortArg I
+port n1294gat
+PortArg ZN
+port n715
+module U965 AN2D0
+PortArg A1
+port n849
+PortArg A2
+port n850
+PortArg Z
+port n783
+module U966 OA22D0
+PortArg A1
+port n766
+PortArg A2
+port n553gat
+PortArg B1
+port n822
+PortArg B2
+port n160gat
+PortArg Z
+port n850
+module U967 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n700
+PortArg B1
+port n762
+PortArg B2
+port n704
+PortArg ZN
+port n849
+module U968 CKND0
+PortArg I
+port n957gat
+PortArg ZN
+port n704
+module U969 CKND0
+PortArg I
+port n816gat
+PortArg ZN
+port n700
+module U970 OAI21D0
+PortArg A1
+port n787
+PortArg A2
+port n801
+PortArg B
+port n43gat
+PortArg ZN
+port n3118gat
+module U971 XOR4D1
+PortArg A1
+port n271gat
+PortArg A2
+port n160gat
+PortArg A3
+port n851
+PortArg A4
+port n852
+PortArg Z
+port n43gat
+module U972 XOR4D1
+PortArg A1
+port n341gat
+PortArg A2
+port n337gat
+PortArg A3
+port n853
+PortArg A4
+port n670
+PortArg Z
+port n852
+module U973 MUX2ND0
+PortArg I0
+port n854
+PortArg I1
+port n855
+PortArg S
+port n842gat
+PortArg ZN
+port n851
+module U974 XNR2D0
+PortArg A1
+port n856
+PortArg A2
+port n722gat
+PortArg ZN
+port n855
+module U975 OAI21D0
+PortArg A1
+port n726gat
+PortArg A2
+port n722gat
+PortArg B
+port n669
+PortArg ZN
+port n854
+module U976 AN2D0
+PortArg A1
+port n857
+PortArg A2
+port n858
+PortArg Z
+port n787
+module U977 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n337gat
+PortArg B1
+port n766
+PortArg B2
+port n777gat
+PortArg Z
+port n858
+module U978 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n722
+PortArg B1
+port n762
+PortArg B2
+port n720
+PortArg ZN
+port n857
+module U979 CKND0
+PortArg I
+port n861gat
+PortArg ZN
+port n720
+module U980 CKND0
+PortArg I
+port n580gat
+PortArg ZN
+port n722
+module U981 OAI21D0
+PortArg A1
+port n790
+PortArg A2
+port n801
+PortArg B
+port n748gat
+PortArg ZN
+port n3117gat
+module U982 XOR4D1
+PortArg A1
+port n648
+PortArg A2
+port n859
+PortArg A3
+port n807
+PortArg A4
+port n860
+PortArg Z
+port n748gat
+module U983 MUX2ND0
+PortArg I0
+port n861
+PortArg I1
+port n862
+PortArg S
+port n806
+PortArg ZN
+port n860
+module U984 AO21D0
+PortArg A1
+port n3084gat
+PortArg A2
+port n3083gat
+PortArg B
+port n802
+PortArg Z
+port n862
+module U985 XOR2D0
+PortArg A1
+port n3084gat
+PortArg A2
+port n3083gat
+PortArg Z
+port n861
+module U986 XNR2D0
+PortArg A1
+port n3088gat
+PortArg A2
+port n3089gat
+PortArg ZN
+port n859
+module U987 CKND2D0
+PortArg A1
+port n863
+PortArg A2
+port n3095gat
+PortArg ZN
+port n801
+module U988 NR2D0
+PortArg A1
+port n3085gat
+PortArg A2
+port n808
+PortArg ZN
+port n863
+module U989 AN2D0
+PortArg A1
+port n864
+PortArg A2
+port n865
+PortArg Z
+port n790
+module U990 OA22D0
+PortArg A1
+port n822
+PortArg A2
+port n271gat
+PortArg B1
+port n766
+PortArg B2
+port n659gat
+PortArg Z
+port n865
+module U991 CKND0
+PortArg I
+port n798
+PortArg ZN
+port n766
+module U992 NR2D0
+PortArg A1
+port n819
+PortArg A2
+port n866
+PortArg ZN
+port n798
+module U993 CKND0
+PortArg I
+port n828
+PortArg ZN
+port n819
+module U994 NR2D0
+PortArg A1
+port n814
+PortArg A2
+port n817
+PortArg ZN
+port n828
+module U995 CKND2D0
+PortArg A1
+port n867
+PortArg A2
+port n813
+PortArg ZN
+port n822
+module U996 CKND0
+PortArg I
+port n866
+PortArg ZN
+port n813
+module U997 AOI22D0
+PortArg A1
+port n797
+PortArg A2
+port n721
+PortArg B1
+port n762
+PortArg B2
+port n719
+PortArg ZN
+port n864
+module U998 CKND0
+PortArg I
+port n1068gat
+PortArg ZN
+port n719
+module U999 CKND0
+PortArg I
+port n821
+PortArg ZN
+port n762
+module U1000 CKND2D0
+PortArg A1
+port n867
+PortArg A2
+port n866
+PortArg ZN
+port n821
+module U1001 NR2D0
+PortArg A1
+port n817
+PortArg A2
+port n818
+PortArg ZN
+port n867
+module U1002 CKND0
+PortArg I
+port n680gat
+PortArg ZN
+port n721
+module U1003 CKND0
+PortArg I
+port n765
+PortArg ZN
+port n797
+module U1004 CKND2D0
+PortArg A1
+port n868
+PortArg A2
+port n817
+PortArg ZN
+port n765
+module U1005 NR2D0
+PortArg A1
+port n647
+PortArg A2
+port n651
+PortArg ZN
+port n817
+module U1006 NR2D0
+PortArg A1
+port n818
+PortArg A2
+port n866
+PortArg ZN
+port n868
+module U1007 AOI21D0
+PortArg A1
+port n3086gat
+PortArg A2
+port n3095gat
+PortArg B
+port n3085gat
+PortArg ZN
+port n866
+module U1008 CKND0
+PortArg I
+port n814
+PortArg ZN
+port n818
+module U1009 CKND2D0
+PortArg A1
+port n869
+PortArg A2
+port n870
+PortArg ZN
+port n814
+module U1010 CKND0
+PortArg I
+port n871
+PortArg ZN
+port n870
+module U1011 CKND2D0
+PortArg A1
+port n872
+PortArg A2
+port n1282gat
+PortArg ZN
+port n3114gat
+module U1012 CKND2D0
+PortArg A1
+port n1135gat
+PortArg A2
+port n873
+PortArg ZN
+port n3113gat
+module U1013 CKND2D0
+PortArg A1
+port n931gat
+PortArg A2
+port n874
+PortArg ZN
+port n3111gat
+module U1014 CKND2D0
+PortArg A1
+port n1121gat
+PortArg A2
+port n875
+PortArg ZN
+port n3110gat
+module U1015 CKND2D0
+PortArg A1
+port n1072gat
+PortArg A2
+port n876
+PortArg ZN
+port n3109gat
+module U1016 CKND2D0
+PortArg A1
+port n877
+PortArg A2
+port n1035gat
+PortArg ZN
+port n3108gat
+module U1017 NR2D0
+PortArg A1
+port n3106gat
+PortArg A2
+port n666
+PortArg ZN
+port n3107gat
+module U1018 AN2D0
+PortArg A1
+port n1771gat
+PortArg A2
+port n1775gat
+PortArg Z
+port n666
+module U1019 CKND2D0
+PortArg A1
+port n878
+PortArg A2
+port n879
+PortArg ZN
+port n3105gat
+module U1020 AOI22D0
+PortArg A1
+port n880
+PortArg A2
+port n881
+PortArg B1
+port n882
+PortArg B2
+port n650
+PortArg ZN
+port n878
+module U1021 NR2D0
+PortArg A1
+port n3088gat
+PortArg A2
+port n3087gat
+PortArg ZN
+port n882
+module U1022 CKND0
+PortArg I
+port n883
+PortArg ZN
+port n881
+module U1023 NR2D0
+PortArg A1
+port n3087gat
+PortArg A2
+port n799
+PortArg ZN
+port n880
+module U1024 CKND2D0
+PortArg A1
+port n884
+PortArg A2
+port n885
+PortArg ZN
+port n3104gat
+module U1025 AOI22D0
+PortArg A1
+port n886
+PortArg A2
+port n656
+PortArg B1
+port n658
+PortArg B2
+port n887
+PortArg ZN
+port n884
+module U1026 CKND0
+PortArg I
+port n888
+PortArg ZN
+port n887
+module U1027 AN2D0
+PortArg A1
+port n889
+PortArg A2
+port n890
+PortArg Z
+port n658
+module U1028 NR2D0
+PortArg A1
+port n3087gat
+PortArg A2
+port n645
+PortArg ZN
+port n890
+module U1029 NR2D0
+PortArg A1
+port n891
+PortArg A2
+port n892
+PortArg ZN
+port n889
+module U1030 CKND0
+PortArg I
+port n647
+PortArg ZN
+port n892
+module U1031 AN2D0
+PortArg A1
+port n657
+PortArg A2
+port n3094gat
+PortArg Z
+port n886
+module U1032 CKND2D0
+PortArg A1
+port n893
+PortArg A2
+port n894
+PortArg ZN
+port n3016gat
+module U1033 NR2D0
+PortArg A1
+port n895
+PortArg A2
+port n896
+PortArg ZN
+port n894
+module U1034 CKND2D0
+PortArg A1
+port n2476gat
+PortArg A2
+port n2468gat
+PortArg ZN
+port n896
+module U1035 CKND2D0
+PortArg A1
+port n2464gat
+PortArg A2
+port n897
+PortArg ZN
+port n895
+module U1036 CKND0
+PortArg I
+port n3090gat
+PortArg ZN
+port n897
+module U1037 NR2D0
+PortArg A1
+port n898
+PortArg A2
+port n899
+PortArg ZN
+port n893
+module U1038 CKND2D0
+PortArg A1
+port n2599gat
+PortArg A2
+port n2526gat
+PortArg ZN
+port n899
+module U1039 CKND2D0
+PortArg A1
+port n2522gat
+PortArg A2
+port n2518gat
+PortArg ZN
+port n898
+module U1040 XOR2D0
+PortArg A1
+port n687
+PortArg A2
+port n667gat
+PortArg Z
+port n3010gat
+module U1041 XNR2D0
+PortArg A1
+port n900
+PortArg A2
+port n901
+PortArg ZN
+port n687
+module U1042 XOR4D1
+PortArg A1
+port n561gat
+PortArg A2
+port n553gat
+PortArg A3
+port n777gat
+PortArg A4
+port n659gat
+PortArg Z
+port n901
+module U1043 XOR4D1
+PortArg A1
+port n825
+PortArg A2
+port n322gat
+PortArg A3
+port n314gat
+PortArg A4
+port n318gat
+PortArg Z
+port n900
+module U1044 CKND0
+PortArg I
+port n366gat
+PortArg ZN
+port n825
+module U1045 NR2D0
+PortArg A1
+port n902
+PortArg A2
+port n903
+PortArg ZN
+port n2983gat
+module U1046 AO21D0
+PortArg A1
+port n2182gat
+PortArg A2
+port n904
+PortArg B
+port n905
+PortArg Z
+port n903
+module U1047 CKND2D0
+PortArg A1
+port n906
+PortArg A2
+port n907
+PortArg ZN
+port n904
+module U1048 NR2D0
+PortArg A1
+port n2262gat
+PortArg A2
+port n2190gat
+PortArg ZN
+port n907
+module U1049 NR2D0
+PortArg A1
+port n2179gat
+PortArg A2
+port n2135gat
+PortArg ZN
+port n906
+module U1050 XNR2D0
+PortArg A1
+port n3116gat
+PortArg A2
+port n1197gat
+PortArg ZN
+port n2971gat
+module U1051 XNR2D0
+PortArg A1
+port n908
+PortArg A2
+port n909
+PortArg ZN
+port n3116gat
+module U1052 XOR4D1
+PortArg A1
+port n1226gat
+PortArg A2
+port n1135gat
+PortArg A3
+port n931gat
+PortArg A4
+port n1282gat
+PortArg Z
+port n909
+module U1053 XOR4D1
+PortArg A1
+port n1121gat
+PortArg A2
+port n1072gat
+PortArg A3
+port n1035gat
+PortArg A4
+port n1045gat
+PortArg Z
+port n908
+module U1054 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n911
+PortArg B
+port n912
+PortArg ZN
+port n2952gat
+module U1055 OAI21D0
+PortArg A1
+port n913
+PortArg A2
+port n914
+PortArg B
+port n915
+PortArg ZN
+port n2929gat
+module U1056 AOI22D0
+PortArg A1
+port n916
+PortArg A2
+port n917
+PortArg B1
+port n3072gat
+PortArg B2
+port n918
+PortArg ZN
+port n915
+module U1057 XNR2D0
+PortArg A1
+port n919
+PortArg A2
+port n388gat
+PortArg ZN
+port n916
+module U1058 CKND0
+PortArg I
+port n3081gat
+PortArg ZN
+port n914
+module U1059 CKND0
+PortArg I
+port n920
+PortArg ZN
+port n2928gat
+module U1060 CKND0
+PortArg I
+port n921
+PortArg ZN
+port n2927gat
+module U1061 MUX2ND0
+PortArg I0
+port n922
+PortArg I1
+port n923
+PortArg S
+port n924
+PortArg ZN
+port n2926gat
+module U1062 XOR2D0
+PortArg A1
+port n470gat
+PortArg A2
+port n925
+PortArg Z
+port n923
+module U1063 NR2D0
+PortArg A1
+port n926
+PortArg A2
+port n927
+PortArg ZN
+port n925
+module U1064 AOI21D0
+PortArg A1
+port n256gat
+PortArg A2
+port n928
+PortArg B
+port n156gat
+PortArg ZN
+port n926
+module U1065 CKND0
+PortArg I
+port n152gat
+PortArg ZN
+port n928
+module U1066 OAI21D0
+PortArg A1
+port n913
+PortArg A2
+port n929
+PortArg B
+port n930
+PortArg ZN
+port n2925gat
+module U1067 AOI22D0
+PortArg A1
+port n931
+PortArg A2
+port n917
+PortArg B1
+port n3073gat
+PortArg B2
+port n918
+PortArg ZN
+port n930
+module U1068 XOR2D0
+PortArg A1
+port n932
+PortArg A2
+port n463gat
+PortArg Z
+port n931
+module U1069 CKND2D0
+PortArg A1
+port n919
+PortArg A2
+port n933
+PortArg ZN
+port n932
+module U1070 AO21D0
+PortArg A1
+port n934
+PortArg A2
+port n327gat
+PortArg B
+port n388gat
+PortArg Z
+port n933
+module U1071 CKND0
+PortArg I
+port n935
+PortArg ZN
+port n919
+module U1072 CKND0
+PortArg I
+port n3082gat
+PortArg ZN
+port n929
+module U1073 MUX2ND0
+PortArg I0
+port n936
+PortArg I1
+port n937
+PortArg S
+port n924
+PortArg ZN
+port n2924gat
+module U1074 XNR2D0
+PortArg A1
+port n256gat
+PortArg A2
+port n938
+PortArg ZN
+port n937
+module U1075 MUX2ND0
+PortArg I0
+port n939
+PortArg I1
+port n940
+PortArg S
+port n924
+PortArg ZN
+port n2923gat
+module U1076 XOR2D0
+PortArg A1
+port n148gat
+PortArg A2
+port n941
+PortArg Z
+port n940
+module U1077 NR2D0
+PortArg A1
+port n256gat
+PortArg A2
+port n938
+PortArg ZN
+port n941
+module U1078 OR2D0
+PortArg A1
+port n942
+PortArg A2
+port n152gat
+PortArg Z
+port n938
+module U1079 CKND0
+PortArg I
+port n943
+PortArg ZN
+port n2922gat
+module U1080 CKND0
+PortArg I
+port n944
+PortArg ZN
+port n2921gat
+module U1081 OAI22D0
+PortArg A1
+port n913
+PortArg A2
+port n945
+PortArg B1
+port n911
+PortArg B2
+port n946
+PortArg ZN
+port n2920gat
+module U1082 CKND0
+PortArg I
+port n3076gat
+PortArg ZN
+port n945
+module U1083 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n936
+PortArg B
+port n912
+PortArg ZN
+port n2919gat
+module U1084 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n939
+PortArg B
+port n912
+PortArg ZN
+port n2918gat
+module U1085 MUX2ND0
+PortArg I0
+port n911
+PortArg I1
+port n947
+PortArg S
+port n924
+PortArg ZN
+port n2917gat
+module U1086 XNR2D0
+PortArg A1
+port n152gat
+PortArg A2
+port n942
+PortArg ZN
+port n947
+module U1087 OR2D0
+PortArg A1
+port n927
+PortArg A2
+port n156gat
+PortArg Z
+port n942
+module U1088 CKND0
+PortArg I
+port n3067gat
+PortArg ZN
+port n911
+module U1089 OAI21D0
+PortArg A1
+port n913
+PortArg A2
+port n948
+PortArg B
+port n949
+PortArg ZN
+port n2916gat
+module U1090 AOI22D0
+PortArg A1
+port n950
+PortArg A2
+port n917
+PortArg B1
+port n3070gat
+PortArg B2
+port n918
+PortArg ZN
+port n949
+module U1091 XNR2D0
+PortArg A1
+port n951
+PortArg A2
+port n327gat
+PortArg ZN
+port n950
+module U1092 CKND0
+PortArg I
+port n3079gat
+PortArg ZN
+port n948
+module U1093 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n921
+PortArg ZN
+port n2915gat
+module U1094 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3075gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3066gat
+PortArg ZN
+port n921
+module U1095 CKND0
+PortArg I
+port n952
+PortArg ZN
+port n2914gat
+module U1096 OAI22D0
+PortArg A1
+port n913
+PortArg A2
+port n953
+PortArg B1
+port n946
+PortArg B2
+port n939
+PortArg ZN
+port n2913gat
+module U1097 CKND0
+PortArg I
+port n3065gat
+PortArg ZN
+port n939
+module U1098 CKND0
+PortArg I
+port n3074gat
+PortArg ZN
+port n953
+module U1099 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n954
+PortArg B
+port n912
+PortArg ZN
+port n2912gat
+module U1100 CKND0
+PortArg I
+port n3070gat
+PortArg ZN
+port n954
+module U1101 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n955
+PortArg B
+port n912
+PortArg ZN
+port n2911gat
+module U1102 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n956
+PortArg B
+port n912
+PortArg ZN
+port n2910gat
+module U1103 CKND0
+PortArg I
+port n3071gat
+PortArg ZN
+port n956
+module U1104 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n957
+PortArg B
+port n912
+PortArg ZN
+port n2909gat
+module U1105 CKND0
+PortArg I
+port n3069gat
+PortArg ZN
+port n957
+module U1106 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n922
+PortArg B
+port n912
+PortArg ZN
+port n2908gat
+module U1107 CKND0
+PortArg I
+port n3073gat
+PortArg ZN
+port n922
+module U1108 OAI21D0
+PortArg A1
+port n910
+PortArg A2
+port n958
+PortArg B
+port n912
+PortArg ZN
+port n2907gat
+module U1109 CKND0
+PortArg I
+port n3072gat
+PortArg ZN
+port n958
+module U1110 MAOI22D0
+PortArg A1
+port n650
+PortArg A2
+port n656
+PortArg B1
+port n959
+PortArg B2
+port n960
+PortArg ZN
+port n910
+module U1111 CKND2D0
+PortArg A1
+port n647
+PortArg A2
+port n961
+PortArg ZN
+port n960
+module U1112 NR2D0
+PortArg A1
+port n799
+PortArg A2
+port n807
+PortArg ZN
+port n647
+module U1113 CKND0
+PortArg I
+port n3093gat
+PortArg ZN
+port n799
+module U1114 CKND2D0
+PortArg A1
+port n3088gat
+PortArg A2
+port n648
+PortArg ZN
+port n959
+module U1115 AN2D0
+PortArg A1
+port n962
+PortArg A2
+port n651
+PortArg Z
+port n656
+module U1116 NR2D0
+PortArg A1
+port n963
+PortArg A2
+port n648
+PortArg ZN
+port n651
+module U1117 NR2D0
+PortArg A1
+port n3088gat
+PortArg A2
+port n891
+PortArg ZN
+port n962
+module U1118 OAI22D0
+PortArg A1
+port n913
+PortArg A2
+port n964
+PortArg B1
+port n946
+PortArg B2
+port n936
+PortArg ZN
+port n2905gat
+module U1119 CKND0
+PortArg I
+port n3066gat
+PortArg ZN
+port n936
+module U1120 CKND0
+PortArg I
+port n3075gat
+PortArg ZN
+port n964
+module U1121 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n943
+PortArg ZN
+port n2904gat
+module U1122 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3082gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3073gat
+PortArg ZN
+port n943
+module U1123 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n920
+PortArg ZN
+port n2903gat
+module U1124 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3076gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3067gat
+PortArg ZN
+port n920
+module U1125 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n965
+PortArg ZN
+port n2901gat
+module U1126 OAI21D0
+PortArg A1
+port n913
+PortArg A2
+port n966
+PortArg B
+port n967
+PortArg ZN
+port n2900gat
+module U1127 AOI22D0
+PortArg A1
+port n968
+PortArg A2
+port n917
+PortArg B1
+port n3071gat
+PortArg B2
+port n918
+PortArg ZN
+port n967
+module U1128 XNR2D0
+PortArg A1
+port n331gat
+PortArg A2
+port n969
+PortArg ZN
+port n968
+module U1129 CKND0
+PortArg I
+port n3080gat
+PortArg ZN
+port n966
+module U1130 OAI21D0
+PortArg A1
+port n913
+PortArg A2
+port n970
+PortArg B
+port n971
+PortArg ZN
+port n2899gat
+module U1131 AOI22D0
+PortArg A1
+port n972
+PortArg A2
+port n917
+PortArg B1
+port n3069gat
+PortArg B2
+port n918
+PortArg ZN
+port n971
+module U1132 CKND0
+PortArg I
+port n946
+PortArg ZN
+port n918
+module U1133 AN2D0
+PortArg A1
+port n946
+PortArg A2
+port n913
+PortArg Z
+port n917
+module U1134 XOR2D0
+PortArg A1
+port n973
+PortArg A2
+port n384gat
+PortArg Z
+port n972
+module U1135 CKND2D0
+PortArg A1
+port n951
+PortArg A2
+port n974
+PortArg ZN
+port n973
+module U1136 CKND0
+PortArg I
+port n327gat
+PortArg ZN
+port n974
+module U1137 AN2D0
+PortArg A1
+port n969
+PortArg A2
+port n934
+PortArg Z
+port n951
+module U1138 CKND0
+PortArg I
+port n331gat
+PortArg ZN
+port n934
+module U1139 NR2D0
+PortArg A1
+port n935
+PortArg A2
+port n388gat
+PortArg ZN
+port n969
+module U1140 CKND0
+PortArg I
+port n3078gat
+PortArg ZN
+port n970
+module U1141 OAI22D0
+PortArg A1
+port n913
+PortArg A2
+port n975
+PortArg B1
+port n946
+PortArg B2
+port n955
+PortArg ZN
+port n2898gat
+module U1142 CKND2D0
+PortArg A1
+port n976
+PortArg A2
+port n977
+PortArg ZN
+port n946
+module U1143 NR2D0
+PortArg A1
+port n3088gat
+PortArg A2
+port n3086gat
+PortArg ZN
+port n977
+module U1144 NR2D0
+PortArg A1
+port n649
+PortArg A2
+port n869
+PortArg ZN
+port n976
+module U1145 CKND0
+PortArg I
+port n3077gat
+PortArg ZN
+port n975
+module U1146 CKND0
+PortArg I
+port n978
+PortArg ZN
+port n2897gat
+module U1147 CKND0
+PortArg I
+port n965
+PortArg ZN
+port n2896gat
+module U1148 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3080gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3071gat
+PortArg ZN
+port n965
+module U1149 CKND0
+PortArg I
+port n979
+PortArg ZN
+port n2895gat
+module U1150 CKND0
+PortArg I
+port n980
+PortArg ZN
+port n2894gat
+module U1151 MUX2ND0
+PortArg I0
+port n955
+PortArg I1
+port n981
+PortArg S
+port n924
+PortArg ZN
+port n2892gat
+module U1152 OA21D0
+PortArg A1
+port n883
+PortArg A2
+port n869
+PortArg B
+port n913
+PortArg Z
+port n924
+module U1153 CKND2D0
+PortArg A1
+port n982
+PortArg A2
+port n871
+PortArg ZN
+port n913
+module U1154 NR2D0
+PortArg A1
+port n963
+PortArg A2
+port n645
+PortArg ZN
+port n871
+module U1155 CKND0
+PortArg I
+port n3095gat
+PortArg ZN
+port n963
+module U1156 AN2D0
+PortArg A1
+port n648
+PortArg A2
+port n650
+PortArg Z
+port n982
+module U1157 NR2D0
+PortArg A1
+port n983
+PortArg A2
+port n657
+PortArg ZN
+port n650
+module U1158 CKND2D0
+PortArg A1
+port n984
+PortArg A2
+port n3095gat
+PortArg ZN
+port n657
+module U1159 NR2D0
+PortArg A1
+port n807
+PortArg A2
+port n891
+PortArg ZN
+port n984
+module U1160 CKND2D0
+PortArg A1
+port n985
+PortArg A2
+port n802
+PortArg ZN
+port n891
+module U1161 NR2D0
+PortArg A1
+port n3085gat
+PortArg A2
+port n3106gat
+PortArg ZN
+port n985
+module U1162 CKND0
+PortArg I
+port n3086gat
+PortArg ZN
+port n807
+module U1163 CKND0
+PortArg I
+port n3094gat
+PortArg ZN
+port n983
+module U1164 CKND0
+PortArg I
+port n3087gat
+PortArg ZN
+port n648
+module U1165 CKND2D0
+PortArg A1
+port n3093gat
+PortArg A2
+port n3087gat
+PortArg ZN
+port n869
+module U1166 CKND2D0
+PortArg A1
+port n986
+PortArg A2
+port n961
+PortArg ZN
+port n883
+module U1167 CKND0
+PortArg I
+port n649
+PortArg ZN
+port n961
+module U1168 CKND2D0
+PortArg A1
+port n987
+PortArg A2
+port n988
+PortArg ZN
+port n649
+module U1169 NR2D0
+PortArg A1
+port n3106gat
+PortArg A2
+port n888
+PortArg ZN
+port n988
+module U1170 NR2D0
+PortArg A1
+port n3091gat
+PortArg A2
+port n3092gat
+PortArg ZN
+port n888
+module U1171 CKND0
+PortArg I
+port n1871gat
+PortArg ZN
+port n3106gat
+module U1172 NR2D0
+PortArg A1
+port n806
+PortArg A2
+port n808
+PortArg ZN
+port n987
+module U1173 CKND0
+PortArg I
+port n802
+PortArg ZN
+port n808
+module U1174 NR2D0
+PortArg A1
+port n3084gat
+PortArg A2
+port n3083gat
+PortArg ZN
+port n802
+module U1175 CKND0
+PortArg I
+port n3085gat
+PortArg ZN
+port n806
+module U1176 NR2D0
+PortArg A1
+port n3086gat
+PortArg A2
+port n645
+PortArg ZN
+port n986
+module U1177 CKND0
+PortArg I
+port n3088gat
+PortArg ZN
+port n645
+module U1178 XNR2D0
+PortArg A1
+port n156gat
+PortArg A2
+port n927
+PortArg ZN
+port n981
+module U1179 CKND0
+PortArg I
+port n3068gat
+PortArg ZN
+port n955
+module U1180 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n952
+PortArg ZN
+port n2891gat
+module U1181 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3074gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3065gat
+PortArg ZN
+port n952
+module U1182 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n978
+PortArg ZN
+port n2890gat
+module U1183 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3081gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3072gat
+PortArg ZN
+port n978
+module U1184 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n980
+PortArg ZN
+port n2888gat
+module U1185 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3077gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3068gat
+PortArg ZN
+port n980
+module U1186 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n944
+PortArg ZN
+port n2887gat
+module U1187 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3079gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3070gat
+PortArg ZN
+port n944
+module U1188 CKND2D0
+PortArg A1
+port n912
+PortArg A2
+port n979
+PortArg ZN
+port n2886gat
+module U1189 AOI22D0
+PortArg A1
+port n3095gat
+PortArg A2
+port n3078gat
+PortArg B1
+port n3093gat
+PortArg B2
+port n3069gat
+PortArg ZN
+port n979
+module U1190 CKND2D0
+PortArg A1
+port n989
+PortArg A2
+port n990
+PortArg ZN
+port n912
+module U1191 NR2D0
+PortArg A1
+port n991
+PortArg A2
+port n992
+PortArg ZN
+port n990
+module U1192 CKND2D0
+PortArg A1
+port n601
+PortArg A2
+port n2630gat
+PortArg ZN
+port n992
+module U1193 OAI21D0
+PortArg A1
+port n856
+PortArg A2
+port n688
+PortArg B
+port n993
+PortArg ZN
+port n601
+module U1194 NR2D0
+PortArg A1
+port n603
+PortArg A2
+port n630
+PortArg ZN
+port n993
+module U1195 AN2D0
+PortArg A1
+port n994
+PortArg A2
+port n995
+PortArg Z
+port n630
+module U1196 NR2D0
+PortArg A1
+port n394gat
+PortArg A2
+port n2454gat
+PortArg ZN
+port n995
+module U1197 NR2D0
+PortArg A1
+port n669
+PortArg A2
+port n853
+PortArg ZN
+port n994
+module U1198 CKND2D0
+PortArg A1
+port n927
+PortArg A2
+port n935
+PortArg ZN
+port n603
+module U1199 CKND2D0
+PortArg A1
+port n996
+PortArg A2
+port n997
+PortArg ZN
+port n935
+module U1200 NR2D0
+PortArg A1
+port n703gat
+PortArg A2
+port n2454gat
+PortArg ZN
+port n997
+module U1201 NR2D0
+PortArg A1
+port n669
+PortArg A2
+port n670
+PortArg ZN
+port n996
+module U1202 CKND2D0
+PortArg A1
+port n998
+PortArg A2
+port n631
+PortArg ZN
+port n927
+module U1203 CKND0
+PortArg I
+port n688
+PortArg ZN
+port n631
+module U1204 NR2D0
+PortArg A1
+port n703gat
+PortArg A2
+port n856
+PortArg ZN
+port n998
+module U1205 CKND2D0
+PortArg A1
+port n999
+PortArg A2
+port n394gat
+PortArg ZN
+port n688
+module U1206 NR2D0
+PortArg A1
+port n722gat
+PortArg A2
+port n2454gat
+PortArg ZN
+port n999
+module U1207 CKND0
+PortArg I
+port n726gat
+PortArg ZN
+port n856
+module U1208 CKND2D0
+PortArg A1
+port n110
+PortArg A2
+port n113
+PortArg ZN
+port n991
+module U1209 NR2D0
+PortArg A1
+port n1000
+PortArg A2
+port n1001
+PortArg ZN
+port n989
+module U1210 OAI21D0
+PortArg A1
+port n1002
+PortArg A2
+port n1003
+PortArg B
+port n1004
+PortArg ZN
+port n1001
+module U1211 MUX2ND0
+PortArg I0
+port n2626gat
+PortArg I1
+port n2490gat
+PortArg S
+port n115
+PortArg ZN
+port n1004
+module U1212 CKND2D0
+PortArg A1
+port n2399gat
+PortArg A2
+port n108
+PortArg ZN
+port n1003
+module U1213 CKND0
+PortArg I
+port n1005
+PortArg ZN
+port n1002
+module U1214 MUX2ND0
+PortArg I0
+port n2626gat
+PortArg I1
+port n2490gat
+PortArg S
+port n2155gat
+PortArg ZN
+port n1000
+module U1215 XOR4D1
+PortArg A1
+port n122
+PortArg A2
+port n3128gat
+PortArg A3
+port n3127gat
+PortArg A4
+port n2339gat
+PortArg Z
+port n2646gat
+module U1216 XOR4D1
+PortArg A1
+port n1006
+PortArg A2
+port n2626gat
+PortArg A3
+port n2490gat
+PortArg A4
+port n1007
+PortArg Z
+port n2613gat
+module U1217 XNR2D0
+PortArg A1
+port n2543gat
+PortArg A2
+port n2622gat
+PortArg ZN
+port n1007
+module U1218 XNR2D0
+PortArg A1
+port n126
+PortArg A2
+port n2630gat
+PortArg ZN
+port n1006
+module U1219 XOR4D1
+PortArg A1
+port n110
+PortArg A2
+port n1008
+PortArg A3
+port n2203gat
+PortArg A4
+port n1005
+PortArg Z
+port n2579gat
+module U1220 XNR2D0
+PortArg A1
+port n2343gat
+PortArg A2
+port n109
+PortArg ZN
+port n1005
+module U1221 XNR2D0
+PortArg A1
+port n121
+PortArg A2
+port n2399gat
+PortArg ZN
+port n1008
+module U1222 NR2D0
+PortArg A1
+port n885
+PortArg A2
+port n653
+PortArg ZN
+port n2556gat
+module U1223 OA21D0
+PortArg A1
+port n1850gat
+PortArg A2
+port n1009
+PortArg B
+port n1010
+PortArg Z
+port n885
+module U1224 NR2D0
+PortArg A1
+port n2143gat
+PortArg A2
+port n1011
+PortArg ZN
+port n1009
+module U1225 NR2D0
+PortArg A1
+port n653
+PortArg A2
+port n879
+PortArg ZN
+port n2436gat
+module U1226 XNR2D0
+PortArg A1
+port n1011
+PortArg A2
+port n2143gat
+PortArg ZN
+port n879
+module U1227 NR2D0
+PortArg A1
+port n652
+PortArg A2
+port n875
+PortArg ZN
+port n2396gat
+module U1228 XOR2D0
+PortArg A1
+port n1012
+PortArg A2
+port n2403gat
+PortArg Z
+port n875
+module U1229 NR2D0
+PortArg A1
+port n653
+PortArg A2
+port n659
+PortArg ZN
+port n2387gat
+module U1230 XNR2D0
+PortArg A1
+port n1013
+PortArg A2
+port n1014
+PortArg ZN
+port n659
+module U1231 NR2D0
+PortArg A1
+port n655
+PortArg A2
+port n653
+PortArg ZN
+port n2330gat
+module U1232 CKND2D0
+PortArg A1
+port n905
+PortArg A2
+port n58
+PortArg ZN
+port n653
+module U1233 OA21D0
+PortArg A1
+port n1740gat
+PortArg A2
+port n1015
+PortArg B
+port n1016
+PortArg Z
+port n905
+module U1234 MUX2ND0
+PortArg I0
+port n1017
+PortArg I1
+port n1018
+PortArg S
+port n2989gat
+PortArg ZN
+port n1016
+module U1235 AN2D0
+PortArg A1
+port n127
+PortArg A2
+port n1740gat
+PortArg Z
+port n1018
+module U1236 MUX2ND0
+PortArg I0
+port n1019
+PortArg I1
+port n622
+PortArg S
+port n1020
+PortArg ZN
+port n1017
+module U1237 NR2D0
+PortArg A1
+port n1496gat
+PortArg A2
+port n2091gat
+PortArg ZN
+port n1020
+module U1238 CKND2D0
+PortArg A1
+port n1021
+PortArg A2
+port n1022
+PortArg ZN
+port n622
+module U1239 NR2D0
+PortArg A1
+port n1899gat
+PortArg A2
+port n1023
+PortArg ZN
+port n1022
+module U1240 NR2D0
+PortArg A1
+port n626
+PortArg A2
+port n637
+PortArg ZN
+port n1021
+module U1241 CKND0
+PortArg I
+port n2139gat
+PortArg ZN
+port n626
+module U1242 NR2D0
+PortArg A1
+port n874
+PortArg A2
+port n652
+PortArg ZN
+port n2198gat
+module U1243 NR2D0
+PortArg A1
+port n877
+PortArg A2
+port n652
+PortArg ZN
+port n2197gat
+module U1244 OA22D0
+PortArg A1
+port n1024
+PortArg A2
+port n1025
+PortArg B1
+port n2407gat
+PortArg B2
+port n1026
+PortArg Z
+port n877
+module U1245 NR2D0
+PortArg A1
+port n2347gat
+PortArg A2
+port n1024
+PortArg ZN
+port n1026
+module U1246 NR2D0
+PortArg A1
+port n652
+PortArg A2
+port n876
+PortArg ZN
+port n2196gat
+module U1247 XNR2D0
+PortArg A1
+port n1024
+PortArg A2
+port n2347gat
+PortArg ZN
+port n876
+module U1248 CKND2D0
+PortArg A1
+port n1012
+PortArg A2
+port n1027
+PortArg ZN
+port n1024
+module U1249 CKND2D0
+PortArg A1
+port n58
+PortArg A2
+port n902
+PortArg ZN
+port n652
+module U1250 CKND2D0
+PortArg A1
+port n1028
+PortArg A2
+port n1029
+PortArg ZN
+port n902
+module U1251 MUX2ND0
+PortArg I0
+port n2440gat
+PortArg I1
+port n2394gat
+PortArg S
+port n2989gat
+PortArg ZN
+port n1029
+module U1252 NR2D0
+PortArg A1
+port n1012
+PortArg A2
+port n1030
+PortArg ZN
+port n1028
+module U1253 NR2D0
+PortArg A1
+port n2440gat
+PortArg A2
+port n2394gat
+PortArg ZN
+port n1012
+module U1254 CKND0
+PortArg I
+port n1031
+PortArg ZN
+port n58
+module U1255 NR2D0
+PortArg A1
+port n872
+PortArg A2
+port n1031
+PortArg ZN
+port n2194gat
+module U1256 NR2D0
+PortArg A1
+port n634
+PortArg A2
+port n1032
+PortArg ZN
+port n872
+module U1257 NR2D0
+PortArg A1
+port n1033
+PortArg A2
+port n1034
+PortArg ZN
+port n2163gat
+module U1258 CKND2D0
+PortArg A1
+port n1312gat
+PortArg A2
+port n1035
+PortArg ZN
+port n1034
+module U1259 OR2D0
+PortArg A1
+port n1036
+PortArg A2
+port n2169gat
+PortArg Z
+port n1033
+module U1260 NR2D0
+PortArg A1
+port n1031
+PortArg A2
+port n873
+PortArg ZN
+port n2057gat
+module U1261 XNR2D0
+PortArg A1
+port n1037
+PortArg A2
+port n2135gat
+PortArg ZN
+port n873
+module U1262 CKND2D0
+PortArg A1
+port n634
+PortArg A2
+port n1032
+PortArg ZN
+port n1037
+module U1263 CKND0
+PortArg I
+port n2190gat
+PortArg ZN
+port n1032
+module U1264 CKND0
+PortArg I
+port n2262gat
+PortArg ZN
+port n634
+module U1265 CKND2D0
+PortArg A1
+port n1038
+PortArg A2
+port n1039
+PortArg ZN
+port n1031
+module U1266 NR2D0
+PortArg A1
+port n161
+PortArg A2
+port n157
+PortArg ZN
+port n1039
+module U1267 AOI21D0
+PortArg A1
+port n2099gat
+PortArg A2
+port n754
+PortArg B
+port n1040
+PortArg ZN
+port n1038
+module U1268 CKND0
+PortArg I
+port n1035
+PortArg ZN
+port n1040
+module U1269 AN2D0
+PortArg A1
+port n1041
+PortArg A2
+port n148
+PortArg Z
+port n2015gat
+module U1270 NR2D0
+PortArg A1
+port n2040gat
+PortArg A2
+port n1775gat
+PortArg ZN
+port n1041
+module U1271 NR2D0
+PortArg A1
+port n621
+PortArg A2
+port n1042
+PortArg ZN
+port n2009gat
+module U1272 OAI21D0
+PortArg A1
+port n1312gat
+PortArg A2
+port n151
+PortArg B
+port n1035
+PortArg ZN
+port n1042
+module U1273 OR2D0
+PortArg A1
+port n1043
+PortArg A2
+port n1044
+PortArg Z
+port n604
+module U1274 CKND2D0
+PortArg A1
+port n2658gat
+PortArg A2
+port n2588gat
+PortArg ZN
+port n1044
+module U1275 CKND2D0
+PortArg A1
+port n1045
+PortArg A2
+port n2510gat
+PortArg ZN
+port n1043
+module U1276 AN2D0
+PortArg A1
+port n2506gat
+PortArg A2
+port n2502gat
+PortArg Z
+port n1045
+module U1277 CKND2D0
+PortArg A1
+port n754
+PortArg A2
+port n1046
+PortArg ZN
+port n621
+module U1278 CKND2D0
+PortArg A1
+port n2021gat
+PortArg A2
+port n1880gat
+PortArg ZN
+port n754
+module U1279 NR2D0
+PortArg A1
+port n1036
+PortArg A2
+port n1019
+PortArg ZN
+port n1927gat
+module U1280 CKND0
+PortArg I
+port n1046
+PortArg ZN
+port n1036
+module U1281 NR2D0
+PortArg A1
+port n1010
+PortArg A2
+port n1047
+PortArg ZN
+port n1915gat
+module U1282 AN2D0
+PortArg A1
+port n1048
+PortArg A2
+port n2117gat
+PortArg Z
+port n1882gat
+module U1283 NR2D0
+PortArg A1
+port n2125gat
+PortArg A2
+port n1049
+PortArg ZN
+port n1048
+module U1284 NR2D0
+PortArg A1
+port n3099gat
+PortArg A2
+port n1050
+PortArg ZN
+port n1827gat
+module U1285 CKND0
+PortArg I
+port n2319gat
+PortArg ZN
+port n1050
+module U1286 NR2D0
+PortArg A1
+port n1019
+PortArg A2
+port n1047
+PortArg ZN
+port n1800gat
+module U1287 CKND2D0
+PortArg A1
+port n1051
+PortArg A2
+port n1052
+PortArg ZN
+port n1047
+module U1288 NR2D0
+PortArg A1
+port n2440gat
+PortArg A2
+port n2403gat
+PortArg ZN
+port n1052
+module U1289 NR2D0
+PortArg A1
+port n1053
+PortArg A2
+port n1025
+PortArg ZN
+port n1051
+module U1290 NR2D0
+PortArg A1
+port n1054
+PortArg A2
+port n1055
+PortArg ZN
+port n1793gat
+module U1291 CKND0
+PortArg I
+port n2458gat
+PortArg ZN
+port n170
+module U1292 NR2D0
+PortArg A1
+port n1056
+PortArg A2
+port n1057
+PortArg ZN
+port n1696gat
+module U1293 CKND0
+PortArg I
+port n2121gat
+PortArg ZN
+port n166
+module U1294 CKND0
+PortArg I
+port n2125gat
+PortArg ZN
+port n165
+module U1295 CKND0
+PortArg I
+port n2110gat
+PortArg ZN
+port n164
+module U1296 NR2D0
+PortArg A1
+port n1058
+PortArg A2
+port n1059
+PortArg ZN
+port n1636gat
+module U1297 CKND2D0
+PortArg A1
+port n1060
+PortArg A2
+port n1850gat
+PortArg ZN
+port n1059
+module U1298 CKND2D0
+PortArg A1
+port n2989gat
+PortArg A2
+port n1061
+PortArg ZN
+port n1058
+module U1299 CKND0
+PortArg I
+port n2033gat
+PortArg ZN
+port n163
+module U1300 CKND0
+PortArg I
+port n1057
+PortArg ZN
+port n1626gat
+module U1301 CKND2D0
+PortArg A1
+port n1062
+PortArg A2
+port n629
+PortArg ZN
+port n1057
+module U1302 AN2D0
+PortArg A1
+port n853
+PortArg A2
+port n722gat
+PortArg Z
+port n1062
+module U1303 CKND0
+PortArg I
+port n1063
+PortArg ZN
+port n1625gat
+module U1304 NR2D0
+PortArg A1
+port n853
+PortArg A2
+port n1064
+PortArg ZN
+port n1620gat
+module U1305 OR2D0
+PortArg A1
+port n670
+PortArg A2
+port n669
+PortArg Z
+port n1064
+module U1306 CKND2D0
+PortArg A1
+port n726gat
+PortArg A2
+port n722gat
+PortArg ZN
+port n669
+module U1307 CKND0
+PortArg I
+port n394gat
+PortArg ZN
+port n670
+module U1308 CKND0
+PortArg I
+port n703gat
+PortArg ZN
+port n853
+module U1309 CKND0
+PortArg I
+port n2025gat
+PortArg ZN
+port n162
+module U1310 NR2D0
+PortArg A1
+port n1056
+PortArg A2
+port n1063
+PortArg ZN
+port n1613gat
+module U1311 CKND2D0
+PortArg A1
+port n1065
+PortArg A2
+port n629
+PortArg ZN
+port n1063
+module U1312 AN2D0
+PortArg A1
+port n1066
+PortArg A2
+port n394gat
+PortArg Z
+port n629
+module U1313 NR2D0
+PortArg A1
+port n726gat
+PortArg A2
+port n2454gat
+PortArg ZN
+port n1066
+module U1314 NR2D0
+PortArg A1
+port n722gat
+PortArg A2
+port n703gat
+PortArg ZN
+port n1065
+module U1315 NR2D0
+PortArg A1
+port n1056
+PortArg A2
+port n1067
+PortArg ZN
+port n1610gat
+module U1316 CKND0
+PortArg I
+port n1606gat
+PortArg ZN
+port n1067
+module U1317 OAI21D0
+PortArg A1
+port n1829gat
+PortArg A2
+port n605
+PortArg B
+port n1068
+PortArg ZN
+port n1056
+module U1318 NR2D0
+PortArg A1
+port n80
+PortArg A2
+port n1049
+PortArg ZN
+port n1068
+module U1319 CKND0
+PortArg I
+port n3100gat
+PortArg ZN
+port n1049
+module U1320 CKND0
+PortArg I
+port n2472gat
+PortArg ZN
+port n80
+module U1321 CKND2D0
+PortArg A1
+port n1825gat
+PortArg A2
+port n1821gat
+PortArg ZN
+port n605
+module U1322 CKND0
+PortArg I
+port n2037gat
+PortArg ZN
+port n161
+module U1323 NR2D0
+PortArg A1
+port n2454gat
+PortArg A2
+port n271gat
+PortArg ZN
+port n1606gat
+module U1324 CKND0
+PortArg I
+port n2044gat
+PortArg ZN
+port n160
+module U1325 NR2D0
+PortArg A1
+port n1069
+PortArg A2
+port n1070
+PortArg ZN
+port n1593gat
+module U1326 CKND2D0
+PortArg A1
+port n1060
+PortArg A2
+port n625
+PortArg ZN
+port n1070
+module U1327 CKND0
+PortArg I
+port n1312gat
+PortArg ZN
+port n1069
+module U1328 CKND0
+PortArg I
+port n2176gat
+PortArg ZN
+port n158
+module U1329 CKND0
+PortArg I
+port n2095gat
+PortArg ZN
+port n157
+module U1330 NR2D0
+PortArg A1
+port n1055
+PortArg A2
+port n1071
+PortArg ZN
+port n1567gat
+module U1331 NR2D0
+PortArg A1
+port n1072
+PortArg A2
+port n1073
+PortArg ZN
+port n1565gat
+module U1332 OR2D0
+PortArg A1
+port n1055
+PortArg A2
+port n1014
+PortArg Z
+port n1073
+module U1333 CKND2D0
+PortArg A1
+port n1074
+PortArg A2
+port n1075
+PortArg ZN
+port n1055
+module U1334 NR2D0
+PortArg A1
+port n2403gat
+PortArg A2
+port n2394gat
+PortArg ZN
+port n1075
+module U1335 NR2D0
+PortArg A1
+port n641
+PortArg A2
+port n1025
+PortArg ZN
+port n1074
+module U1336 CKND2D0
+PortArg A1
+port n2407gat
+PortArg A2
+port n642
+PortArg ZN
+port n1025
+module U1337 CKND2D0
+PortArg A1
+port n625
+PortArg A2
+port n1013
+PortArg ZN
+port n1072
+module U1338 NR2D0
+PortArg A1
+port n1015
+PortArg A2
+port n1076
+PortArg ZN
+port n1564gat
+module U1339 OAI21D0
+PortArg A1
+port n1030
+PortArg A2
+port n1077
+PortArg B
+port n1046
+PortArg ZN
+port n1076
+module U1340 CKND2D0
+PortArg A1
+port n1078
+PortArg A2
+port n1079
+PortArg ZN
+port n1046
+module U1341 OAI22D0
+PortArg A1
+port n1030
+PortArg A2
+port n1080
+PortArg B1
+port n1081
+PortArg B2
+port n1082
+PortArg ZN
+port n1079
+module U1342 CKND2D0
+PortArg A1
+port n1083
+PortArg A2
+port n1084
+PortArg ZN
+port n1082
+module U1343 XNR2D0
+PortArg A1
+port n402gat
+PortArg A2
+port n2403gat
+PortArg ZN
+port n1084
+module U1344 NR2D0
+PortArg A1
+port n1085
+PortArg A2
+port n1086
+PortArg ZN
+port n1083
+module U1345 XNR2D0
+PortArg A1
+port n763
+PortArg A2
+port n2440gat
+PortArg ZN
+port n1086
+module U1346 CKND0
+PortArg I
+port n919gat
+PortArg ZN
+port n763
+module U1347 XNR2D0
+PortArg A1
+port n769
+PortArg A2
+port n2394gat
+PortArg ZN
+port n1085
+module U1348 CKND0
+PortArg I
+port n846gat
+PortArg ZN
+port n769
+module U1349 CKND2D0
+PortArg A1
+port n1087
+PortArg A2
+port n398gat
+PortArg ZN
+port n1081
+module U1350 NR2D0
+PortArg A1
+port n2407gat
+PortArg A2
+port n642
+PortArg ZN
+port n1087
+module U1351 CKND0
+PortArg I
+port n874
+PortArg ZN
+port n1080
+module U1352 NR2D0
+PortArg A1
+port n696
+PortArg A2
+port n1054
+PortArg ZN
+port n1078
+module U1353 OA21D0
+PortArg A1
+port n2989gat
+PortArg A2
+port n1019
+PortArg B
+port n1015
+PortArg Z
+port n1054
+module U1354 CKND2D0
+PortArg A1
+port n625
+PortArg A2
+port n1088
+PortArg ZN
+port n1019
+module U1355 CKND2D0
+PortArg A1
+port n1834gat
+PortArg A2
+port n1767gat
+PortArg ZN
+port n1090
+module U1356 CKND0
+PortArg I
+port n1880gat
+PortArg ZN
+port n1089
+module U1357 CKND2D0
+PortArg A1
+port n2440gat
+PortArg A2
+port n1053
+PortArg ZN
+port n1077
+module U1358 CKND2D0
+PortArg A1
+port n1091
+PortArg A2
+port n2403gat
+PortArg ZN
+port n1030
+module U1359 NR2D0
+PortArg A1
+port n2407gat
+PortArg A2
+port n2347gat
+PortArg ZN
+port n1091
+module U1360 CKND2D0
+PortArg A1
+port n1092
+PortArg A2
+port n1093
+PortArg ZN
+port n1015
+module U1361 AN2D0
+PortArg A1
+port n1023
+PortArg A2
+port n2989gat
+PortArg Z
+port n1093
+module U1362 NR2D0
+PortArg A1
+port n1061
+PortArg A2
+port n1094
+PortArg ZN
+port n1092
+module U1363 CKND0
+PortArg I
+port n2592gat
+PortArg ZN
+port n153
+module U1364 NR2D0
+PortArg A1
+port n1095
+PortArg A2
+port n1096
+PortArg ZN
+port n1516gat
+module U1365 CKND2D0
+PortArg A1
+port n1097
+PortArg A2
+port n874
+PortArg ZN
+port n1096
+module U1366 NR2D0
+PortArg A1
+port n641
+PortArg A2
+port n1053
+PortArg ZN
+port n874
+module U1367 CKND0
+PortArg I
+port n2394gat
+PortArg ZN
+port n1053
+module U1368 CKND0
+PortArg I
+port n2440gat
+PortArg ZN
+port n641
+module U1369 NR2D0
+PortArg A1
+port n1027
+PortArg A2
+port n642
+PortArg ZN
+port n1097
+module U1370 CKND0
+PortArg I
+port n2347gat
+PortArg ZN
+port n642
+module U1371 CKND0
+PortArg I
+port n2403gat
+PortArg ZN
+port n1027
+module U1372 CKND2D0
+PortArg A1
+port n1098
+PortArg A2
+port n1060
+PortArg ZN
+port n1095
+module U1373 CKND0
+PortArg I
+port n1094
+PortArg ZN
+port n1060
+module U1374 CKND2D0
+PortArg A1
+port n1099
+PortArg A2
+port n2139gat
+PortArg ZN
+port n1094
+module U1375 NR2D0
+PortArg A1
+port n1899gat
+PortArg A2
+port n1014
+PortArg ZN
+port n1099
+module U1376 NR2D0
+PortArg A1
+port n2407gat
+PortArg A2
+port n1100
+PortArg ZN
+port n1098
+module U1377 CKND0
+PortArg I
+port n625
+PortArg ZN
+port n1100
+module U1378 NR2D0
+PortArg A1
+port n1061
+PortArg A2
+port n1023
+PortArg ZN
+port n625
+module U1379 CKND0
+PortArg I
+port n2143gat
+PortArg ZN
+port n1061
+module U1380 CKND0
+PortArg I
+port n1775gat
+PortArg ZN
+port n151
+module U1381 CKND0
+PortArg I
+port n1363gat
+PortArg ZN
+port n149
+module U1382 CKND0
+PortArg I
+port n1316gat
+PortArg ZN
+port n148
+module U1383 CKND0
+PortArg I
+port n1433gat
+PortArg ZN
+port n147
+module U1384 CKND0
+PortArg I
+port n1332gat
+PortArg ZN
+port n144
+module U1385 CKND0
+PortArg I
+port n1394gat
+PortArg ZN
+port n143
+module U1386 NR2D0
+PortArg A1
+port n757
+PortArg A2
+port n1101
+PortArg ZN
+port n1391gat
+module U1387 CKND2D0
+PortArg A1
+port n697
+PortArg A2
+port n2562gat
+PortArg ZN
+port n1101
+module U1388 NR2D0
+PortArg A1
+port n107
+PortArg A2
+port n108
+PortArg ZN
+port n697
+module U1389 CKND2D0
+PortArg A1
+port n1102
+PortArg A2
+port n1103
+PortArg ZN
+port n757
+module U1390 NR2D0
+PortArg A1
+port n1104
+PortArg A2
+port n1105
+PortArg ZN
+port n1103
+module U1391 CKND2D0
+PortArg A1
+port n2630gat
+PortArg A2
+port n2543gat
+PortArg ZN
+port n1105
+module U1392 CKND2D0
+PortArg A1
+port n110
+PortArg A2
+port n111
+PortArg ZN
+port n1104
+module U1393 NR2D0
+PortArg A1
+port n104
+PortArg A2
+port n1106
+PortArg ZN
+port n1102
+module U1394 CKND2D0
+PortArg A1
+port n2490gat
+PortArg A2
+port n2622gat
+PortArg ZN
+port n1106
+module U1395 CKND0
+PortArg I
+port n1071
+PortArg ZN
+port n128
+module U1396 CKND2D0
+PortArg A1
+port n1107
+PortArg A2
+port n655
+PortArg ZN
+port n1071
+module U1397 AN2D0
+PortArg A1
+port n1899gat
+PortArg A2
+port n2139gat
+PortArg Z
+port n655
+module U1398 NR2D0
+PortArg A1
+port n1023
+PortArg A2
+port n637
+PortArg ZN
+port n1107
+module U1399 CKND2D0
+PortArg A1
+port n2143gat
+PortArg A2
+port n1014
+PortArg ZN
+port n637
+module U1400 CKND0
+PortArg I
+port n1010
+PortArg ZN
+port n127
+module U1401 CKND2D0
+PortArg A1
+port n1108
+PortArg A2
+port n1088
+PortArg ZN
+port n1010
+module U1402 CKND0
+PortArg I
+port n1011
+PortArg ZN
+port n1088
+module U1403 CKND2D0
+PortArg A1
+port n1013
+PortArg A2
+port n1014
+PortArg ZN
+port n1011
+module U1404 CKND0
+PortArg I
+port n2061gat
+PortArg ZN
+port n1014
+module U1405 NR2D0
+PortArg A1
+port n2139gat
+PortArg A2
+port n1899gat
+PortArg ZN
+port n1013
+module U1406 NR2D0
+PortArg A1
+port n2143gat
+PortArg A2
+port n1023
+PortArg ZN
+port n1108
+module U1407 CKND0
+PortArg I
+port n1850gat
+PortArg ZN
+port n1023
+module U1408 CKND0
+PortArg I
+port n2634gat
+PortArg ZN
+port n126
+module U1409 CKND0
+PortArg I
+port n2339gat
+PortArg ZN
+port n3126gat
+module U1410 CKND0
+PortArg I
+port n2270gat
+PortArg ZN
+port n3127gat
+module U1411 CKND0
+PortArg I
+port n2390gat
+PortArg ZN
+port n3128gat
+module U1412 CKND0
+PortArg I
+port n2495gat
+PortArg ZN
+port n122
+module U1413 CKND0
+PortArg I
+port n2640gat
+PortArg ZN
+port n121
+module U1414 CKND0
+PortArg I
+port n2543gat
+PortArg ZN
+port n115
+module U1415 CKND0
+PortArg I
+port n2630gat
+PortArg ZN
+port n114
+module U1416 CKND0
+PortArg I
+port n2622gat
+PortArg ZN
+port n113
+module U1417 CKND0
+PortArg I
+port n2490gat
+PortArg ZN
+port n112
+module U1418 CKND0
+PortArg I
+port n2626gat
+PortArg ZN
+port n111
+module U1419 CKND0
+PortArg I
+port n2207gat
+PortArg ZN
+port n110
+module U1420 CKND0
+PortArg I
+port n2562gat
+PortArg ZN
+port n109
+module U1421 CKND0
+PortArg I
+port n2203gat
+PortArg ZN
+port n108
+module U1422 CKND0
+PortArg I
+port n2343gat
+PortArg ZN
+port n107
+module U1423 CKND0
+PortArg I
+port n2399gat
+PortArg ZN
+port n104
+module U1424 CKND0
+PortArg I
+port n699gat
+PortArg ZN
+port n103
+module U1425 CKND0
+PortArg I
+port n684gat
+PortArg ZN
+port n102
+module U1426 CKND0
+PortArg I
+port n883gat
+PortArg ZN
+port n101
+module U1427 CKND0
+PortArg I
+port n820gat
+PortArg ZN
+port n100
