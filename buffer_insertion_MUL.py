@@ -457,9 +457,9 @@ def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_
 
     prob.writeLP("BufferInsertion.lp")
 
-    start_time = time.time()
+    start_time = time.clock()
     prob.solve()
-    end_time = time.time()
+    end_time = time.clock()
     # print "Execute time:", end_time - start_time
     #
     # print "Status:", LpStatus[prob.status]
