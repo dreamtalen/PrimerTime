@@ -248,7 +248,6 @@ def main_progress():
         for start_port in path_start_port_list:
             for end_port in path_end_port_list:
                 if port_module_dict[start_port] != port_module_dict[end_port]:
-                    print start_port, end_port
                     paths = find_all_paths(directed_graph, start_port, end_port, D_port_list)
                     if paths:
                         for path in paths:
