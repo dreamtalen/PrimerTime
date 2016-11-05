@@ -1,0 +1,6834 @@
+moduleDef rca15
+input A
+width 7
+width 0
+input B
+width 7
+width 0
+output S
+width 7
+width 0
+input CI
+input clk
+output CO
+net CO1
+net CO2
+net CO3
+net CO4
+net CO5
+net CO6
+net CO7
+net CO8
+net CO9
+net CO10
+net CO11
+net CO12
+net CO13
+net CO14
+net rca_8bit_1_CI0
+net rca_8bit_1_A0
+net rca_8bit_1_A1
+net rca_8bit_1_A2
+net rca_8bit_1_A3
+net rca_8bit_1_A5
+net rca_8bit_1_A6
+net rca_8bit_1_A7
+net rca_8bit_1_A4
+net rca_8bit_1_B4
+net rca_8bit_1_B1
+net rca_8bit_1_B2
+net rca_8bit_1_B3
+net rca_8bit_1_B5
+net rca_8bit_1_B6
+net rca_8bit_1_B7
+net rca_8bit_1_B0
+net rca_8bit_2_CI0
+net rca_8bit_2_A0
+net rca_8bit_2_A1
+net rca_8bit_2_A2
+net rca_8bit_2_A3
+net rca_8bit_2_A5
+net rca_8bit_2_A6
+net rca_8bit_2_A7
+net rca_8bit_2_A4
+net rca_8bit_2_B4
+net rca_8bit_2_B1
+net rca_8bit_2_B2
+net rca_8bit_2_B3
+net rca_8bit_2_B5
+net rca_8bit_2_B6
+net rca_8bit_2_B7
+net rca_8bit_2_B0
+net rca_8bit_3_CI0
+net rca_8bit_3_A0
+net rca_8bit_3_A1
+net rca_8bit_3_A2
+net rca_8bit_3_A3
+net rca_8bit_3_A5
+net rca_8bit_3_A6
+net rca_8bit_3_A7
+net rca_8bit_3_A4
+net rca_8bit_3_B4
+net rca_8bit_3_B1
+net rca_8bit_3_B2
+net rca_8bit_3_B3
+net rca_8bit_3_B5
+net rca_8bit_3_B6
+net rca_8bit_3_B7
+net rca_8bit_3_B0
+net rca_8bit_4_CI0
+net rca_8bit_4_A0
+net rca_8bit_4_A1
+net rca_8bit_4_A2
+net rca_8bit_4_A3
+net rca_8bit_4_A5
+net rca_8bit_4_A6
+net rca_8bit_4_A7
+net rca_8bit_4_A4
+net rca_8bit_4_B4
+net rca_8bit_4_B1
+net rca_8bit_4_B2
+net rca_8bit_4_B3
+net rca_8bit_4_B5
+net rca_8bit_4_B6
+net rca_8bit_4_B7
+net rca_8bit_4_B0
+net rca_8bit_5_CI0
+net rca_8bit_5_A0
+net rca_8bit_5_A1
+net rca_8bit_5_A2
+net rca_8bit_5_A3
+net rca_8bit_5_A5
+net rca_8bit_5_A6
+net rca_8bit_5_A7
+net rca_8bit_5_A4
+net rca_8bit_5_B4
+net rca_8bit_5_B1
+net rca_8bit_5_B2
+net rca_8bit_5_B3
+net rca_8bit_5_B5
+net rca_8bit_5_B6
+net rca_8bit_5_B7
+net rca_8bit_5_B0
+net rca_8bit_6_CI0
+net rca_8bit_6_A0
+net rca_8bit_6_A1
+net rca_8bit_6_A2
+net rca_8bit_6_A3
+net rca_8bit_6_A5
+net rca_8bit_6_A6
+net rca_8bit_6_A7
+net rca_8bit_6_A4
+net rca_8bit_6_B4
+net rca_8bit_6_B1
+net rca_8bit_6_B2
+net rca_8bit_6_B3
+net rca_8bit_6_B5
+net rca_8bit_6_B6
+net rca_8bit_6_B7
+net rca_8bit_6_B0
+net rca_8bit_7_CI0
+net rca_8bit_7_A0
+net rca_8bit_7_A1
+net rca_8bit_7_A2
+net rca_8bit_7_A3
+net rca_8bit_7_A5
+net rca_8bit_7_A6
+net rca_8bit_7_A7
+net rca_8bit_7_A4
+net rca_8bit_7_B4
+net rca_8bit_7_B1
+net rca_8bit_7_B2
+net rca_8bit_7_B3
+net rca_8bit_7_B5
+net rca_8bit_7_B6
+net rca_8bit_7_B7
+net rca_8bit_7_B0
+net rca_8bit_8_CI0
+net rca_8bit_8_A0
+net rca_8bit_8_A1
+net rca_8bit_8_A2
+net rca_8bit_8_A3
+net rca_8bit_8_A5
+net rca_8bit_8_A6
+net rca_8bit_8_A7
+net rca_8bit_8_A4
+net rca_8bit_8_B4
+net rca_8bit_8_B1
+net rca_8bit_8_B2
+net rca_8bit_8_B3
+net rca_8bit_8_B5
+net rca_8bit_8_B6
+net rca_8bit_8_B7
+net rca_8bit_8_B0
+net rca_8bit_9_CI0
+net rca_8bit_9_A0
+net rca_8bit_9_A1
+net rca_8bit_9_A2
+net rca_8bit_9_A3
+net rca_8bit_9_A5
+net rca_8bit_9_A6
+net rca_8bit_9_A7
+net rca_8bit_9_A4
+net rca_8bit_9_B4
+net rca_8bit_9_B1
+net rca_8bit_9_B2
+net rca_8bit_9_B3
+net rca_8bit_9_B5
+net rca_8bit_9_B6
+net rca_8bit_9_B7
+net rca_8bit_9_B0
+net rca_8bit_10_CI0
+net rca_8bit_10_A0
+net rca_8bit_10_A1
+net rca_8bit_10_A2
+net rca_8bit_10_A3
+net rca_8bit_10_A5
+net rca_8bit_10_A6
+net rca_8bit_10_A7
+net rca_8bit_10_A4
+net rca_8bit_10_B4
+net rca_8bit_10_B1
+net rca_8bit_10_B2
+net rca_8bit_10_B3
+net rca_8bit_10_B5
+net rca_8bit_10_B6
+net rca_8bit_10_B7
+net rca_8bit_10_B0
+net rca_8bit_11_CI0
+net rca_8bit_11_A0
+net rca_8bit_11_A1
+net rca_8bit_11_A2
+net rca_8bit_11_A3
+net rca_8bit_11_A5
+net rca_8bit_11_A6
+net rca_8bit_11_A7
+net rca_8bit_11_A4
+net rca_8bit_11_B4
+net rca_8bit_11_B1
+net rca_8bit_11_B2
+net rca_8bit_11_B3
+net rca_8bit_11_B5
+net rca_8bit_11_B6
+net rca_8bit_11_B7
+net rca_8bit_11_B0
+net rca_8bit_12_CI0
+net rca_8bit_12_A0
+net rca_8bit_12_A1
+net rca_8bit_12_A2
+net rca_8bit_12_A3
+net rca_8bit_12_A5
+net rca_8bit_12_A6
+net rca_8bit_12_A7
+net rca_8bit_12_A4
+net rca_8bit_12_B4
+net rca_8bit_12_B1
+net rca_8bit_12_B2
+net rca_8bit_12_B3
+net rca_8bit_12_B5
+net rca_8bit_12_B6
+net rca_8bit_12_B7
+net rca_8bit_12_B0
+net rca_8bit_13_CI0
+net rca_8bit_13_A0
+net rca_8bit_13_A1
+net rca_8bit_13_A2
+net rca_8bit_13_A3
+net rca_8bit_13_A5
+net rca_8bit_13_A6
+net rca_8bit_13_A7
+net rca_8bit_13_A4
+net rca_8bit_13_B4
+net rca_8bit_13_B1
+net rca_8bit_13_B2
+net rca_8bit_13_B3
+net rca_8bit_13_B5
+net rca_8bit_13_B6
+net rca_8bit_13_B7
+net rca_8bit_13_B0
+net rca_8bit_14_CI0
+net rca_8bit_14_A0
+net rca_8bit_14_A1
+net rca_8bit_14_A2
+net rca_8bit_14_A3
+net rca_8bit_14_A5
+net rca_8bit_14_A6
+net rca_8bit_14_A7
+net rca_8bit_14_A4
+net rca_8bit_14_B4
+net rca_8bit_14_B1
+net rca_8bit_14_B2
+net rca_8bit_14_B3
+net rca_8bit_14_B5
+net rca_8bit_14_B6
+net rca_8bit_14_B7
+net rca_8bit_14_B0
+net rca_8bit_15_CI0
+net rca_8bit_15_A0
+net rca_8bit_15_A1
+net rca_8bit_15_A2
+net rca_8bit_15_A3
+net rca_8bit_15_A5
+net rca_8bit_15_A6
+net rca_8bit_15_A7
+net rca_8bit_15_A4
+net rca_8bit_15_B4
+net rca_8bit_15_B1
+net rca_8bit_15_B2
+net rca_8bit_15_B3
+net rca_8bit_15_B5
+net rca_8bit_15_B6
+net rca_8bit_15_B7
+net rca_8bit_15_B0
+net n376
+net n377
+net n378
+net n379
+net n380
+net n381
+net n382
+net n383
+net n384
+net n385
+net n386
+net n387
+net n388
+net n389
+net n390
+net n391
+net n392
+net n393
+net n394
+net n395
+net n396
+net n397
+net n398
+net n399
+net n400
+net n401
+net n402
+net n403
+net n404
+net n405
+net n406
+net n407
+net n408
+net n409
+net n410
+net n411
+net n412
+net n413
+net n414
+net n415
+net n416
+net n417
+net n418
+net n419
+net n420
+net n421
+net n422
+net n423
+net n424
+net n425
+net n426
+net n427
+net n428
+net n429
+net n430
+net n431
+net n432
+net n433
+net n434
+net n435
+net n436
+net n437
+net n438
+net n439
+net n440
+net n441
+net n442
+net n443
+net n444
+net n445
+net n446
+net n447
+net n448
+net n449
+net n450
+net n451
+net n452
+net n453
+net n454
+net n455
+net n456
+net n457
+net n458
+net n459
+net n460
+net n461
+net n462
+net n463
+net n464
+net n465
+net n466
+net n467
+net n468
+net n469
+net n470
+net n471
+net n472
+net n473
+net n474
+net n475
+net n476
+net n477
+net n478
+net n479
+net n480
+net n481
+net n482
+net n483
+net n484
+net n485
+net n486
+net n487
+net n488
+net n489
+net n490
+net n491
+net n492
+net n493
+net n494
+net n495
+net n496
+net n497
+net n498
+net n499
+net n500
+net n501
+net n502
+net n503
+net n504
+net n505
+net n506
+net n507
+net n508
+net n509
+net n510
+net n511
+net n512
+net n513
+net n514
+net n515
+net n516
+net n517
+net n518
+net n519
+net n520
+net n521
+net n522
+net n523
+net n524
+net n525
+net n526
+net n527
+net n528
+net n529
+net n530
+net n531
+net n532
+net n533
+net n534
+net n535
+net n536
+net n537
+net n538
+net n539
+net n540
+net n541
+net n542
+net n543
+net n544
+net n545
+net n546
+net n547
+net n548
+net n549
+net n550
+net n551
+net n552
+net n553
+net n554
+net n555
+net n556
+net n557
+net n558
+net n559
+net n560
+net n561
+net n562
+net n563
+net n564
+net n565
+net n566
+net n567
+net n568
+net n569
+net n570
+net n571
+net n572
+net n573
+net n574
+net n575
+net n576
+net n577
+net n578
+net n579
+net n580
+net n581
+net n582
+net n583
+net n584
+net n585
+net n586
+net n587
+net n588
+net n589
+net n590
+net n591
+net n592
+net n593
+net n594
+net n595
+net n596
+net n597
+net n598
+net n599
+net n600
+net n601
+net n602
+net n603
+net n604
+net n605
+net n606
+net n607
+net n608
+net n609
+net n610
+net n611
+net n612
+net n613
+net n614
+net n615
+net n616
+net n617
+net n618
+net n619
+net n620
+net n621
+net n622
+net n623
+net n624
+net n625
+net n626
+net n627
+net n628
+net n629
+net n630
+net n631
+net n632
+net n633
+net n634
+net n635
+net n636
+net n637
+net n638
+net n639
+net n640
+net n641
+net n642
+net n643
+net n644
+net n645
+net n646
+net n647
+net n648
+net n649
+net n650
+net n651
+net n652
+net n653
+net n654
+net n655
+net n656
+net n657
+net n658
+net n659
+net n660
+net n661
+net n662
+net n663
+net n664
+net n665
+net n666
+net n667
+net n668
+net n669
+net n670
+net n671
+net n672
+net n673
+net n674
+net n675
+net n676
+net n677
+net n678
+net n679
+net n680
+net n681
+net n682
+net n683
+net n684
+net n685
+net n686
+net n687
+net n688
+net n689
+net n690
+net n691
+net n692
+net n693
+net n694
+net n695
+net n696
+net n697
+net n698
+net n699
+net n700
+net n701
+net n702
+net n703
+net n704
+net n705
+net n706
+net n707
+net n708
+net n709
+net n710
+net n711
+net n712
+net n713
+net n714
+net n715
+net n716
+net n717
+net n718
+net n719
+net n720
+net n721
+net n722
+net n723
+net n724
+net n725
+net n726
+net n727
+net n728
+net n729
+net n730
+net n731
+net n732
+net n733
+net n734
+net n735
+net n736
+net n737
+net n738
+net n739
+net n740
+net n741
+net n742
+net n743
+net n744
+net n745
+net n746
+net n747
+net n748
+net n749
+net n750
+net S1
+width 7
+width 0
+net S2
+width 7
+width 0
+net S3
+width 7
+width 0
+net S4
+width 7
+width 0
+net S5
+width 7
+width 0
+net S6
+width 7
+width 0
+net S7
+width 7
+width 0
+net S8
+width 7
+width 0
+net S9
+width 7
+width 0
+net S10
+width 7
+width 0
+net S11
+width 7
+width 0
+net S12
+width 7
+width 0
+net S13
+width 7
+width 0
+net S14
+width 7
+width 0
+module rca_8bit_1_ICI DFQD1
+PortArg D
+port CI
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_CI0
+module rca_8bit_1_I214 DFQD1
+PortArg D
+port A
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A0
+module rca_8bit_1_I215 DFQD1
+PortArg D
+port A
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A1
+module rca_8bit_1_I216 DFQD1
+PortArg D
+port A
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A2
+module rca_8bit_1_I217 DFQD1
+PortArg D
+port A
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A3
+module rca_8bit_1_I218 DFQD1
+PortArg D
+port A
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A5
+module rca_8bit_1_I219 DFQD1
+PortArg D
+port A
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A6
+module rca_8bit_1_I220 DFQD1
+PortArg D
+port A
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A7
+module rca_8bit_1_I221 DFQD1
+PortArg D
+port A
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_A4
+module rca_8bit_1_I230 DFQD1
+PortArg D
+port B
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B4
+module rca_8bit_1_I231 DFQD1
+PortArg D
+port B
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B1
+module rca_8bit_1_I232 DFQD1
+PortArg D
+port B
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B2
+module rca_8bit_1_I233 DFQD1
+PortArg D
+port B
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B3
+module rca_8bit_1_I234 DFQD1
+PortArg D
+port B
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B5
+module rca_8bit_1_I235 DFQD1
+PortArg D
+port B
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B6
+module rca_8bit_1_I236 DFQD1
+PortArg D
+port B
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B7
+module rca_8bit_1_I237 DFQD1
+PortArg D
+port B
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_1_B0
+module rca_8bit_2_ICI DFQD1
+PortArg D
+port CO1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_CI0
+module rca_8bit_2_I214 DFQD1
+PortArg D
+port S1
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A0
+module rca_8bit_2_I215 DFQD1
+PortArg D
+port S1
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A1
+module rca_8bit_2_I216 DFQD1
+PortArg D
+port S1
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A2
+module rca_8bit_2_I217 DFQD1
+PortArg D
+port S1
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A3
+module rca_8bit_2_I218 DFQD1
+PortArg D
+port S1
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A5
+module rca_8bit_2_I219 DFQD1
+PortArg D
+port S1
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A6
+module rca_8bit_2_I220 DFQD1
+PortArg D
+port S1
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A7
+module rca_8bit_2_I221 DFQD1
+PortArg D
+port S1
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_A4
+module rca_8bit_2_I230 DFQD1
+PortArg D
+port S1
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B4
+module rca_8bit_2_I231 DFQD1
+PortArg D
+port S1
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B1
+module rca_8bit_2_I232 DFQD1
+PortArg D
+port S1
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B2
+module rca_8bit_2_I233 DFQD1
+PortArg D
+port S1
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B3
+module rca_8bit_2_I234 DFQD1
+PortArg D
+port S1
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B5
+module rca_8bit_2_I235 DFQD1
+PortArg D
+port S1
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B6
+module rca_8bit_2_I236 DFQD1
+PortArg D
+port S1
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B7
+module rca_8bit_2_I237 DFQD1
+PortArg D
+port S1
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_2_B0
+module rca_8bit_3_ICI DFQD1
+PortArg D
+port CO2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_CI0
+module rca_8bit_3_I214 DFQD1
+PortArg D
+port S2
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A0
+module rca_8bit_3_I215 DFQD1
+PortArg D
+port S2
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A1
+module rca_8bit_3_I216 DFQD1
+PortArg D
+port S2
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A2
+module rca_8bit_3_I217 DFQD1
+PortArg D
+port S2
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A3
+module rca_8bit_3_I218 DFQD1
+PortArg D
+port S2
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A5
+module rca_8bit_3_I219 DFQD1
+PortArg D
+port S2
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A6
+module rca_8bit_3_I220 DFQD1
+PortArg D
+port S2
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A7
+module rca_8bit_3_I221 DFQD1
+PortArg D
+port S2
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_A4
+module rca_8bit_3_I230 DFQD1
+PortArg D
+port S2
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B4
+module rca_8bit_3_I231 DFQD1
+PortArg D
+port S2
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B1
+module rca_8bit_3_I232 DFQD1
+PortArg D
+port S2
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B2
+module rca_8bit_3_I233 DFQD1
+PortArg D
+port S2
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B3
+module rca_8bit_3_I234 DFQD1
+PortArg D
+port S2
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B5
+module rca_8bit_3_I235 DFQD1
+PortArg D
+port S2
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B6
+module rca_8bit_3_I236 DFQD1
+PortArg D
+port S2
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B7
+module rca_8bit_3_I237 DFQD1
+PortArg D
+port S2
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_3_B0
+module rca_8bit_4_ICI DFQD1
+PortArg D
+port CO3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_CI0
+module rca_8bit_4_I214 DFQD1
+PortArg D
+port S3
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A0
+module rca_8bit_4_I215 DFQD1
+PortArg D
+port S3
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A1
+module rca_8bit_4_I216 DFQD1
+PortArg D
+port S3
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A2
+module rca_8bit_4_I217 DFQD1
+PortArg D
+port S3
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A3
+module rca_8bit_4_I218 DFQD1
+PortArg D
+port S3
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A5
+module rca_8bit_4_I219 DFQD1
+PortArg D
+port S3
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A6
+module rca_8bit_4_I220 DFQD1
+PortArg D
+port S3
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A7
+module rca_8bit_4_I221 DFQD1
+PortArg D
+port S3
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_A4
+module rca_8bit_4_I230 DFQD1
+PortArg D
+port S3
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B4
+module rca_8bit_4_I231 DFQD1
+PortArg D
+port S3
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B1
+module rca_8bit_4_I232 DFQD1
+PortArg D
+port S3
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B2
+module rca_8bit_4_I233 DFQD1
+PortArg D
+port S3
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B3
+module rca_8bit_4_I234 DFQD1
+PortArg D
+port S3
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B5
+module rca_8bit_4_I235 DFQD1
+PortArg D
+port S3
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B6
+module rca_8bit_4_I236 DFQD1
+PortArg D
+port S3
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B7
+module rca_8bit_4_I237 DFQD1
+PortArg D
+port S3
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_4_B0
+module rca_8bit_5_ICI DFQD1
+PortArg D
+port CO4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_CI0
+module rca_8bit_5_I214 DFQD1
+PortArg D
+port S4
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A0
+module rca_8bit_5_I215 DFQD1
+PortArg D
+port S4
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A1
+module rca_8bit_5_I216 DFQD1
+PortArg D
+port S4
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A2
+module rca_8bit_5_I217 DFQD1
+PortArg D
+port S4
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A3
+module rca_8bit_5_I218 DFQD1
+PortArg D
+port S4
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A5
+module rca_8bit_5_I219 DFQD1
+PortArg D
+port S4
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A6
+module rca_8bit_5_I220 DFQD1
+PortArg D
+port S4
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A7
+module rca_8bit_5_I221 DFQD1
+PortArg D
+port S4
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_A4
+module rca_8bit_5_I230 DFQD1
+PortArg D
+port S4
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B4
+module rca_8bit_5_I231 DFQD1
+PortArg D
+port S4
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B1
+module rca_8bit_5_I232 DFQD1
+PortArg D
+port S4
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B2
+module rca_8bit_5_I233 DFQD1
+PortArg D
+port S4
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B3
+module rca_8bit_5_I234 DFQD1
+PortArg D
+port S4
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B5
+module rca_8bit_5_I235 DFQD1
+PortArg D
+port S4
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B6
+module rca_8bit_5_I236 DFQD1
+PortArg D
+port S4
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B7
+module rca_8bit_5_I237 DFQD1
+PortArg D
+port S4
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_5_B0
+module rca_8bit_6_ICI DFQD1
+PortArg D
+port CO5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_CI0
+module rca_8bit_6_I214 DFQD1
+PortArg D
+port S5
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A0
+module rca_8bit_6_I215 DFQD1
+PortArg D
+port S5
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A1
+module rca_8bit_6_I216 DFQD1
+PortArg D
+port S5
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A2
+module rca_8bit_6_I217 DFQD1
+PortArg D
+port S5
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A3
+module rca_8bit_6_I218 DFQD1
+PortArg D
+port S5
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A5
+module rca_8bit_6_I219 DFQD1
+PortArg D
+port S5
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A6
+module rca_8bit_6_I220 DFQD1
+PortArg D
+port S5
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A7
+module rca_8bit_6_I221 DFQD1
+PortArg D
+port S5
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_A4
+module rca_8bit_6_I230 DFQD1
+PortArg D
+port S5
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B4
+module rca_8bit_6_I231 DFQD1
+PortArg D
+port S5
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B1
+module rca_8bit_6_I232 DFQD1
+PortArg D
+port S5
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B2
+module rca_8bit_6_I233 DFQD1
+PortArg D
+port S5
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B3
+module rca_8bit_6_I234 DFQD1
+PortArg D
+port S5
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B5
+module rca_8bit_6_I235 DFQD1
+PortArg D
+port S5
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B6
+module rca_8bit_6_I236 DFQD1
+PortArg D
+port S5
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B7
+module rca_8bit_6_I237 DFQD1
+PortArg D
+port S5
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_6_B0
+module rca_8bit_7_ICI DFQD1
+PortArg D
+port CO6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_CI0
+module rca_8bit_7_I214 DFQD1
+PortArg D
+port S6
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A0
+module rca_8bit_7_I215 DFQD1
+PortArg D
+port S6
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A1
+module rca_8bit_7_I216 DFQD1
+PortArg D
+port S6
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A2
+module rca_8bit_7_I217 DFQD1
+PortArg D
+port S6
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A3
+module rca_8bit_7_I218 DFQD1
+PortArg D
+port S6
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A5
+module rca_8bit_7_I219 DFQD1
+PortArg D
+port S6
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A6
+module rca_8bit_7_I220 DFQD1
+PortArg D
+port S6
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A7
+module rca_8bit_7_I221 DFQD1
+PortArg D
+port S6
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_A4
+module rca_8bit_7_I230 DFQD1
+PortArg D
+port S6
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B4
+module rca_8bit_7_I231 DFQD1
+PortArg D
+port S6
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B1
+module rca_8bit_7_I232 DFQD1
+PortArg D
+port S6
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B2
+module rca_8bit_7_I233 DFQD1
+PortArg D
+port S6
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B3
+module rca_8bit_7_I234 DFQD1
+PortArg D
+port S6
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B5
+module rca_8bit_7_I235 DFQD1
+PortArg D
+port S6
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B6
+module rca_8bit_7_I236 DFQD1
+PortArg D
+port S6
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B7
+module rca_8bit_7_I237 DFQD1
+PortArg D
+port S6
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_7_B0
+module rca_8bit_8_ICI DFQD1
+PortArg D
+port CO7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_CI0
+module rca_8bit_8_I214 DFQD1
+PortArg D
+port S7
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A0
+module rca_8bit_8_I215 DFQD1
+PortArg D
+port S7
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A1
+module rca_8bit_8_I216 DFQD1
+PortArg D
+port S7
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A2
+module rca_8bit_8_I217 DFQD1
+PortArg D
+port S7
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A3
+module rca_8bit_8_I218 DFQD1
+PortArg D
+port S7
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A5
+module rca_8bit_8_I219 DFQD1
+PortArg D
+port S7
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A6
+module rca_8bit_8_I220 DFQD1
+PortArg D
+port S7
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A7
+module rca_8bit_8_I221 DFQD1
+PortArg D
+port S7
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_A4
+module rca_8bit_8_I230 DFQD1
+PortArg D
+port S7
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B4
+module rca_8bit_8_I231 DFQD1
+PortArg D
+port S7
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B1
+module rca_8bit_8_I232 DFQD1
+PortArg D
+port S7
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B2
+module rca_8bit_8_I233 DFQD1
+PortArg D
+port S7
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B3
+module rca_8bit_8_I234 DFQD1
+PortArg D
+port S7
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B5
+module rca_8bit_8_I235 DFQD1
+PortArg D
+port S7
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B6
+module rca_8bit_8_I236 DFQD1
+PortArg D
+port S7
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B7
+module rca_8bit_8_I237 DFQD1
+PortArg D
+port S7
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_8_B0
+module rca_8bit_9_ICI DFQD1
+PortArg D
+port CO8
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_CI0
+module rca_8bit_9_I214 DFQD1
+PortArg D
+port S8
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A0
+module rca_8bit_9_I215 DFQD1
+PortArg D
+port S8
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A1
+module rca_8bit_9_I216 DFQD1
+PortArg D
+port S8
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A2
+module rca_8bit_9_I217 DFQD1
+PortArg D
+port S8
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A3
+module rca_8bit_9_I218 DFQD1
+PortArg D
+port S8
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A5
+module rca_8bit_9_I219 DFQD1
+PortArg D
+port S8
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A6
+module rca_8bit_9_I220 DFQD1
+PortArg D
+port S8
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A7
+module rca_8bit_9_I221 DFQD1
+PortArg D
+port S8
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_A4
+module rca_8bit_9_I230 DFQD1
+PortArg D
+port S8
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B4
+module rca_8bit_9_I231 DFQD1
+PortArg D
+port S8
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B1
+module rca_8bit_9_I232 DFQD1
+PortArg D
+port S8
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B2
+module rca_8bit_9_I233 DFQD1
+PortArg D
+port S8
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B3
+module rca_8bit_9_I234 DFQD1
+PortArg D
+port S8
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B5
+module rca_8bit_9_I235 DFQD1
+PortArg D
+port S8
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B6
+module rca_8bit_9_I236 DFQD1
+PortArg D
+port S8
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B7
+module rca_8bit_9_I237 DFQD1
+PortArg D
+port S8
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_9_B0
+module rca_8bit_10_ICI DFQD1
+PortArg D
+port CO9
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_CI0
+module rca_8bit_10_I214 DFQD1
+PortArg D
+port S9
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A0
+module rca_8bit_10_I215 DFQD1
+PortArg D
+port S9
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A1
+module rca_8bit_10_I216 DFQD1
+PortArg D
+port S9
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A2
+module rca_8bit_10_I217 DFQD1
+PortArg D
+port S9
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A3
+module rca_8bit_10_I218 DFQD1
+PortArg D
+port S9
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A5
+module rca_8bit_10_I219 DFQD1
+PortArg D
+port S9
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A6
+module rca_8bit_10_I220 DFQD1
+PortArg D
+port S9
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A7
+module rca_8bit_10_I221 DFQD1
+PortArg D
+port S9
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_A4
+module rca_8bit_10_I230 DFQD1
+PortArg D
+port S9
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B4
+module rca_8bit_10_I231 DFQD1
+PortArg D
+port S9
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B1
+module rca_8bit_10_I232 DFQD1
+PortArg D
+port S9
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B2
+module rca_8bit_10_I233 DFQD1
+PortArg D
+port S9
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B3
+module rca_8bit_10_I234 DFQD1
+PortArg D
+port S9
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B5
+module rca_8bit_10_I235 DFQD1
+PortArg D
+port S9
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B6
+module rca_8bit_10_I236 DFQD1
+PortArg D
+port S9
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B7
+module rca_8bit_10_I237 DFQD1
+PortArg D
+port S9
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_10_B0
+module rca_8bit_11_ICI DFQD1
+PortArg D
+port CO10
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_CI0
+module rca_8bit_11_I214 DFQD1
+PortArg D
+port S10
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A0
+module rca_8bit_11_I215 DFQD1
+PortArg D
+port S10
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A1
+module rca_8bit_11_I216 DFQD1
+PortArg D
+port S10
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A2
+module rca_8bit_11_I217 DFQD1
+PortArg D
+port S10
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A3
+module rca_8bit_11_I218 DFQD1
+PortArg D
+port S10
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A5
+module rca_8bit_11_I219 DFQD1
+PortArg D
+port S10
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A6
+module rca_8bit_11_I220 DFQD1
+PortArg D
+port S10
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A7
+module rca_8bit_11_I221 DFQD1
+PortArg D
+port S10
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_A4
+module rca_8bit_11_I230 DFQD1
+PortArg D
+port S10
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B4
+module rca_8bit_11_I231 DFQD1
+PortArg D
+port S10
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B1
+module rca_8bit_11_I232 DFQD1
+PortArg D
+port S10
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B2
+module rca_8bit_11_I233 DFQD1
+PortArg D
+port S10
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B3
+module rca_8bit_11_I234 DFQD1
+PortArg D
+port S10
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B5
+module rca_8bit_11_I235 DFQD1
+PortArg D
+port S10
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B6
+module rca_8bit_11_I236 DFQD1
+PortArg D
+port S10
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B7
+module rca_8bit_11_I237 DFQD1
+PortArg D
+port S10
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_11_B0
+module rca_8bit_12_ICI DFQD1
+PortArg D
+port CO11
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_CI0
+module rca_8bit_12_I214 DFQD1
+PortArg D
+port S11
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A0
+module rca_8bit_12_I215 DFQD1
+PortArg D
+port S11
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A1
+module rca_8bit_12_I216 DFQD1
+PortArg D
+port S11
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A2
+module rca_8bit_12_I217 DFQD1
+PortArg D
+port S11
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A3
+module rca_8bit_12_I218 DFQD1
+PortArg D
+port S11
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A5
+module rca_8bit_12_I219 DFQD1
+PortArg D
+port S11
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A6
+module rca_8bit_12_I220 DFQD1
+PortArg D
+port S11
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A7
+module rca_8bit_12_I221 DFQD1
+PortArg D
+port S11
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_A4
+module rca_8bit_12_I230 DFQD1
+PortArg D
+port S11
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B4
+module rca_8bit_12_I231 DFQD1
+PortArg D
+port S11
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B1
+module rca_8bit_12_I232 DFQD1
+PortArg D
+port S11
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B2
+module rca_8bit_12_I233 DFQD1
+PortArg D
+port S11
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B3
+module rca_8bit_12_I234 DFQD1
+PortArg D
+port S11
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B5
+module rca_8bit_12_I235 DFQD1
+PortArg D
+port S11
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B6
+module rca_8bit_12_I236 DFQD1
+PortArg D
+port S11
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B7
+module rca_8bit_12_I237 DFQD1
+PortArg D
+port S11
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_12_B0
+module rca_8bit_13_ICI DFQD1
+PortArg D
+port CO12
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_CI0
+module rca_8bit_13_I214 DFQD1
+PortArg D
+port S12
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A0
+module rca_8bit_13_I215 DFQD1
+PortArg D
+port S12
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A1
+module rca_8bit_13_I216 DFQD1
+PortArg D
+port S12
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A2
+module rca_8bit_13_I217 DFQD1
+PortArg D
+port S12
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A3
+module rca_8bit_13_I218 DFQD1
+PortArg D
+port S12
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A5
+module rca_8bit_13_I219 DFQD1
+PortArg D
+port S12
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A6
+module rca_8bit_13_I220 DFQD1
+PortArg D
+port S12
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A7
+module rca_8bit_13_I221 DFQD1
+PortArg D
+port S12
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_A4
+module rca_8bit_13_I230 DFQD1
+PortArg D
+port S12
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B4
+module rca_8bit_13_I231 DFQD1
+PortArg D
+port S12
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B1
+module rca_8bit_13_I232 DFQD1
+PortArg D
+port S12
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B2
+module rca_8bit_13_I233 DFQD1
+PortArg D
+port S12
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B3
+module rca_8bit_13_I234 DFQD1
+PortArg D
+port S12
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B5
+module rca_8bit_13_I235 DFQD1
+PortArg D
+port S12
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B6
+module rca_8bit_13_I236 DFQD1
+PortArg D
+port S12
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B7
+module rca_8bit_13_I237 DFQD1
+PortArg D
+port S12
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_13_B0
+module rca_8bit_14_ICI DFQD1
+PortArg D
+port CO13
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_CI0
+module rca_8bit_14_I214 DFQD1
+PortArg D
+port S13
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A0
+module rca_8bit_14_I215 DFQD1
+PortArg D
+port S13
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A1
+module rca_8bit_14_I216 DFQD1
+PortArg D
+port S13
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A2
+module rca_8bit_14_I217 DFQD1
+PortArg D
+port S13
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A3
+module rca_8bit_14_I218 DFQD1
+PortArg D
+port S13
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A5
+module rca_8bit_14_I219 DFQD1
+PortArg D
+port S13
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A6
+module rca_8bit_14_I220 DFQD1
+PortArg D
+port S13
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A7
+module rca_8bit_14_I221 DFQD1
+PortArg D
+port S13
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_A4
+module rca_8bit_14_I230 DFQD1
+PortArg D
+port S13
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B4
+module rca_8bit_14_I231 DFQD1
+PortArg D
+port S13
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B1
+module rca_8bit_14_I232 DFQD1
+PortArg D
+port S13
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B2
+module rca_8bit_14_I233 DFQD1
+PortArg D
+port S13
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B3
+module rca_8bit_14_I234 DFQD1
+PortArg D
+port S13
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B5
+module rca_8bit_14_I235 DFQD1
+PortArg D
+port S13
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B6
+module rca_8bit_14_I236 DFQD1
+PortArg D
+port S13
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B7
+module rca_8bit_14_I237 DFQD1
+PortArg D
+port S13
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_14_B0
+module rca_8bit_15_ICI DFQD1
+PortArg D
+port CO14
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_CI0
+module rca_8bit_15_I214 DFQD1
+PortArg D
+port S14
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A0
+module rca_8bit_15_I215 DFQD1
+PortArg D
+port S14
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A1
+module rca_8bit_15_I216 DFQD1
+PortArg D
+port S14
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A2
+module rca_8bit_15_I217 DFQD1
+PortArg D
+port S14
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A3
+module rca_8bit_15_I218 DFQD1
+PortArg D
+port S14
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A5
+module rca_8bit_15_I219 DFQD1
+PortArg D
+port S14
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A6
+module rca_8bit_15_I220 DFQD1
+PortArg D
+port S14
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A7
+module rca_8bit_15_I221 DFQD1
+PortArg D
+port S14
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_A4
+module rca_8bit_15_I230 DFQD1
+PortArg D
+port S14
+width 4
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B4
+module rca_8bit_15_I231 DFQD1
+PortArg D
+port S14
+width 1
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B1
+module rca_8bit_15_I232 DFQD1
+PortArg D
+port S14
+width 2
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B2
+module rca_8bit_15_I233 DFQD1
+PortArg D
+port S14
+width 3
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B3
+module rca_8bit_15_I234 DFQD1
+PortArg D
+port S14
+width 5
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B5
+module rca_8bit_15_I235 DFQD1
+PortArg D
+port S14
+width 6
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B6
+module rca_8bit_15_I236 DFQD1
+PortArg D
+port S14
+width 7
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B7
+module rca_8bit_15_I237 DFQD1
+PortArg D
+port S14
+width 0
+PortArg CP
+port clk
+PortArg Q
+port rca_8bit_15_B0
+module U511 AOI22D1
+PortArg A1
+port n523
+PortArg A2
+port rca_8bit_1_A6
+PortArg B1
+port n735
+PortArg B2
+port rca_8bit_1_B6
+PortArg ZN
+port n520
+module U512 AOI22D1
+PortArg A1
+port n507
+PortArg A2
+port rca_8bit_2_A6
+PortArg B1
+port n681
+PortArg B2
+port rca_8bit_2_B6
+PortArg ZN
+port n504
+module U513 AOI22D1
+PortArg A1
+port n491
+PortArg A2
+port rca_8bit_3_A6
+PortArg B1
+port n672
+PortArg B2
+port rca_8bit_3_B6
+PortArg ZN
+port n488
+module U514 AOI22D1
+PortArg A1
+port n475
+PortArg A2
+port rca_8bit_4_A6
+PortArg B1
+port n663
+PortArg B2
+port rca_8bit_4_B6
+PortArg ZN
+port n472
+module U515 AOI22D1
+PortArg A1
+port n459
+PortArg A2
+port rca_8bit_5_A6
+PortArg B1
+port n654
+PortArg B2
+port rca_8bit_5_B6
+PortArg ZN
+port n456
+module U516 AOI22D1
+PortArg A1
+port n443
+PortArg A2
+port rca_8bit_6_A6
+PortArg B1
+port n645
+PortArg B2
+port rca_8bit_6_B6
+PortArg ZN
+port n440
+module U517 AOI22D1
+PortArg A1
+port n427
+PortArg A2
+port rca_8bit_7_A6
+PortArg B1
+port n636
+PortArg B2
+port rca_8bit_7_B6
+PortArg ZN
+port n424
+module U518 AOI22D1
+PortArg A1
+port n411
+PortArg A2
+port rca_8bit_8_A6
+PortArg B1
+port n627
+PortArg B2
+port rca_8bit_8_B6
+PortArg ZN
+port n408
+module U519 AOI22D1
+PortArg A1
+port n395
+PortArg A2
+port rca_8bit_9_A6
+PortArg B1
+port n618
+PortArg B2
+port rca_8bit_9_B6
+PortArg ZN
+port n392
+module U520 AOI22D1
+PortArg A1
+port n603
+PortArg A2
+port rca_8bit_10_A6
+PortArg B1
+port n726
+PortArg B2
+port rca_8bit_10_B6
+PortArg ZN
+port n600
+module U521 AOI22D1
+PortArg A1
+port n587
+PortArg A2
+port rca_8bit_11_A6
+PortArg B1
+port n717
+PortArg B2
+port rca_8bit_11_B6
+PortArg ZN
+port n584
+module U522 AOI22D1
+PortArg A1
+port n571
+PortArg A2
+port rca_8bit_12_A6
+PortArg B1
+port n708
+PortArg B2
+port rca_8bit_12_B6
+PortArg ZN
+port n568
+module U523 AOI22D1
+PortArg A1
+port n555
+PortArg A2
+port rca_8bit_13_A6
+PortArg B1
+port n699
+PortArg B2
+port rca_8bit_13_B6
+PortArg ZN
+port n552
+module U524 AOI22D1
+PortArg A1
+port n539
+PortArg A2
+port rca_8bit_14_A6
+PortArg B1
+port n690
+PortArg B2
+port rca_8bit_14_B6
+PortArg ZN
+port n536
+module U525 AOI22D1
+PortArg A1
+port n379
+PortArg A2
+port rca_8bit_15_A6
+PortArg B1
+port n744
+PortArg B2
+port rca_8bit_15_B6
+PortArg ZN
+port n376
+module U526 XNR2D0
+PortArg A1
+port n376
+PortArg A2
+port n377
+PortArg ZN
+port S
+width 7
+module U527 XNR2D0
+PortArg A1
+port n378
+PortArg A2
+port rca_8bit_15_A7
+PortArg ZN
+port n377
+module U528 XOR2D0
+PortArg A1
+port n379
+PortArg A2
+port n380
+PortArg Z
+port S
+width 6
+module U529 XOR2D0
+PortArg A1
+port rca_8bit_15_B6
+PortArg A2
+port rca_8bit_15_A6
+PortArg Z
+port n380
+module U530 XOR2D0
+PortArg A1
+port n381
+PortArg A2
+port n382
+PortArg Z
+port S
+width 5
+module U531 XOR2D0
+PortArg A1
+port rca_8bit_15_B5
+PortArg A2
+port rca_8bit_15_A5
+PortArg Z
+port n382
+module U532 XOR2D0
+PortArg A1
+port n383
+PortArg A2
+port n384
+PortArg Z
+port S
+width 4
+module U533 XOR2D0
+PortArg A1
+port rca_8bit_15_B4
+PortArg A2
+port rca_8bit_15_A4
+PortArg Z
+port n384
+module U534 XOR2D0
+PortArg A1
+port n385
+PortArg A2
+port n386
+PortArg Z
+port S
+width 3
+module U535 XOR2D0
+PortArg A1
+port rca_8bit_15_B3
+PortArg A2
+port rca_8bit_15_A3
+PortArg Z
+port n386
+module U536 XOR2D0
+PortArg A1
+port n387
+PortArg A2
+port n388
+PortArg Z
+port S
+width 2
+module U537 XOR2D0
+PortArg A1
+port rca_8bit_15_B2
+PortArg A2
+port rca_8bit_15_A2
+PortArg Z
+port n388
+module U538 XOR2D0
+PortArg A1
+port n389
+PortArg A2
+port n390
+PortArg Z
+port S
+width 1
+module U539 XOR2D0
+PortArg A1
+port rca_8bit_15_B1
+PortArg A2
+port rca_8bit_15_A1
+PortArg Z
+port n390
+module U540 XOR2D0
+PortArg A1
+port rca_8bit_15_A0
+PortArg A2
+port n391
+PortArg Z
+port S
+width 0
+module U541 XOR2D0
+PortArg A1
+port rca_8bit_15_CI0
+PortArg A2
+port rca_8bit_15_B0
+PortArg Z
+port n391
+module U542 XNR2D0
+PortArg A1
+port n392
+PortArg A2
+port n393
+PortArg ZN
+port S9
+width 7
+module U543 XNR2D0
+PortArg A1
+port n394
+PortArg A2
+port rca_8bit_9_A7
+PortArg ZN
+port n393
+module U544 XOR2D0
+PortArg A1
+port n395
+PortArg A2
+port n396
+PortArg Z
+port S9
+width 6
+module U545 XOR2D0
+PortArg A1
+port rca_8bit_9_B6
+PortArg A2
+port rca_8bit_9_A6
+PortArg Z
+port n396
+module U546 XOR2D0
+PortArg A1
+port n397
+PortArg A2
+port n398
+PortArg Z
+port S9
+width 5
+module U547 XOR2D0
+PortArg A1
+port rca_8bit_9_B5
+PortArg A2
+port rca_8bit_9_A5
+PortArg Z
+port n398
+module U548 XOR2D0
+PortArg A1
+port n399
+PortArg A2
+port n400
+PortArg Z
+port S9
+width 4
+module U549 XOR2D0
+PortArg A1
+port rca_8bit_9_B4
+PortArg A2
+port rca_8bit_9_A4
+PortArg Z
+port n400
+module U550 XOR2D0
+PortArg A1
+port n401
+PortArg A2
+port n402
+PortArg Z
+port S9
+width 3
+module U551 XOR2D0
+PortArg A1
+port rca_8bit_9_B3
+PortArg A2
+port rca_8bit_9_A3
+PortArg Z
+port n402
+module U552 XOR2D0
+PortArg A1
+port n403
+PortArg A2
+port n404
+PortArg Z
+port S9
+width 2
+module U553 XOR2D0
+PortArg A1
+port rca_8bit_9_B2
+PortArg A2
+port rca_8bit_9_A2
+PortArg Z
+port n404
+module U554 XOR2D0
+PortArg A1
+port n405
+PortArg A2
+port n406
+PortArg Z
+port S9
+width 1
+module U555 XOR2D0
+PortArg A1
+port rca_8bit_9_B1
+PortArg A2
+port rca_8bit_9_A1
+PortArg Z
+port n406
+module U556 XOR2D0
+PortArg A1
+port rca_8bit_9_A0
+PortArg A2
+port n407
+PortArg Z
+port S9
+width 0
+module U557 XOR2D0
+PortArg A1
+port rca_8bit_9_CI0
+PortArg A2
+port rca_8bit_9_B0
+PortArg Z
+port n407
+module U558 XNR2D0
+PortArg A1
+port n408
+PortArg A2
+port n409
+PortArg ZN
+port S8
+width 7
+module U559 XNR2D0
+PortArg A1
+port n410
+PortArg A2
+port rca_8bit_8_A7
+PortArg ZN
+port n409
+module U560 XOR2D0
+PortArg A1
+port n411
+PortArg A2
+port n412
+PortArg Z
+port S8
+width 6
+module U561 XOR2D0
+PortArg A1
+port rca_8bit_8_B6
+PortArg A2
+port rca_8bit_8_A6
+PortArg Z
+port n412
+module U562 XOR2D0
+PortArg A1
+port n413
+PortArg A2
+port n414
+PortArg Z
+port S8
+width 5
+module U563 XOR2D0
+PortArg A1
+port rca_8bit_8_B5
+PortArg A2
+port rca_8bit_8_A5
+PortArg Z
+port n414
+module U564 XOR2D0
+PortArg A1
+port n415
+PortArg A2
+port n416
+PortArg Z
+port S8
+width 4
+module U565 XOR2D0
+PortArg A1
+port rca_8bit_8_B4
+PortArg A2
+port rca_8bit_8_A4
+PortArg Z
+port n416
+module U566 XOR2D0
+PortArg A1
+port n417
+PortArg A2
+port n418
+PortArg Z
+port S8
+width 3
+module U567 XOR2D0
+PortArg A1
+port rca_8bit_8_B3
+PortArg A2
+port rca_8bit_8_A3
+PortArg Z
+port n418
+module U568 XOR2D0
+PortArg A1
+port n419
+PortArg A2
+port n420
+PortArg Z
+port S8
+width 2
+module U569 XOR2D0
+PortArg A1
+port rca_8bit_8_B2
+PortArg A2
+port rca_8bit_8_A2
+PortArg Z
+port n420
+module U570 XOR2D0
+PortArg A1
+port n421
+PortArg A2
+port n422
+PortArg Z
+port S8
+width 1
+module U571 XOR2D0
+PortArg A1
+port rca_8bit_8_B1
+PortArg A2
+port rca_8bit_8_A1
+PortArg Z
+port n422
+module U572 XOR2D0
+PortArg A1
+port rca_8bit_8_A0
+PortArg A2
+port n423
+PortArg Z
+port S8
+width 0
+module U573 XOR2D0
+PortArg A1
+port rca_8bit_8_CI0
+PortArg A2
+port rca_8bit_8_B0
+PortArg Z
+port n423
+module U574 XNR2D0
+PortArg A1
+port n424
+PortArg A2
+port n425
+PortArg ZN
+port S7
+width 7
+module U575 XNR2D0
+PortArg A1
+port n426
+PortArg A2
+port rca_8bit_7_A7
+PortArg ZN
+port n425
+module U576 XOR2D0
+PortArg A1
+port n427
+PortArg A2
+port n428
+PortArg Z
+port S7
+width 6
+module U577 XOR2D0
+PortArg A1
+port rca_8bit_7_B6
+PortArg A2
+port rca_8bit_7_A6
+PortArg Z
+port n428
+module U578 XOR2D0
+PortArg A1
+port n429
+PortArg A2
+port n430
+PortArg Z
+port S7
+width 5
+module U579 XOR2D0
+PortArg A1
+port rca_8bit_7_B5
+PortArg A2
+port rca_8bit_7_A5
+PortArg Z
+port n430
+module U580 XOR2D0
+PortArg A1
+port n431
+PortArg A2
+port n432
+PortArg Z
+port S7
+width 4
+module U581 XOR2D0
+PortArg A1
+port rca_8bit_7_B4
+PortArg A2
+port rca_8bit_7_A4
+PortArg Z
+port n432
+module U582 XOR2D0
+PortArg A1
+port n433
+PortArg A2
+port n434
+PortArg Z
+port S7
+width 3
+module U583 XOR2D0
+PortArg A1
+port rca_8bit_7_B3
+PortArg A2
+port rca_8bit_7_A3
+PortArg Z
+port n434
+module U584 XOR2D0
+PortArg A1
+port n435
+PortArg A2
+port n436
+PortArg Z
+port S7
+width 2
+module U585 XOR2D0
+PortArg A1
+port rca_8bit_7_B2
+PortArg A2
+port rca_8bit_7_A2
+PortArg Z
+port n436
+module U586 XOR2D0
+PortArg A1
+port n437
+PortArg A2
+port n438
+PortArg Z
+port S7
+width 1
+module U587 XOR2D0
+PortArg A1
+port rca_8bit_7_B1
+PortArg A2
+port rca_8bit_7_A1
+PortArg Z
+port n438
+module U588 XOR2D0
+PortArg A1
+port rca_8bit_7_A0
+PortArg A2
+port n439
+PortArg Z
+port S7
+width 0
+module U589 XOR2D0
+PortArg A1
+port rca_8bit_7_CI0
+PortArg A2
+port rca_8bit_7_B0
+PortArg Z
+port n439
+module U590 XNR2D0
+PortArg A1
+port n440
+PortArg A2
+port n441
+PortArg ZN
+port S6
+width 7
+module U591 XNR2D0
+PortArg A1
+port n442
+PortArg A2
+port rca_8bit_6_A7
+PortArg ZN
+port n441
+module U592 XOR2D0
+PortArg A1
+port n443
+PortArg A2
+port n444
+PortArg Z
+port S6
+width 6
+module U593 XOR2D0
+PortArg A1
+port rca_8bit_6_B6
+PortArg A2
+port rca_8bit_6_A6
+PortArg Z
+port n444
+module U594 XOR2D0
+PortArg A1
+port n445
+PortArg A2
+port n446
+PortArg Z
+port S6
+width 5
+module U595 XOR2D0
+PortArg A1
+port rca_8bit_6_B5
+PortArg A2
+port rca_8bit_6_A5
+PortArg Z
+port n446
+module U596 XOR2D0
+PortArg A1
+port n447
+PortArg A2
+port n448
+PortArg Z
+port S6
+width 4
+module U597 XOR2D0
+PortArg A1
+port rca_8bit_6_B4
+PortArg A2
+port rca_8bit_6_A4
+PortArg Z
+port n448
+module U598 XOR2D0
+PortArg A1
+port n449
+PortArg A2
+port n450
+PortArg Z
+port S6
+width 3
+module U599 XOR2D0
+PortArg A1
+port rca_8bit_6_B3
+PortArg A2
+port rca_8bit_6_A3
+PortArg Z
+port n450
+module U600 XOR2D0
+PortArg A1
+port n451
+PortArg A2
+port n452
+PortArg Z
+port S6
+width 2
+module U601 XOR2D0
+PortArg A1
+port rca_8bit_6_B2
+PortArg A2
+port rca_8bit_6_A2
+PortArg Z
+port n452
+module U602 XOR2D0
+PortArg A1
+port n453
+PortArg A2
+port n454
+PortArg Z
+port S6
+width 1
+module U603 XOR2D0
+PortArg A1
+port rca_8bit_6_B1
+PortArg A2
+port rca_8bit_6_A1
+PortArg Z
+port n454
+module U604 XOR2D0
+PortArg A1
+port rca_8bit_6_A0
+PortArg A2
+port n455
+PortArg Z
+port S6
+width 0
+module U605 XOR2D0
+PortArg A1
+port rca_8bit_6_CI0
+PortArg A2
+port rca_8bit_6_B0
+PortArg Z
+port n455
+module U606 XNR2D0
+PortArg A1
+port n456
+PortArg A2
+port n457
+PortArg ZN
+port S5
+width 7
+module U607 XNR2D0
+PortArg A1
+port n458
+PortArg A2
+port rca_8bit_5_A7
+PortArg ZN
+port n457
+module U608 XOR2D0
+PortArg A1
+port n459
+PortArg A2
+port n460
+PortArg Z
+port S5
+width 6
+module U609 XOR2D0
+PortArg A1
+port rca_8bit_5_B6
+PortArg A2
+port rca_8bit_5_A6
+PortArg Z
+port n460
+module U610 XOR2D0
+PortArg A1
+port n461
+PortArg A2
+port n462
+PortArg Z
+port S5
+width 5
+module U611 XOR2D0
+PortArg A1
+port rca_8bit_5_B5
+PortArg A2
+port rca_8bit_5_A5
+PortArg Z
+port n462
+module U612 XOR2D0
+PortArg A1
+port n463
+PortArg A2
+port n464
+PortArg Z
+port S5
+width 4
+module U613 XOR2D0
+PortArg A1
+port rca_8bit_5_B4
+PortArg A2
+port rca_8bit_5_A4
+PortArg Z
+port n464
+module U614 XOR2D0
+PortArg A1
+port n465
+PortArg A2
+port n466
+PortArg Z
+port S5
+width 3
+module U615 XOR2D0
+PortArg A1
+port rca_8bit_5_B3
+PortArg A2
+port rca_8bit_5_A3
+PortArg Z
+port n466
+module U616 XOR2D0
+PortArg A1
+port n467
+PortArg A2
+port n468
+PortArg Z
+port S5
+width 2
+module U617 XOR2D0
+PortArg A1
+port rca_8bit_5_B2
+PortArg A2
+port rca_8bit_5_A2
+PortArg Z
+port n468
+module U618 XOR2D0
+PortArg A1
+port n469
+PortArg A2
+port n470
+PortArg Z
+port S5
+width 1
+module U619 XOR2D0
+PortArg A1
+port rca_8bit_5_B1
+PortArg A2
+port rca_8bit_5_A1
+PortArg Z
+port n470
+module U620 XOR2D0
+PortArg A1
+port rca_8bit_5_A0
+PortArg A2
+port n471
+PortArg Z
+port S5
+width 0
+module U621 XOR2D0
+PortArg A1
+port rca_8bit_5_CI0
+PortArg A2
+port rca_8bit_5_B0
+PortArg Z
+port n471
+module U622 XNR2D0
+PortArg A1
+port n472
+PortArg A2
+port n473
+PortArg ZN
+port S4
+width 7
+module U623 XNR2D0
+PortArg A1
+port n474
+PortArg A2
+port rca_8bit_4_A7
+PortArg ZN
+port n473
+module U624 XOR2D0
+PortArg A1
+port n475
+PortArg A2
+port n476
+PortArg Z
+port S4
+width 6
+module U625 XOR2D0
+PortArg A1
+port rca_8bit_4_B6
+PortArg A2
+port rca_8bit_4_A6
+PortArg Z
+port n476
+module U626 XOR2D0
+PortArg A1
+port n477
+PortArg A2
+port n478
+PortArg Z
+port S4
+width 5
+module U627 XOR2D0
+PortArg A1
+port rca_8bit_4_B5
+PortArg A2
+port rca_8bit_4_A5
+PortArg Z
+port n478
+module U628 XOR2D0
+PortArg A1
+port n479
+PortArg A2
+port n480
+PortArg Z
+port S4
+width 4
+module U629 XOR2D0
+PortArg A1
+port rca_8bit_4_B4
+PortArg A2
+port rca_8bit_4_A4
+PortArg Z
+port n480
+module U630 XOR2D0
+PortArg A1
+port n481
+PortArg A2
+port n482
+PortArg Z
+port S4
+width 3
+module U631 XOR2D0
+PortArg A1
+port rca_8bit_4_B3
+PortArg A2
+port rca_8bit_4_A3
+PortArg Z
+port n482
+module U632 XOR2D0
+PortArg A1
+port n483
+PortArg A2
+port n484
+PortArg Z
+port S4
+width 2
+module U633 XOR2D0
+PortArg A1
+port rca_8bit_4_B2
+PortArg A2
+port rca_8bit_4_A2
+PortArg Z
+port n484
+module U634 XOR2D0
+PortArg A1
+port n485
+PortArg A2
+port n486
+PortArg Z
+port S4
+width 1
+module U635 XOR2D0
+PortArg A1
+port rca_8bit_4_B1
+PortArg A2
+port rca_8bit_4_A1
+PortArg Z
+port n486
+module U636 XOR2D0
+PortArg A1
+port rca_8bit_4_A0
+PortArg A2
+port n487
+PortArg Z
+port S4
+width 0
+module U637 XOR2D0
+PortArg A1
+port rca_8bit_4_CI0
+PortArg A2
+port rca_8bit_4_B0
+PortArg Z
+port n487
+module U638 XNR2D0
+PortArg A1
+port n488
+PortArg A2
+port n489
+PortArg ZN
+port S3
+width 7
+module U639 XNR2D0
+PortArg A1
+port n490
+PortArg A2
+port rca_8bit_3_A7
+PortArg ZN
+port n489
+module U640 XOR2D0
+PortArg A1
+port n491
+PortArg A2
+port n492
+PortArg Z
+port S3
+width 6
+module U641 XOR2D0
+PortArg A1
+port rca_8bit_3_B6
+PortArg A2
+port rca_8bit_3_A6
+PortArg Z
+port n492
+module U642 XOR2D0
+PortArg A1
+port n493
+PortArg A2
+port n494
+PortArg Z
+port S3
+width 5
+module U643 XOR2D0
+PortArg A1
+port rca_8bit_3_B5
+PortArg A2
+port rca_8bit_3_A5
+PortArg Z
+port n494
+module U644 XOR2D0
+PortArg A1
+port n495
+PortArg A2
+port n496
+PortArg Z
+port S3
+width 4
+module U645 XOR2D0
+PortArg A1
+port rca_8bit_3_B4
+PortArg A2
+port rca_8bit_3_A4
+PortArg Z
+port n496
+module U646 XOR2D0
+PortArg A1
+port n497
+PortArg A2
+port n498
+PortArg Z
+port S3
+width 3
+module U647 XOR2D0
+PortArg A1
+port rca_8bit_3_B3
+PortArg A2
+port rca_8bit_3_A3
+PortArg Z
+port n498
+module U648 XOR2D0
+PortArg A1
+port n499
+PortArg A2
+port n500
+PortArg Z
+port S3
+width 2
+module U649 XOR2D0
+PortArg A1
+port rca_8bit_3_B2
+PortArg A2
+port rca_8bit_3_A2
+PortArg Z
+port n500
+module U650 XOR2D0
+PortArg A1
+port n501
+PortArg A2
+port n502
+PortArg Z
+port S3
+width 1
+module U651 XOR2D0
+PortArg A1
+port rca_8bit_3_B1
+PortArg A2
+port rca_8bit_3_A1
+PortArg Z
+port n502
+module U652 XOR2D0
+PortArg A1
+port rca_8bit_3_A0
+PortArg A2
+port n503
+PortArg Z
+port S3
+width 0
+module U653 XOR2D0
+PortArg A1
+port rca_8bit_3_CI0
+PortArg A2
+port rca_8bit_3_B0
+PortArg Z
+port n503
+module U654 XNR2D0
+PortArg A1
+port n504
+PortArg A2
+port n505
+PortArg ZN
+port S2
+width 7
+module U655 XNR2D0
+PortArg A1
+port n506
+PortArg A2
+port rca_8bit_2_A7
+PortArg ZN
+port n505
+module U656 XOR2D0
+PortArg A1
+port n507
+PortArg A2
+port n508
+PortArg Z
+port S2
+width 6
+module U657 XOR2D0
+PortArg A1
+port rca_8bit_2_B6
+PortArg A2
+port rca_8bit_2_A6
+PortArg Z
+port n508
+module U658 XOR2D0
+PortArg A1
+port n509
+PortArg A2
+port n510
+PortArg Z
+port S2
+width 5
+module U659 XOR2D0
+PortArg A1
+port rca_8bit_2_B5
+PortArg A2
+port rca_8bit_2_A5
+PortArg Z
+port n510
+module U660 XOR2D0
+PortArg A1
+port n511
+PortArg A2
+port n512
+PortArg Z
+port S2
+width 4
+module U661 XOR2D0
+PortArg A1
+port rca_8bit_2_B4
+PortArg A2
+port rca_8bit_2_A4
+PortArg Z
+port n512
+module U662 XOR2D0
+PortArg A1
+port n513
+PortArg A2
+port n514
+PortArg Z
+port S2
+width 3
+module U663 XOR2D0
+PortArg A1
+port rca_8bit_2_B3
+PortArg A2
+port rca_8bit_2_A3
+PortArg Z
+port n514
+module U664 XOR2D0
+PortArg A1
+port n515
+PortArg A2
+port n516
+PortArg Z
+port S2
+width 2
+module U665 XOR2D0
+PortArg A1
+port rca_8bit_2_B2
+PortArg A2
+port rca_8bit_2_A2
+PortArg Z
+port n516
+module U666 XOR2D0
+PortArg A1
+port n517
+PortArg A2
+port n518
+PortArg Z
+port S2
+width 1
+module U667 XOR2D0
+PortArg A1
+port rca_8bit_2_B1
+PortArg A2
+port rca_8bit_2_A1
+PortArg Z
+port n518
+module U668 XOR2D0
+PortArg A1
+port rca_8bit_2_A0
+PortArg A2
+port n519
+PortArg Z
+port S2
+width 0
+module U669 XOR2D0
+PortArg A1
+port rca_8bit_2_CI0
+PortArg A2
+port rca_8bit_2_B0
+PortArg Z
+port n519
+module U670 XNR2D0
+PortArg A1
+port n520
+PortArg A2
+port n521
+PortArg ZN
+port S1
+width 7
+module U671 XNR2D0
+PortArg A1
+port n522
+PortArg A2
+port rca_8bit_1_A7
+PortArg ZN
+port n521
+module U672 XOR2D0
+PortArg A1
+port n523
+PortArg A2
+port n524
+PortArg Z
+port S1
+width 6
+module U673 XOR2D0
+PortArg A1
+port rca_8bit_1_B6
+PortArg A2
+port rca_8bit_1_A6
+PortArg Z
+port n524
+module U674 XOR2D0
+PortArg A1
+port n525
+PortArg A2
+port n526
+PortArg Z
+port S1
+width 5
+module U675 XOR2D0
+PortArg A1
+port rca_8bit_1_B5
+PortArg A2
+port rca_8bit_1_A5
+PortArg Z
+port n526
+module U676 XOR2D0
+PortArg A1
+port n527
+PortArg A2
+port n528
+PortArg Z
+port S1
+width 4
+module U677 XOR2D0
+PortArg A1
+port rca_8bit_1_B4
+PortArg A2
+port rca_8bit_1_A4
+PortArg Z
+port n528
+module U678 XOR2D0
+PortArg A1
+port n529
+PortArg A2
+port n530
+PortArg Z
+port S1
+width 3
+module U679 XOR2D0
+PortArg A1
+port rca_8bit_1_B3
+PortArg A2
+port rca_8bit_1_A3
+PortArg Z
+port n530
+module U680 XOR2D0
+PortArg A1
+port n531
+PortArg A2
+port n532
+PortArg Z
+port S1
+width 2
+module U681 XOR2D0
+PortArg A1
+port rca_8bit_1_B2
+PortArg A2
+port rca_8bit_1_A2
+PortArg Z
+port n532
+module U682 XOR2D0
+PortArg A1
+port n533
+PortArg A2
+port n534
+PortArg Z
+port S1
+width 1
+module U683 XOR2D0
+PortArg A1
+port rca_8bit_1_B1
+PortArg A2
+port rca_8bit_1_A1
+PortArg Z
+port n534
+module U684 XOR2D0
+PortArg A1
+port rca_8bit_1_A0
+PortArg A2
+port n535
+PortArg Z
+port S1
+width 0
+module U685 XOR2D0
+PortArg A1
+port rca_8bit_1_CI0
+PortArg A2
+port rca_8bit_1_B0
+PortArg Z
+port n535
+module U686 XNR2D0
+PortArg A1
+port n536
+PortArg A2
+port n537
+PortArg ZN
+port S14
+width 7
+module U687 XNR2D0
+PortArg A1
+port n538
+PortArg A2
+port rca_8bit_14_A7
+PortArg ZN
+port n537
+module U688 XOR2D0
+PortArg A1
+port n539
+PortArg A2
+port n540
+PortArg Z
+port S14
+width 6
+module U689 XOR2D0
+PortArg A1
+port rca_8bit_14_B6
+PortArg A2
+port rca_8bit_14_A6
+PortArg Z
+port n540
+module U690 XOR2D0
+PortArg A1
+port n541
+PortArg A2
+port n542
+PortArg Z
+port S14
+width 5
+module U691 XOR2D0
+PortArg A1
+port rca_8bit_14_B5
+PortArg A2
+port rca_8bit_14_A5
+PortArg Z
+port n542
+module U692 XOR2D0
+PortArg A1
+port n543
+PortArg A2
+port n544
+PortArg Z
+port S14
+width 4
+module U693 XOR2D0
+PortArg A1
+port rca_8bit_14_B4
+PortArg A2
+port rca_8bit_14_A4
+PortArg Z
+port n544
+module U694 XOR2D0
+PortArg A1
+port n545
+PortArg A2
+port n546
+PortArg Z
+port S14
+width 3
+module U695 XOR2D0
+PortArg A1
+port rca_8bit_14_B3
+PortArg A2
+port rca_8bit_14_A3
+PortArg Z
+port n546
+module U696 XOR2D0
+PortArg A1
+port n547
+PortArg A2
+port n548
+PortArg Z
+port S14
+width 2
+module U697 XOR2D0
+PortArg A1
+port rca_8bit_14_B2
+PortArg A2
+port rca_8bit_14_A2
+PortArg Z
+port n548
+module U698 XOR2D0
+PortArg A1
+port n549
+PortArg A2
+port n550
+PortArg Z
+port S14
+width 1
+module U699 XOR2D0
+PortArg A1
+port rca_8bit_14_B1
+PortArg A2
+port rca_8bit_14_A1
+PortArg Z
+port n550
+module U700 XOR2D0
+PortArg A1
+port rca_8bit_14_A0
+PortArg A2
+port n551
+PortArg Z
+port S14
+width 0
+module U701 XOR2D0
+PortArg A1
+port rca_8bit_14_CI0
+PortArg A2
+port rca_8bit_14_B0
+PortArg Z
+port n551
+module U702 XNR2D0
+PortArg A1
+port n552
+PortArg A2
+port n553
+PortArg ZN
+port S13
+width 7
+module U703 XNR2D0
+PortArg A1
+port n554
+PortArg A2
+port rca_8bit_13_A7
+PortArg ZN
+port n553
+module U704 XOR2D0
+PortArg A1
+port n555
+PortArg A2
+port n556
+PortArg Z
+port S13
+width 6
+module U705 XOR2D0
+PortArg A1
+port rca_8bit_13_B6
+PortArg A2
+port rca_8bit_13_A6
+PortArg Z
+port n556
+module U706 XOR2D0
+PortArg A1
+port n557
+PortArg A2
+port n558
+PortArg Z
+port S13
+width 5
+module U707 XOR2D0
+PortArg A1
+port rca_8bit_13_B5
+PortArg A2
+port rca_8bit_13_A5
+PortArg Z
+port n558
+module U708 XOR2D0
+PortArg A1
+port n559
+PortArg A2
+port n560
+PortArg Z
+port S13
+width 4
+module U709 XOR2D0
+PortArg A1
+port rca_8bit_13_B4
+PortArg A2
+port rca_8bit_13_A4
+PortArg Z
+port n560
+module U710 XOR2D0
+PortArg A1
+port n561
+PortArg A2
+port n562
+PortArg Z
+port S13
+width 3
+module U711 XOR2D0
+PortArg A1
+port rca_8bit_13_B3
+PortArg A2
+port rca_8bit_13_A3
+PortArg Z
+port n562
+module U712 XOR2D0
+PortArg A1
+port n563
+PortArg A2
+port n564
+PortArg Z
+port S13
+width 2
+module U713 XOR2D0
+PortArg A1
+port rca_8bit_13_B2
+PortArg A2
+port rca_8bit_13_A2
+PortArg Z
+port n564
+module U714 XOR2D0
+PortArg A1
+port n565
+PortArg A2
+port n566
+PortArg Z
+port S13
+width 1
+module U715 XOR2D0
+PortArg A1
+port rca_8bit_13_B1
+PortArg A2
+port rca_8bit_13_A1
+PortArg Z
+port n566
+module U716 XOR2D0
+PortArg A1
+port rca_8bit_13_A0
+PortArg A2
+port n567
+PortArg Z
+port S13
+width 0
+module U717 XOR2D0
+PortArg A1
+port rca_8bit_13_CI0
+PortArg A2
+port rca_8bit_13_B0
+PortArg Z
+port n567
+module U718 XNR2D0
+PortArg A1
+port n568
+PortArg A2
+port n569
+PortArg ZN
+port S12
+width 7
+module U719 XNR2D0
+PortArg A1
+port n570
+PortArg A2
+port rca_8bit_12_A7
+PortArg ZN
+port n569
+module U720 XOR2D0
+PortArg A1
+port n571
+PortArg A2
+port n572
+PortArg Z
+port S12
+width 6
+module U721 XOR2D0
+PortArg A1
+port rca_8bit_12_B6
+PortArg A2
+port rca_8bit_12_A6
+PortArg Z
+port n572
+module U722 XOR2D0
+PortArg A1
+port n573
+PortArg A2
+port n574
+PortArg Z
+port S12
+width 5
+module U723 XOR2D0
+PortArg A1
+port rca_8bit_12_B5
+PortArg A2
+port rca_8bit_12_A5
+PortArg Z
+port n574
+module U724 XOR2D0
+PortArg A1
+port n575
+PortArg A2
+port n576
+PortArg Z
+port S12
+width 4
+module U725 XOR2D0
+PortArg A1
+port rca_8bit_12_B4
+PortArg A2
+port rca_8bit_12_A4
+PortArg Z
+port n576
+module U726 XOR2D0
+PortArg A1
+port n577
+PortArg A2
+port n578
+PortArg Z
+port S12
+width 3
+module U727 XOR2D0
+PortArg A1
+port rca_8bit_12_B3
+PortArg A2
+port rca_8bit_12_A3
+PortArg Z
+port n578
+module U728 XOR2D0
+PortArg A1
+port n579
+PortArg A2
+port n580
+PortArg Z
+port S12
+width 2
+module U729 XOR2D0
+PortArg A1
+port rca_8bit_12_B2
+PortArg A2
+port rca_8bit_12_A2
+PortArg Z
+port n580
+module U730 XOR2D0
+PortArg A1
+port n581
+PortArg A2
+port n582
+PortArg Z
+port S12
+width 1
+module U731 XOR2D0
+PortArg A1
+port rca_8bit_12_B1
+PortArg A2
+port rca_8bit_12_A1
+PortArg Z
+port n582
+module U732 XOR2D0
+PortArg A1
+port rca_8bit_12_A0
+PortArg A2
+port n583
+PortArg Z
+port S12
+width 0
+module U733 XOR2D0
+PortArg A1
+port rca_8bit_12_CI0
+PortArg A2
+port rca_8bit_12_B0
+PortArg Z
+port n583
+module U734 XNR2D0
+PortArg A1
+port n584
+PortArg A2
+port n585
+PortArg ZN
+port S11
+width 7
+module U735 XNR2D0
+PortArg A1
+port n586
+PortArg A2
+port rca_8bit_11_A7
+PortArg ZN
+port n585
+module U736 XOR2D0
+PortArg A1
+port n587
+PortArg A2
+port n588
+PortArg Z
+port S11
+width 6
+module U737 XOR2D0
+PortArg A1
+port rca_8bit_11_B6
+PortArg A2
+port rca_8bit_11_A6
+PortArg Z
+port n588
+module U738 XOR2D0
+PortArg A1
+port n589
+PortArg A2
+port n590
+PortArg Z
+port S11
+width 5
+module U739 XOR2D0
+PortArg A1
+port rca_8bit_11_B5
+PortArg A2
+port rca_8bit_11_A5
+PortArg Z
+port n590
+module U740 XOR2D0
+PortArg A1
+port n591
+PortArg A2
+port n592
+PortArg Z
+port S11
+width 4
+module U741 XOR2D0
+PortArg A1
+port rca_8bit_11_B4
+PortArg A2
+port rca_8bit_11_A4
+PortArg Z
+port n592
+module U742 XOR2D0
+PortArg A1
+port n593
+PortArg A2
+port n594
+PortArg Z
+port S11
+width 3
+module U743 XOR2D0
+PortArg A1
+port rca_8bit_11_B3
+PortArg A2
+port rca_8bit_11_A3
+PortArg Z
+port n594
+module U744 XOR2D0
+PortArg A1
+port n595
+PortArg A2
+port n596
+PortArg Z
+port S11
+width 2
+module U745 XOR2D0
+PortArg A1
+port rca_8bit_11_B2
+PortArg A2
+port rca_8bit_11_A2
+PortArg Z
+port n596
+module U746 XOR2D0
+PortArg A1
+port n597
+PortArg A2
+port n598
+PortArg Z
+port S11
+width 1
+module U747 XOR2D0
+PortArg A1
+port rca_8bit_11_B1
+PortArg A2
+port rca_8bit_11_A1
+PortArg Z
+port n598
+module U748 XOR2D0
+PortArg A1
+port rca_8bit_11_A0
+PortArg A2
+port n599
+PortArg Z
+port S11
+width 0
+module U749 XOR2D0
+PortArg A1
+port rca_8bit_11_CI0
+PortArg A2
+port rca_8bit_11_B0
+PortArg Z
+port n599
+module U750 XNR2D0
+PortArg A1
+port n600
+PortArg A2
+port n601
+PortArg ZN
+port S10
+width 7
+module U751 XNR2D0
+PortArg A1
+port n602
+PortArg A2
+port rca_8bit_10_A7
+PortArg ZN
+port n601
+module U752 XOR2D0
+PortArg A1
+port n603
+PortArg A2
+port n604
+PortArg Z
+port S10
+width 6
+module U753 XOR2D0
+PortArg A1
+port rca_8bit_10_B6
+PortArg A2
+port rca_8bit_10_A6
+PortArg Z
+port n604
+module U754 XOR2D0
+PortArg A1
+port n605
+PortArg A2
+port n606
+PortArg Z
+port S10
+width 5
+module U755 XOR2D0
+PortArg A1
+port rca_8bit_10_B5
+PortArg A2
+port rca_8bit_10_A5
+PortArg Z
+port n606
+module U756 XOR2D0
+PortArg A1
+port n607
+PortArg A2
+port n608
+PortArg Z
+port S10
+width 4
+module U757 XOR2D0
+PortArg A1
+port rca_8bit_10_B4
+PortArg A2
+port rca_8bit_10_A4
+PortArg Z
+port n608
+module U758 XOR2D0
+PortArg A1
+port n609
+PortArg A2
+port n610
+PortArg Z
+port S10
+width 3
+module U759 XOR2D0
+PortArg A1
+port rca_8bit_10_B3
+PortArg A2
+port rca_8bit_10_A3
+PortArg Z
+port n610
+module U760 XOR2D0
+PortArg A1
+port n611
+PortArg A2
+port n612
+PortArg Z
+port S10
+width 2
+module U761 XOR2D0
+PortArg A1
+port rca_8bit_10_B2
+PortArg A2
+port rca_8bit_10_A2
+PortArg Z
+port n612
+module U762 XOR2D0
+PortArg A1
+port n613
+PortArg A2
+port n614
+PortArg Z
+port S10
+width 1
+module U763 XOR2D0
+PortArg A1
+port rca_8bit_10_B1
+PortArg A2
+port rca_8bit_10_A1
+PortArg Z
+port n614
+module U764 XOR2D0
+PortArg A1
+port rca_8bit_10_A0
+PortArg A2
+port n615
+PortArg Z
+port S10
+width 0
+module U765 XOR2D0
+PortArg A1
+port rca_8bit_10_CI0
+PortArg A2
+port rca_8bit_10_B0
+PortArg Z
+port n615
+module U766 OAI22D0
+PortArg A1
+port n392
+PortArg A2
+port n616
+PortArg B1
+port n617
+PortArg B2
+port n394
+PortArg ZN
+port CO9
+module U767 CKND0
+PortArg I
+port rca_8bit_9_B7
+PortArg ZN
+port n394
+module U768 AN2D0
+PortArg A1
+port n616
+PortArg A2
+port n392
+PortArg Z
+port n617
+module U769 CKND0
+PortArg I
+port rca_8bit_9_A7
+PortArg ZN
+port n616
+module U770 OR2D0
+PortArg A1
+port rca_8bit_9_A6
+PortArg A2
+port n395
+PortArg Z
+port n618
+module U771 AO22D0
+PortArg A1
+port n397
+PortArg A2
+port rca_8bit_9_A5
+PortArg B1
+port n619
+PortArg B2
+port rca_8bit_9_B5
+PortArg Z
+port n395
+module U772 OR2D0
+PortArg A1
+port rca_8bit_9_A5
+PortArg A2
+port n397
+PortArg Z
+port n619
+module U773 AO22D0
+PortArg A1
+port n399
+PortArg A2
+port rca_8bit_9_A4
+PortArg B1
+port n620
+PortArg B2
+port rca_8bit_9_B4
+PortArg Z
+port n397
+module U774 OR2D0
+PortArg A1
+port rca_8bit_9_A4
+PortArg A2
+port n399
+PortArg Z
+port n620
+module U775 AO22D0
+PortArg A1
+port n401
+PortArg A2
+port rca_8bit_9_A3
+PortArg B1
+port n621
+PortArg B2
+port rca_8bit_9_B3
+PortArg Z
+port n399
+module U776 OR2D0
+PortArg A1
+port rca_8bit_9_A3
+PortArg A2
+port n401
+PortArg Z
+port n621
+module U777 AO22D0
+PortArg A1
+port n403
+PortArg A2
+port rca_8bit_9_A2
+PortArg B1
+port n622
+PortArg B2
+port rca_8bit_9_B2
+PortArg Z
+port n401
+module U778 OR2D0
+PortArg A1
+port rca_8bit_9_A2
+PortArg A2
+port n403
+PortArg Z
+port n622
+module U779 AO22D0
+PortArg A1
+port n405
+PortArg A2
+port rca_8bit_9_A1
+PortArg B1
+port n623
+PortArg B2
+port rca_8bit_9_B1
+PortArg Z
+port n403
+module U780 OR2D0
+PortArg A1
+port rca_8bit_9_A1
+PortArg A2
+port n405
+PortArg Z
+port n623
+module U781 AO22D0
+PortArg A1
+port rca_8bit_9_A0
+PortArg A2
+port rca_8bit_9_B0
+PortArg B1
+port n624
+PortArg B2
+port rca_8bit_9_CI0
+PortArg Z
+port n405
+module U782 OR2D0
+PortArg A1
+port rca_8bit_9_A0
+PortArg A2
+port rca_8bit_9_B0
+PortArg Z
+port n624
+module U783 OAI22D0
+PortArg A1
+port n408
+PortArg A2
+port n625
+PortArg B1
+port n626
+PortArg B2
+port n410
+PortArg ZN
+port CO8
+module U784 CKND0
+PortArg I
+port rca_8bit_8_B7
+PortArg ZN
+port n410
+module U785 AN2D0
+PortArg A1
+port n625
+PortArg A2
+port n408
+PortArg Z
+port n626
+module U786 CKND0
+PortArg I
+port rca_8bit_8_A7
+PortArg ZN
+port n625
+module U787 OR2D0
+PortArg A1
+port rca_8bit_8_A6
+PortArg A2
+port n411
+PortArg Z
+port n627
+module U788 AO22D0
+PortArg A1
+port n413
+PortArg A2
+port rca_8bit_8_A5
+PortArg B1
+port n628
+PortArg B2
+port rca_8bit_8_B5
+PortArg Z
+port n411
+module U789 OR2D0
+PortArg A1
+port rca_8bit_8_A5
+PortArg A2
+port n413
+PortArg Z
+port n628
+module U790 AO22D0
+PortArg A1
+port n415
+PortArg A2
+port rca_8bit_8_A4
+PortArg B1
+port n629
+PortArg B2
+port rca_8bit_8_B4
+PortArg Z
+port n413
+module U791 OR2D0
+PortArg A1
+port rca_8bit_8_A4
+PortArg A2
+port n415
+PortArg Z
+port n629
+module U792 AO22D0
+PortArg A1
+port n417
+PortArg A2
+port rca_8bit_8_A3
+PortArg B1
+port n630
+PortArg B2
+port rca_8bit_8_B3
+PortArg Z
+port n415
+module U793 OR2D0
+PortArg A1
+port rca_8bit_8_A3
+PortArg A2
+port n417
+PortArg Z
+port n630
+module U794 AO22D0
+PortArg A1
+port n419
+PortArg A2
+port rca_8bit_8_A2
+PortArg B1
+port n631
+PortArg B2
+port rca_8bit_8_B2
+PortArg Z
+port n417
+module U795 OR2D0
+PortArg A1
+port rca_8bit_8_A2
+PortArg A2
+port n419
+PortArg Z
+port n631
+module U796 AO22D0
+PortArg A1
+port n421
+PortArg A2
+port rca_8bit_8_A1
+PortArg B1
+port n632
+PortArg B2
+port rca_8bit_8_B1
+PortArg Z
+port n419
+module U797 OR2D0
+PortArg A1
+port rca_8bit_8_A1
+PortArg A2
+port n421
+PortArg Z
+port n632
+module U798 AO22D0
+PortArg A1
+port rca_8bit_8_A0
+PortArg A2
+port rca_8bit_8_B0
+PortArg B1
+port n633
+PortArg B2
+port rca_8bit_8_CI0
+PortArg Z
+port n421
+module U799 OR2D0
+PortArg A1
+port rca_8bit_8_A0
+PortArg A2
+port rca_8bit_8_B0
+PortArg Z
+port n633
+module U800 OAI22D0
+PortArg A1
+port n424
+PortArg A2
+port n634
+PortArg B1
+port n635
+PortArg B2
+port n426
+PortArg ZN
+port CO7
+module U801 CKND0
+PortArg I
+port rca_8bit_7_B7
+PortArg ZN
+port n426
+module U802 AN2D0
+PortArg A1
+port n634
+PortArg A2
+port n424
+PortArg Z
+port n635
+module U803 CKND0
+PortArg I
+port rca_8bit_7_A7
+PortArg ZN
+port n634
+module U804 OR2D0
+PortArg A1
+port rca_8bit_7_A6
+PortArg A2
+port n427
+PortArg Z
+port n636
+module U805 AO22D0
+PortArg A1
+port n429
+PortArg A2
+port rca_8bit_7_A5
+PortArg B1
+port n637
+PortArg B2
+port rca_8bit_7_B5
+PortArg Z
+port n427
+module U806 OR2D0
+PortArg A1
+port rca_8bit_7_A5
+PortArg A2
+port n429
+PortArg Z
+port n637
+module U807 AO22D0
+PortArg A1
+port n431
+PortArg A2
+port rca_8bit_7_A4
+PortArg B1
+port n638
+PortArg B2
+port rca_8bit_7_B4
+PortArg Z
+port n429
+module U808 OR2D0
+PortArg A1
+port rca_8bit_7_A4
+PortArg A2
+port n431
+PortArg Z
+port n638
+module U809 AO22D0
+PortArg A1
+port n433
+PortArg A2
+port rca_8bit_7_A3
+PortArg B1
+port n639
+PortArg B2
+port rca_8bit_7_B3
+PortArg Z
+port n431
+module U810 OR2D0
+PortArg A1
+port rca_8bit_7_A3
+PortArg A2
+port n433
+PortArg Z
+port n639
+module U811 AO22D0
+PortArg A1
+port n435
+PortArg A2
+port rca_8bit_7_A2
+PortArg B1
+port n640
+PortArg B2
+port rca_8bit_7_B2
+PortArg Z
+port n433
+module U812 OR2D0
+PortArg A1
+port rca_8bit_7_A2
+PortArg A2
+port n435
+PortArg Z
+port n640
+module U813 AO22D0
+PortArg A1
+port n437
+PortArg A2
+port rca_8bit_7_A1
+PortArg B1
+port n641
+PortArg B2
+port rca_8bit_7_B1
+PortArg Z
+port n435
+module U814 OR2D0
+PortArg A1
+port rca_8bit_7_A1
+PortArg A2
+port n437
+PortArg Z
+port n641
+module U815 AO22D0
+PortArg A1
+port rca_8bit_7_A0
+PortArg A2
+port rca_8bit_7_B0
+PortArg B1
+port n642
+PortArg B2
+port rca_8bit_7_CI0
+PortArg Z
+port n437
+module U816 OR2D0
+PortArg A1
+port rca_8bit_7_A0
+PortArg A2
+port rca_8bit_7_B0
+PortArg Z
+port n642
+module U817 OAI22D0
+PortArg A1
+port n440
+PortArg A2
+port n643
+PortArg B1
+port n644
+PortArg B2
+port n442
+PortArg ZN
+port CO6
+module U818 CKND0
+PortArg I
+port rca_8bit_6_B7
+PortArg ZN
+port n442
+module U819 AN2D0
+PortArg A1
+port n643
+PortArg A2
+port n440
+PortArg Z
+port n644
+module U820 CKND0
+PortArg I
+port rca_8bit_6_A7
+PortArg ZN
+port n643
+module U821 OR2D0
+PortArg A1
+port rca_8bit_6_A6
+PortArg A2
+port n443
+PortArg Z
+port n645
+module U822 AO22D0
+PortArg A1
+port n445
+PortArg A2
+port rca_8bit_6_A5
+PortArg B1
+port n646
+PortArg B2
+port rca_8bit_6_B5
+PortArg Z
+port n443
+module U823 OR2D0
+PortArg A1
+port rca_8bit_6_A5
+PortArg A2
+port n445
+PortArg Z
+port n646
+module U824 AO22D0
+PortArg A1
+port n447
+PortArg A2
+port rca_8bit_6_A4
+PortArg B1
+port n647
+PortArg B2
+port rca_8bit_6_B4
+PortArg Z
+port n445
+module U825 OR2D0
+PortArg A1
+port rca_8bit_6_A4
+PortArg A2
+port n447
+PortArg Z
+port n647
+module U826 AO22D0
+PortArg A1
+port n449
+PortArg A2
+port rca_8bit_6_A3
+PortArg B1
+port n648
+PortArg B2
+port rca_8bit_6_B3
+PortArg Z
+port n447
+module U827 OR2D0
+PortArg A1
+port rca_8bit_6_A3
+PortArg A2
+port n449
+PortArg Z
+port n648
+module U828 AO22D0
+PortArg A1
+port n451
+PortArg A2
+port rca_8bit_6_A2
+PortArg B1
+port n649
+PortArg B2
+port rca_8bit_6_B2
+PortArg Z
+port n449
+module U829 OR2D0
+PortArg A1
+port rca_8bit_6_A2
+PortArg A2
+port n451
+PortArg Z
+port n649
+module U830 AO22D0
+PortArg A1
+port n453
+PortArg A2
+port rca_8bit_6_A1
+PortArg B1
+port n650
+PortArg B2
+port rca_8bit_6_B1
+PortArg Z
+port n451
+module U831 OR2D0
+PortArg A1
+port rca_8bit_6_A1
+PortArg A2
+port n453
+PortArg Z
+port n650
+module U832 AO22D0
+PortArg A1
+port rca_8bit_6_A0
+PortArg A2
+port rca_8bit_6_B0
+PortArg B1
+port n651
+PortArg B2
+port rca_8bit_6_CI0
+PortArg Z
+port n453
+module U833 OR2D0
+PortArg A1
+port rca_8bit_6_A0
+PortArg A2
+port rca_8bit_6_B0
+PortArg Z
+port n651
+module U834 OAI22D0
+PortArg A1
+port n456
+PortArg A2
+port n652
+PortArg B1
+port n653
+PortArg B2
+port n458
+PortArg ZN
+port CO5
+module U835 CKND0
+PortArg I
+port rca_8bit_5_B7
+PortArg ZN
+port n458
+module U836 AN2D0
+PortArg A1
+port n652
+PortArg A2
+port n456
+PortArg Z
+port n653
+module U837 CKND0
+PortArg I
+port rca_8bit_5_A7
+PortArg ZN
+port n652
+module U838 OR2D0
+PortArg A1
+port rca_8bit_5_A6
+PortArg A2
+port n459
+PortArg Z
+port n654
+module U839 AO22D0
+PortArg A1
+port n461
+PortArg A2
+port rca_8bit_5_A5
+PortArg B1
+port n655
+PortArg B2
+port rca_8bit_5_B5
+PortArg Z
+port n459
+module U840 OR2D0
+PortArg A1
+port rca_8bit_5_A5
+PortArg A2
+port n461
+PortArg Z
+port n655
+module U841 AO22D0
+PortArg A1
+port n463
+PortArg A2
+port rca_8bit_5_A4
+PortArg B1
+port n656
+PortArg B2
+port rca_8bit_5_B4
+PortArg Z
+port n461
+module U842 OR2D0
+PortArg A1
+port rca_8bit_5_A4
+PortArg A2
+port n463
+PortArg Z
+port n656
+module U843 AO22D0
+PortArg A1
+port n465
+PortArg A2
+port rca_8bit_5_A3
+PortArg B1
+port n657
+PortArg B2
+port rca_8bit_5_B3
+PortArg Z
+port n463
+module U844 OR2D0
+PortArg A1
+port rca_8bit_5_A3
+PortArg A2
+port n465
+PortArg Z
+port n657
+module U845 AO22D0
+PortArg A1
+port n467
+PortArg A2
+port rca_8bit_5_A2
+PortArg B1
+port n658
+PortArg B2
+port rca_8bit_5_B2
+PortArg Z
+port n465
+module U846 OR2D0
+PortArg A1
+port rca_8bit_5_A2
+PortArg A2
+port n467
+PortArg Z
+port n658
+module U847 AO22D0
+PortArg A1
+port n469
+PortArg A2
+port rca_8bit_5_A1
+PortArg B1
+port n659
+PortArg B2
+port rca_8bit_5_B1
+PortArg Z
+port n467
+module U848 OR2D0
+PortArg A1
+port rca_8bit_5_A1
+PortArg A2
+port n469
+PortArg Z
+port n659
+module U849 AO22D0
+PortArg A1
+port rca_8bit_5_A0
+PortArg A2
+port rca_8bit_5_B0
+PortArg B1
+port n660
+PortArg B2
+port rca_8bit_5_CI0
+PortArg Z
+port n469
+module U850 OR2D0
+PortArg A1
+port rca_8bit_5_A0
+PortArg A2
+port rca_8bit_5_B0
+PortArg Z
+port n660
+module U851 OAI22D0
+PortArg A1
+port n472
+PortArg A2
+port n661
+PortArg B1
+port n662
+PortArg B2
+port n474
+PortArg ZN
+port CO4
+module U852 CKND0
+PortArg I
+port rca_8bit_4_B7
+PortArg ZN
+port n474
+module U853 AN2D0
+PortArg A1
+port n661
+PortArg A2
+port n472
+PortArg Z
+port n662
+module U854 CKND0
+PortArg I
+port rca_8bit_4_A7
+PortArg ZN
+port n661
+module U855 OR2D0
+PortArg A1
+port rca_8bit_4_A6
+PortArg A2
+port n475
+PortArg Z
+port n663
+module U856 AO22D0
+PortArg A1
+port n477
+PortArg A2
+port rca_8bit_4_A5
+PortArg B1
+port n664
+PortArg B2
+port rca_8bit_4_B5
+PortArg Z
+port n475
+module U857 OR2D0
+PortArg A1
+port rca_8bit_4_A5
+PortArg A2
+port n477
+PortArg Z
+port n664
+module U858 AO22D0
+PortArg A1
+port n479
+PortArg A2
+port rca_8bit_4_A4
+PortArg B1
+port n665
+PortArg B2
+port rca_8bit_4_B4
+PortArg Z
+port n477
+module U859 OR2D0
+PortArg A1
+port rca_8bit_4_A4
+PortArg A2
+port n479
+PortArg Z
+port n665
+module U860 AO22D0
+PortArg A1
+port n481
+PortArg A2
+port rca_8bit_4_A3
+PortArg B1
+port n666
+PortArg B2
+port rca_8bit_4_B3
+PortArg Z
+port n479
+module U861 OR2D0
+PortArg A1
+port rca_8bit_4_A3
+PortArg A2
+port n481
+PortArg Z
+port n666
+module U862 AO22D0
+PortArg A1
+port n483
+PortArg A2
+port rca_8bit_4_A2
+PortArg B1
+port n667
+PortArg B2
+port rca_8bit_4_B2
+PortArg Z
+port n481
+module U863 OR2D0
+PortArg A1
+port rca_8bit_4_A2
+PortArg A2
+port n483
+PortArg Z
+port n667
+module U864 AO22D0
+PortArg A1
+port n485
+PortArg A2
+port rca_8bit_4_A1
+PortArg B1
+port n668
+PortArg B2
+port rca_8bit_4_B1
+PortArg Z
+port n483
+module U865 OR2D0
+PortArg A1
+port rca_8bit_4_A1
+PortArg A2
+port n485
+PortArg Z
+port n668
+module U866 AO22D0
+PortArg A1
+port rca_8bit_4_A0
+PortArg A2
+port rca_8bit_4_B0
+PortArg B1
+port n669
+PortArg B2
+port rca_8bit_4_CI0
+PortArg Z
+port n485
+module U867 OR2D0
+PortArg A1
+port rca_8bit_4_A0
+PortArg A2
+port rca_8bit_4_B0
+PortArg Z
+port n669
+module U868 OAI22D0
+PortArg A1
+port n488
+PortArg A2
+port n670
+PortArg B1
+port n671
+PortArg B2
+port n490
+PortArg ZN
+port CO3
+module U869 CKND0
+PortArg I
+port rca_8bit_3_B7
+PortArg ZN
+port n490
+module U870 AN2D0
+PortArg A1
+port n670
+PortArg A2
+port n488
+PortArg Z
+port n671
+module U871 CKND0
+PortArg I
+port rca_8bit_3_A7
+PortArg ZN
+port n670
+module U872 OR2D0
+PortArg A1
+port rca_8bit_3_A6
+PortArg A2
+port n491
+PortArg Z
+port n672
+module U873 AO22D0
+PortArg A1
+port n493
+PortArg A2
+port rca_8bit_3_A5
+PortArg B1
+port n673
+PortArg B2
+port rca_8bit_3_B5
+PortArg Z
+port n491
+module U874 OR2D0
+PortArg A1
+port rca_8bit_3_A5
+PortArg A2
+port n493
+PortArg Z
+port n673
+module U875 AO22D0
+PortArg A1
+port n495
+PortArg A2
+port rca_8bit_3_A4
+PortArg B1
+port n674
+PortArg B2
+port rca_8bit_3_B4
+PortArg Z
+port n493
+module U876 OR2D0
+PortArg A1
+port rca_8bit_3_A4
+PortArg A2
+port n495
+PortArg Z
+port n674
+module U877 AO22D0
+PortArg A1
+port n497
+PortArg A2
+port rca_8bit_3_A3
+PortArg B1
+port n675
+PortArg B2
+port rca_8bit_3_B3
+PortArg Z
+port n495
+module U878 OR2D0
+PortArg A1
+port rca_8bit_3_A3
+PortArg A2
+port n497
+PortArg Z
+port n675
+module U879 AO22D0
+PortArg A1
+port n499
+PortArg A2
+port rca_8bit_3_A2
+PortArg B1
+port n676
+PortArg B2
+port rca_8bit_3_B2
+PortArg Z
+port n497
+module U880 OR2D0
+PortArg A1
+port rca_8bit_3_A2
+PortArg A2
+port n499
+PortArg Z
+port n676
+module U881 AO22D0
+PortArg A1
+port n501
+PortArg A2
+port rca_8bit_3_A1
+PortArg B1
+port n677
+PortArg B2
+port rca_8bit_3_B1
+PortArg Z
+port n499
+module U882 OR2D0
+PortArg A1
+port rca_8bit_3_A1
+PortArg A2
+port n501
+PortArg Z
+port n677
+module U883 AO22D0
+PortArg A1
+port rca_8bit_3_A0
+PortArg A2
+port rca_8bit_3_B0
+PortArg B1
+port n678
+PortArg B2
+port rca_8bit_3_CI0
+PortArg Z
+port n501
+module U884 OR2D0
+PortArg A1
+port rca_8bit_3_A0
+PortArg A2
+port rca_8bit_3_B0
+PortArg Z
+port n678
+module U885 OAI22D0
+PortArg A1
+port n504
+PortArg A2
+port n679
+PortArg B1
+port n680
+PortArg B2
+port n506
+PortArg ZN
+port CO2
+module U886 CKND0
+PortArg I
+port rca_8bit_2_B7
+PortArg ZN
+port n506
+module U887 AN2D0
+PortArg A1
+port n679
+PortArg A2
+port n504
+PortArg Z
+port n680
+module U888 CKND0
+PortArg I
+port rca_8bit_2_A7
+PortArg ZN
+port n679
+module U889 OR2D0
+PortArg A1
+port rca_8bit_2_A6
+PortArg A2
+port n507
+PortArg Z
+port n681
+module U890 AO22D0
+PortArg A1
+port n509
+PortArg A2
+port rca_8bit_2_A5
+PortArg B1
+port n682
+PortArg B2
+port rca_8bit_2_B5
+PortArg Z
+port n507
+module U891 OR2D0
+PortArg A1
+port rca_8bit_2_A5
+PortArg A2
+port n509
+PortArg Z
+port n682
+module U892 AO22D0
+PortArg A1
+port n511
+PortArg A2
+port rca_8bit_2_A4
+PortArg B1
+port n683
+PortArg B2
+port rca_8bit_2_B4
+PortArg Z
+port n509
+module U893 OR2D0
+PortArg A1
+port rca_8bit_2_A4
+PortArg A2
+port n511
+PortArg Z
+port n683
+module U894 AO22D0
+PortArg A1
+port n513
+PortArg A2
+port rca_8bit_2_A3
+PortArg B1
+port n684
+PortArg B2
+port rca_8bit_2_B3
+PortArg Z
+port n511
+module U895 OR2D0
+PortArg A1
+port rca_8bit_2_A3
+PortArg A2
+port n513
+PortArg Z
+port n684
+module U896 AO22D0
+PortArg A1
+port n515
+PortArg A2
+port rca_8bit_2_A2
+PortArg B1
+port n685
+PortArg B2
+port rca_8bit_2_B2
+PortArg Z
+port n513
+module U897 OR2D0
+PortArg A1
+port rca_8bit_2_A2
+PortArg A2
+port n515
+PortArg Z
+port n685
+module U898 AO22D0
+PortArg A1
+port n517
+PortArg A2
+port rca_8bit_2_A1
+PortArg B1
+port n686
+PortArg B2
+port rca_8bit_2_B1
+PortArg Z
+port n515
+module U899 OR2D0
+PortArg A1
+port rca_8bit_2_A1
+PortArg A2
+port n517
+PortArg Z
+port n686
+module U900 AO22D0
+PortArg A1
+port rca_8bit_2_A0
+PortArg A2
+port rca_8bit_2_B0
+PortArg B1
+port n687
+PortArg B2
+port rca_8bit_2_CI0
+PortArg Z
+port n517
+module U901 OR2D0
+PortArg A1
+port rca_8bit_2_A0
+PortArg A2
+port rca_8bit_2_B0
+PortArg Z
+port n687
+module U902 OAI22D0
+PortArg A1
+port n536
+PortArg A2
+port n688
+PortArg B1
+port n689
+PortArg B2
+port n538
+PortArg ZN
+port CO14
+module U903 CKND0
+PortArg I
+port rca_8bit_14_B7
+PortArg ZN
+port n538
+module U904 AN2D0
+PortArg A1
+port n688
+PortArg A2
+port n536
+PortArg Z
+port n689
+module U905 CKND0
+PortArg I
+port rca_8bit_14_A7
+PortArg ZN
+port n688
+module U906 OR2D0
+PortArg A1
+port rca_8bit_14_A6
+PortArg A2
+port n539
+PortArg Z
+port n690
+module U907 AO22D0
+PortArg A1
+port n541
+PortArg A2
+port rca_8bit_14_A5
+PortArg B1
+port n691
+PortArg B2
+port rca_8bit_14_B5
+PortArg Z
+port n539
+module U908 OR2D0
+PortArg A1
+port rca_8bit_14_A5
+PortArg A2
+port n541
+PortArg Z
+port n691
+module U909 AO22D0
+PortArg A1
+port n543
+PortArg A2
+port rca_8bit_14_A4
+PortArg B1
+port n692
+PortArg B2
+port rca_8bit_14_B4
+PortArg Z
+port n541
+module U910 OR2D0
+PortArg A1
+port rca_8bit_14_A4
+PortArg A2
+port n543
+PortArg Z
+port n692
+module U911 AO22D0
+PortArg A1
+port n545
+PortArg A2
+port rca_8bit_14_A3
+PortArg B1
+port n693
+PortArg B2
+port rca_8bit_14_B3
+PortArg Z
+port n543
+module U912 OR2D0
+PortArg A1
+port rca_8bit_14_A3
+PortArg A2
+port n545
+PortArg Z
+port n693
+module U913 AO22D0
+PortArg A1
+port n547
+PortArg A2
+port rca_8bit_14_A2
+PortArg B1
+port n694
+PortArg B2
+port rca_8bit_14_B2
+PortArg Z
+port n545
+module U914 OR2D0
+PortArg A1
+port rca_8bit_14_A2
+PortArg A2
+port n547
+PortArg Z
+port n694
+module U915 AO22D0
+PortArg A1
+port n549
+PortArg A2
+port rca_8bit_14_A1
+PortArg B1
+port n695
+PortArg B2
+port rca_8bit_14_B1
+PortArg Z
+port n547
+module U916 OR2D0
+PortArg A1
+port rca_8bit_14_A1
+PortArg A2
+port n549
+PortArg Z
+port n695
+module U917 AO22D0
+PortArg A1
+port rca_8bit_14_A0
+PortArg A2
+port rca_8bit_14_B0
+PortArg B1
+port n696
+PortArg B2
+port rca_8bit_14_CI0
+PortArg Z
+port n549
+module U918 OR2D0
+PortArg A1
+port rca_8bit_14_A0
+PortArg A2
+port rca_8bit_14_B0
+PortArg Z
+port n696
+module U919 OAI22D0
+PortArg A1
+port n552
+PortArg A2
+port n697
+PortArg B1
+port n698
+PortArg B2
+port n554
+PortArg ZN
+port CO13
+module U920 CKND0
+PortArg I
+port rca_8bit_13_B7
+PortArg ZN
+port n554
+module U921 AN2D0
+PortArg A1
+port n697
+PortArg A2
+port n552
+PortArg Z
+port n698
+module U922 CKND0
+PortArg I
+port rca_8bit_13_A7
+PortArg ZN
+port n697
+module U923 OR2D0
+PortArg A1
+port rca_8bit_13_A6
+PortArg A2
+port n555
+PortArg Z
+port n699
+module U924 AO22D0
+PortArg A1
+port n557
+PortArg A2
+port rca_8bit_13_A5
+PortArg B1
+port n700
+PortArg B2
+port rca_8bit_13_B5
+PortArg Z
+port n555
+module U925 OR2D0
+PortArg A1
+port rca_8bit_13_A5
+PortArg A2
+port n557
+PortArg Z
+port n700
+module U926 AO22D0
+PortArg A1
+port n559
+PortArg A2
+port rca_8bit_13_A4
+PortArg B1
+port n701
+PortArg B2
+port rca_8bit_13_B4
+PortArg Z
+port n557
+module U927 OR2D0
+PortArg A1
+port rca_8bit_13_A4
+PortArg A2
+port n559
+PortArg Z
+port n701
+module U928 AO22D0
+PortArg A1
+port n561
+PortArg A2
+port rca_8bit_13_A3
+PortArg B1
+port n702
+PortArg B2
+port rca_8bit_13_B3
+PortArg Z
+port n559
+module U929 OR2D0
+PortArg A1
+port rca_8bit_13_A3
+PortArg A2
+port n561
+PortArg Z
+port n702
+module U930 AO22D0
+PortArg A1
+port n563
+PortArg A2
+port rca_8bit_13_A2
+PortArg B1
+port n703
+PortArg B2
+port rca_8bit_13_B2
+PortArg Z
+port n561
+module U931 OR2D0
+PortArg A1
+port rca_8bit_13_A2
+PortArg A2
+port n563
+PortArg Z
+port n703
+module U932 AO22D0
+PortArg A1
+port n565
+PortArg A2
+port rca_8bit_13_A1
+PortArg B1
+port n704
+PortArg B2
+port rca_8bit_13_B1
+PortArg Z
+port n563
+module U933 OR2D0
+PortArg A1
+port rca_8bit_13_A1
+PortArg A2
+port n565
+PortArg Z
+port n704
+module U934 AO22D0
+PortArg A1
+port rca_8bit_13_A0
+PortArg A2
+port rca_8bit_13_B0
+PortArg B1
+port n705
+PortArg B2
+port rca_8bit_13_CI0
+PortArg Z
+port n565
+module U935 OR2D0
+PortArg A1
+port rca_8bit_13_A0
+PortArg A2
+port rca_8bit_13_B0
+PortArg Z
+port n705
+module U936 OAI22D0
+PortArg A1
+port n568
+PortArg A2
+port n706
+PortArg B1
+port n707
+PortArg B2
+port n570
+PortArg ZN
+port CO12
+module U937 CKND0
+PortArg I
+port rca_8bit_12_B7
+PortArg ZN
+port n570
+module U938 AN2D0
+PortArg A1
+port n706
+PortArg A2
+port n568
+PortArg Z
+port n707
+module U939 CKND0
+PortArg I
+port rca_8bit_12_A7
+PortArg ZN
+port n706
+module U940 OR2D0
+PortArg A1
+port rca_8bit_12_A6
+PortArg A2
+port n571
+PortArg Z
+port n708
+module U941 AO22D0
+PortArg A1
+port n573
+PortArg A2
+port rca_8bit_12_A5
+PortArg B1
+port n709
+PortArg B2
+port rca_8bit_12_B5
+PortArg Z
+port n571
+module U942 OR2D0
+PortArg A1
+port rca_8bit_12_A5
+PortArg A2
+port n573
+PortArg Z
+port n709
+module U943 AO22D0
+PortArg A1
+port n575
+PortArg A2
+port rca_8bit_12_A4
+PortArg B1
+port n710
+PortArg B2
+port rca_8bit_12_B4
+PortArg Z
+port n573
+module U944 OR2D0
+PortArg A1
+port rca_8bit_12_A4
+PortArg A2
+port n575
+PortArg Z
+port n710
+module U945 AO22D0
+PortArg A1
+port n577
+PortArg A2
+port rca_8bit_12_A3
+PortArg B1
+port n711
+PortArg B2
+port rca_8bit_12_B3
+PortArg Z
+port n575
+module U946 OR2D0
+PortArg A1
+port rca_8bit_12_A3
+PortArg A2
+port n577
+PortArg Z
+port n711
+module U947 AO22D0
+PortArg A1
+port n579
+PortArg A2
+port rca_8bit_12_A2
+PortArg B1
+port n712
+PortArg B2
+port rca_8bit_12_B2
+PortArg Z
+port n577
+module U948 OR2D0
+PortArg A1
+port rca_8bit_12_A2
+PortArg A2
+port n579
+PortArg Z
+port n712
+module U949 AO22D0
+PortArg A1
+port n581
+PortArg A2
+port rca_8bit_12_A1
+PortArg B1
+port n713
+PortArg B2
+port rca_8bit_12_B1
+PortArg Z
+port n579
+module U950 OR2D0
+PortArg A1
+port rca_8bit_12_A1
+PortArg A2
+port n581
+PortArg Z
+port n713
+module U951 AO22D0
+PortArg A1
+port rca_8bit_12_A0
+PortArg A2
+port rca_8bit_12_B0
+PortArg B1
+port n714
+PortArg B2
+port rca_8bit_12_CI0
+PortArg Z
+port n581
+module U952 OR2D0
+PortArg A1
+port rca_8bit_12_A0
+PortArg A2
+port rca_8bit_12_B0
+PortArg Z
+port n714
+module U953 OAI22D0
+PortArg A1
+port n584
+PortArg A2
+port n715
+PortArg B1
+port n716
+PortArg B2
+port n586
+PortArg ZN
+port CO11
+module U954 CKND0
+PortArg I
+port rca_8bit_11_B7
+PortArg ZN
+port n586
+module U955 AN2D0
+PortArg A1
+port n715
+PortArg A2
+port n584
+PortArg Z
+port n716
+module U956 CKND0
+PortArg I
+port rca_8bit_11_A7
+PortArg ZN
+port n715
+module U957 OR2D0
+PortArg A1
+port rca_8bit_11_A6
+PortArg A2
+port n587
+PortArg Z
+port n717
+module U958 AO22D0
+PortArg A1
+port n589
+PortArg A2
+port rca_8bit_11_A5
+PortArg B1
+port n718
+PortArg B2
+port rca_8bit_11_B5
+PortArg Z
+port n587
+module U959 OR2D0
+PortArg A1
+port rca_8bit_11_A5
+PortArg A2
+port n589
+PortArg Z
+port n718
+module U960 AO22D0
+PortArg A1
+port n591
+PortArg A2
+port rca_8bit_11_A4
+PortArg B1
+port n719
+PortArg B2
+port rca_8bit_11_B4
+PortArg Z
+port n589
+module U961 OR2D0
+PortArg A1
+port rca_8bit_11_A4
+PortArg A2
+port n591
+PortArg Z
+port n719
+module U962 AO22D0
+PortArg A1
+port n593
+PortArg A2
+port rca_8bit_11_A3
+PortArg B1
+port n720
+PortArg B2
+port rca_8bit_11_B3
+PortArg Z
+port n591
+module U963 OR2D0
+PortArg A1
+port rca_8bit_11_A3
+PortArg A2
+port n593
+PortArg Z
+port n720
+module U964 AO22D0
+PortArg A1
+port n595
+PortArg A2
+port rca_8bit_11_A2
+PortArg B1
+port n721
+PortArg B2
+port rca_8bit_11_B2
+PortArg Z
+port n593
+module U965 OR2D0
+PortArg A1
+port rca_8bit_11_A2
+PortArg A2
+port n595
+PortArg Z
+port n721
+module U966 AO22D0
+PortArg A1
+port n597
+PortArg A2
+port rca_8bit_11_A1
+PortArg B1
+port n722
+PortArg B2
+port rca_8bit_11_B1
+PortArg Z
+port n595
+module U967 OR2D0
+PortArg A1
+port rca_8bit_11_A1
+PortArg A2
+port n597
+PortArg Z
+port n722
+module U968 AO22D0
+PortArg A1
+port rca_8bit_11_A0
+PortArg A2
+port rca_8bit_11_B0
+PortArg B1
+port n723
+PortArg B2
+port rca_8bit_11_CI0
+PortArg Z
+port n597
+module U969 OR2D0
+PortArg A1
+port rca_8bit_11_A0
+PortArg A2
+port rca_8bit_11_B0
+PortArg Z
+port n723
+module U970 OAI22D0
+PortArg A1
+port n600
+PortArg A2
+port n724
+PortArg B1
+port n725
+PortArg B2
+port n602
+PortArg ZN
+port CO10
+module U971 CKND0
+PortArg I
+port rca_8bit_10_B7
+PortArg ZN
+port n602
+module U972 AN2D0
+PortArg A1
+port n724
+PortArg A2
+port n600
+PortArg Z
+port n725
+module U973 CKND0
+PortArg I
+port rca_8bit_10_A7
+PortArg ZN
+port n724
+module U974 OR2D0
+PortArg A1
+port rca_8bit_10_A6
+PortArg A2
+port n603
+PortArg Z
+port n726
+module U975 AO22D0
+PortArg A1
+port n605
+PortArg A2
+port rca_8bit_10_A5
+PortArg B1
+port n727
+PortArg B2
+port rca_8bit_10_B5
+PortArg Z
+port n603
+module U976 OR2D0
+PortArg A1
+port rca_8bit_10_A5
+PortArg A2
+port n605
+PortArg Z
+port n727
+module U977 AO22D0
+PortArg A1
+port n607
+PortArg A2
+port rca_8bit_10_A4
+PortArg B1
+port n728
+PortArg B2
+port rca_8bit_10_B4
+PortArg Z
+port n605
+module U978 OR2D0
+PortArg A1
+port rca_8bit_10_A4
+PortArg A2
+port n607
+PortArg Z
+port n728
+module U979 AO22D0
+PortArg A1
+port n609
+PortArg A2
+port rca_8bit_10_A3
+PortArg B1
+port n729
+PortArg B2
+port rca_8bit_10_B3
+PortArg Z
+port n607
+module U980 OR2D0
+PortArg A1
+port rca_8bit_10_A3
+PortArg A2
+port n609
+PortArg Z
+port n729
+module U981 AO22D0
+PortArg A1
+port n611
+PortArg A2
+port rca_8bit_10_A2
+PortArg B1
+port n730
+PortArg B2
+port rca_8bit_10_B2
+PortArg Z
+port n609
+module U982 OR2D0
+PortArg A1
+port rca_8bit_10_A2
+PortArg A2
+port n611
+PortArg Z
+port n730
+module U983 AO22D0
+PortArg A1
+port n613
+PortArg A2
+port rca_8bit_10_A1
+PortArg B1
+port n731
+PortArg B2
+port rca_8bit_10_B1
+PortArg Z
+port n611
+module U984 OR2D0
+PortArg A1
+port rca_8bit_10_A1
+PortArg A2
+port n613
+PortArg Z
+port n731
+module U985 AO22D0
+PortArg A1
+port rca_8bit_10_A0
+PortArg A2
+port rca_8bit_10_B0
+PortArg B1
+port n732
+PortArg B2
+port rca_8bit_10_CI0
+PortArg Z
+port n613
+module U986 OR2D0
+PortArg A1
+port rca_8bit_10_A0
+PortArg A2
+port rca_8bit_10_B0
+PortArg Z
+port n732
+module U987 OAI22D0
+PortArg A1
+port n520
+PortArg A2
+port n733
+PortArg B1
+port n734
+PortArg B2
+port n522
+PortArg ZN
+port CO1
+module U988 CKND0
+PortArg I
+port rca_8bit_1_B7
+PortArg ZN
+port n522
+module U989 AN2D0
+PortArg A1
+port n733
+PortArg A2
+port n520
+PortArg Z
+port n734
+module U990 CKND0
+PortArg I
+port rca_8bit_1_A7
+PortArg ZN
+port n733
+module U991 OR2D0
+PortArg A1
+port rca_8bit_1_A6
+PortArg A2
+port n523
+PortArg Z
+port n735
+module U992 AO22D0
+PortArg A1
+port n525
+PortArg A2
+port rca_8bit_1_A5
+PortArg B1
+port n736
+PortArg B2
+port rca_8bit_1_B5
+PortArg Z
+port n523
+module U993 OR2D0
+PortArg A1
+port rca_8bit_1_A5
+PortArg A2
+port n525
+PortArg Z
+port n736
+module U994 AO22D0
+PortArg A1
+port n527
+PortArg A2
+port rca_8bit_1_A4
+PortArg B1
+port n737
+PortArg B2
+port rca_8bit_1_B4
+PortArg Z
+port n525
+module U995 OR2D0
+PortArg A1
+port rca_8bit_1_A4
+PortArg A2
+port n527
+PortArg Z
+port n737
+module U996 AO22D0
+PortArg A1
+port n529
+PortArg A2
+port rca_8bit_1_A3
+PortArg B1
+port n738
+PortArg B2
+port rca_8bit_1_B3
+PortArg Z
+port n527
+module U997 OR2D0
+PortArg A1
+port rca_8bit_1_A3
+PortArg A2
+port n529
+PortArg Z
+port n738
+module U998 AO22D0
+PortArg A1
+port n531
+PortArg A2
+port rca_8bit_1_A2
+PortArg B1
+port n739
+PortArg B2
+port rca_8bit_1_B2
+PortArg Z
+port n529
+module U999 OR2D0
+PortArg A1
+port rca_8bit_1_A2
+PortArg A2
+port n531
+PortArg Z
+port n739
+module U1000 AO22D0
+PortArg A1
+port n533
+PortArg A2
+port rca_8bit_1_A1
+PortArg B1
+port n740
+PortArg B2
+port rca_8bit_1_B1
+PortArg Z
+port n531
+module U1001 OR2D0
+PortArg A1
+port rca_8bit_1_A1
+PortArg A2
+port n533
+PortArg Z
+port n740
+module U1002 AO22D0
+PortArg A1
+port rca_8bit_1_A0
+PortArg A2
+port rca_8bit_1_B0
+PortArg B1
+port n741
+PortArg B2
+port rca_8bit_1_CI0
+PortArg Z
+port n533
+module U1003 OR2D0
+PortArg A1
+port rca_8bit_1_A0
+PortArg A2
+port rca_8bit_1_B0
+PortArg Z
+port n741
+module U1004 OAI22D0
+PortArg A1
+port n376
+PortArg A2
+port n742
+PortArg B1
+port n743
+PortArg B2
+port n378
+PortArg ZN
+port CO
+module U1005 CKND0
+PortArg I
+port rca_8bit_15_B7
+PortArg ZN
+port n378
+module U1006 AN2D0
+PortArg A1
+port n742
+PortArg A2
+port n376
+PortArg Z
+port n743
+module U1007 CKND0
+PortArg I
+port rca_8bit_15_A7
+PortArg ZN
+port n742
+module U1008 OR2D0
+PortArg A1
+port rca_8bit_15_A6
+PortArg A2
+port n379
+PortArg Z
+port n744
+module U1009 AO22D0
+PortArg A1
+port n381
+PortArg A2
+port rca_8bit_15_A5
+PortArg B1
+port n745
+PortArg B2
+port rca_8bit_15_B5
+PortArg Z
+port n379
+module U1010 OR2D0
+PortArg A1
+port rca_8bit_15_A5
+PortArg A2
+port n381
+PortArg Z
+port n745
+module U1011 AO22D0
+PortArg A1
+port n383
+PortArg A2
+port rca_8bit_15_A4
+PortArg B1
+port n746
+PortArg B2
+port rca_8bit_15_B4
+PortArg Z
+port n381
+module U1012 OR2D0
+PortArg A1
+port rca_8bit_15_A4
+PortArg A2
+port n383
+PortArg Z
+port n746
+module U1013 AO22D0
+PortArg A1
+port n385
+PortArg A2
+port rca_8bit_15_A3
+PortArg B1
+port n747
+PortArg B2
+port rca_8bit_15_B3
+PortArg Z
+port n383
+module U1014 OR2D0
+PortArg A1
+port rca_8bit_15_A3
+PortArg A2
+port n385
+PortArg Z
+port n747
+module U1015 AO22D0
+PortArg A1
+port n387
+PortArg A2
+port rca_8bit_15_A2
+PortArg B1
+port n748
+PortArg B2
+port rca_8bit_15_B2
+PortArg Z
+port n385
+module U1016 OR2D0
+PortArg A1
+port rca_8bit_15_A2
+PortArg A2
+port n387
+PortArg Z
+port n748
+module U1017 AO22D0
+PortArg A1
+port n389
+PortArg A2
+port rca_8bit_15_A1
+PortArg B1
+port n749
+PortArg B2
+port rca_8bit_15_B1
+PortArg Z
+port n387
+module U1018 OR2D0
+PortArg A1
+port rca_8bit_15_A1
+PortArg A2
+port n389
+PortArg Z
+port n749
+module U1019 AO22D0
+PortArg A1
+port rca_8bit_15_A0
+PortArg A2
+port rca_8bit_15_B0
+PortArg B1
+port n750
+PortArg B2
+port rca_8bit_15_CI0
+PortArg Z
+port n389
+module U1020 OR2D0
+PortArg A1
+port rca_8bit_15_A0
+PortArg A2
+port rca_8bit_15_B0
+PortArg Z
+port n750
