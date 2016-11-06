@@ -242,7 +242,8 @@ def main_progress():
     startportlist_list = []
     endportlist_list = []
     startportlist_list.append(list(set(module_input_port_list)))
-    rca_num = int(input_file[3]) if int(input_file[3]) != 1 else 10
+    # rca_num = int(input_file[3]) if int(input_file[3]) != 1 else 10
+    rca_num = int(input_file[3])*10+int(input_file[4])
     # rca_num = 10
     for i in range(rca_num):
         startportlist_list.append(['rca_8bit_'+str(i+1)+'_'+dff+'_port_CP' for dff in stage_dff_list])
@@ -303,35 +304,6 @@ def main_progress():
     path_latency_dict_bak = dict.copy(path_latency_dict)
 
 
-    print "###########RVT_method###########"
-    buffer_kinds = ['INVD0', 'BUFFD0','DEL0']
-    buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL0':9.4457185}
-    buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL0':4.68}
-
-    edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-    original_area = total_area
-    original_time = time_cost
-    # original_area = 276.12
-    # original_time = 514.016638994
-    print "RVT area", original_area
-    print "RVT time", original_time
-    
-    # time.sleep(10)
-    '''
-    print "###########Multi-Vt###########"
-    edge_delay_dict = dict.copy(edge_delay_dict_bak)
-    path_latency_dict = dict.copy(path_latency_dict_bak)
-
-    buffer_kinds = ['INVD0', 'BUFFD0', 'DEL0', 'INVD0HVT', 'INVD1LVT', 'BUFFD0HVT', 'BUFFD1LVT']
-    buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL0':9.4457185, 'INVD0HVT':1.954623, 'INVD1LVT':0.179328, 'BUFFD0HVT':4.3670685, 'BUFFD1LVT':0.5221205}
-    buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL0':4.68, 'INVD0HVT':1.08, 'INVD1LVT':1.08, 'BUFFD0HVT':1.44, 'BUFFD1LVT':1.44}
-
-    edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-    new_area = total_area
-    new_time = time_cost
-    print "Multi-Vt area", new_area
-    print "Multi-Vt time", new_time
-    '''
     # print "###########Step_by_Step###########"
     print "###########Pipeline_step###########"
     buffer_kinds = ['INVD0', 'BUFFD0','DEL0']
@@ -359,25 +331,15 @@ def main_progress():
         outer_edge_list = list(set(outer_edges))
         outer_edge_list_list.append(outer_edge_list)
 
-    area_list = []
-    time_list = []
-    for part_path_list, outer_edge_list in itertools.izip(part_path_list_list, outer_edge_list_list):
-        print "Stage path number", len(part_path_list)
-        edge_delay_dict, path_latency_dict, total_area, time_cost = discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
-        area_list.append(total_area)
-        time_list.append(time_cost)
-        print time_cost
-    print "Pipeline Time", sum(time_list)
-    print "Pipeline Area", sum(area_list)
-
     buffer_kinds = sorted(buffer_kinds, key=lambda x:buffer_delay_dict[x], reverse=True)
-    for factor in [x/100.0 for x in range(50, 55, 5)]:
+    area_result_list = []
+    area_result_factor_dict = {}
+    for factor in [x/1000.0 for x in range(100, 1000)]:
         area_list = []
         time_list = []
         edge_delay_dict = dict.copy(edge_delay_dict_bak)
         path_latency_dict = dict.copy(path_latency_dict_bak)
         for part_path_list, outer_edge_list in itertools.izip(part_path_list_list, outer_edge_list_list):
-
             for buffer in buffer_kinds:
                 part_buffer_kinds = [buffer]
                 part_buffer_delay_dict = {buffer:buffer_delay_dict[buffer]}
@@ -394,9 +356,14 @@ def main_progress():
                     edge_delay_dict, path_latency_dict, total_area, time_cost= discrete_insertion(part_buffer_kinds, part_buffer_delay_dict, part_buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
                     area_list.append(total_area)
                     time_list.append(time_cost)
-        print "Pipeline_step factor", factor
-        print "Pipeline_step time", sum(time_list)
-        print "Pipeline_step area", sum(area_list)
+        area_result_list.append(sum(area_list))
+        area_result_factor_dict[sum(area_list)]=factor
+        print "Step_by_Step factor", factor
+        print "Step_by_Step area", sum(area_list)
+        print "Step_by_Step time", sum(time_list)
+    min_area_result = min(area_result_list)
+    print "Min area", min_area_result
+    print "Min area factor", area_result_factor_dict[min_area_result]
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
 
