@@ -6,10 +6,14 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument('file')
+parser.add_argument('low_factor')
+parser.add_argument('high_factor')
 
 args = parser.parse_args()
 
 input_file = args.file
+low_factor = int(args.low_factor)
+high_factor = int(args.high_factor)
 
 
 def find_all_paths(graph, start, end, D_port_list=[], path=[]):
@@ -335,9 +339,10 @@ def main_progress():
         outer_edge_list_list.append(outer_edge_list)
 
     buffer_kinds = sorted(buffer_kinds, key=lambda x:buffer_delay_dict[x], reverse=True)
-    area_result_list = []
-    area_result_factor_dict = {}
-    for factor in [x/1000.0 for x in range(100, 1000)]:
+    min_area_result = 9999.9
+    area_result_factor_dict = {min_area_result:'not found'}
+
+    for factor in [x/1000.0 for x in range(low_factor, high_factor)]:
         area_list = []
         time_list = []
         edge_delay_dict = dict.copy(edge_delay_dict_bak)
@@ -359,14 +364,13 @@ def main_progress():
                     edge_delay_dict, path_latency_dict, total_area, time_cost= discrete_insertion(part_buffer_kinds, part_buffer_delay_dict, part_buffer_area_dict, outer_edge_list, part_path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
                     area_list.append(total_area)
                     time_list.append(time_cost)
-        area_result_list.append(sum(area_list))
-        area_result_factor_dict[sum(area_list)]=factor
+        if sum(area_list) < min_area_result:
+            min_area_result = sum(area_list)
+            area_result_factor_dict[min_area_result] = factor
         print "Step_by_Step factor", factor
         print "Step_by_Step area", sum(area_list)
-        print "Step_by_Step time", sum(time_list)
-    min_area_result = min(area_result_list)
-    print "Min area", min_area_result
-    print "Min area factor", area_result_factor_dict[min_area_result]
+        print "Min area", min_area_result
+        print "Min area factor", area_result_factor_dict[min_area_result]
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
 
