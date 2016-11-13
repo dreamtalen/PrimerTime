@@ -367,10 +367,9 @@ def main_progress():
         if sum(area_list) < min_area_result:
             min_area_result = sum(area_list)
             area_result_factor_dict[min_area_result] = factor
-        print "Step_by_Step factor", factor
-        print "Step_by_Step area", sum(area_list)
-        print "Min area", min_area_result
-        print "Min area factor", area_result_factor_dict[min_area_result]
+        print "Step_by_Step factor", factor, "Step_by_Step area", sum(area_list)
+    print "Min area", min_area_result
+    print "Min area factor", area_result_factor_dict[min_area_result]
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
 
