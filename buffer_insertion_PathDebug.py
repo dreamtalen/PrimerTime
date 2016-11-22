@@ -229,10 +229,10 @@ def main_progress():
 
     # print directed_graph
 
-    # path_start_port_list = list(set(module_input_port_list)|set(DFF_CK_port_list))
-    # path_end_port_list = list(set(D_port_list)|set(module_output_port_list))
-    path_start_port_list = ['DFF_948_dff_org_port_CP']
-    path_end_port_list = ['DFF_413_dff_org_port_D']
+    path_start_port_list = list(set(module_input_port_list)|set(DFF_CK_port_list))
+    path_end_port_list = list(set(D_port_list)|set(module_output_port_list))
+    # path_start_port_list = ['DFF_948_dff_org_port_CP']
+    # path_end_port_list = ['DFF_413_dff_org_port_D']
 
     path_num = 0
 
