@@ -313,9 +313,28 @@ def dp_max_delay_highbound_only(number_list, high_bound, cache_dict):
         cache_dict[high_bound] = result
         return result
 
-def greedy_assign_buffer_with_lowbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict):
-    return min(d_slack, d_desired)
+def DP_assign_buffer_bothbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict):
+    sorted_buffer_list = sorted(buffer_kinds, key=lambda x:buffer_delay_dict[x])
+    cache_dict = {}
+    buffer_list = dp_min_area_bothbound(sorted_buffer_list, d_slack, d_desired, buffer_delay_dict, buffer_area_dict, cache_dict)
+    # print buffer_list, sum(buffer_area_dict[i] for i in buffer_list), sum(buffer_delay_dict[i] for i in buffer_list)
+    return sum(buffer_delay_dict[i] for i in buffer_list)
 
+def dp_min_area_bothbound(buffer_list, high_bound, low_bound, buffer_delay_dict, buffer_area_dict, cache_dict):
+    # if low_bound <= buffer_delay_dict[buffer_list[0]] <= high_bound: return [buffer_list[0]]
+    if low_bound <= 0: return []
+    if buffer_delay_dict[buffer_list[0]] > high_bound: return []
+    if high_bound in cache_dict:
+        # print 'cache hit'
+        return cache_dict[high_bound]
+    else:
+        # print high_bound, low_bound, cache_dict
+        result_list =[dp_min_area_bothbound(buffer_list, high_bound - buffer_delay_dict[n], low_bound - buffer_delay_dict[n], buffer_delay_dict, buffer_area_dict, cache_dict)+[n] for n in buffer_list if buffer_delay_dict[n] < high_bound]
+        result = min(result_list, key=lambda x: sum(buffer_area_dict[i] for i in x))
+        # print result_list, high_bound, low_bound, result
+        cache_dict [high_bound] = result
+        return result
+    # return min(d_slack, d_desired)
 
 def greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
     added_delay = 0.0
@@ -330,18 +349,18 @@ def greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_di
         if len(outeredge_shortpath_dict[e]) > 0:
             d_slack = high_bound - path_latency_dict[max(outeredge_path_dict[e], key=lambda k: path_latency_dict[k])]
             d_desired = low_bound - path_latency_dict[min(outeredge_path_dict[e], key=lambda k: path_latency_dict[k])]
-            print d_slack, d_desired
 
             # d = min(d_slack, d_desired)
 
             if d_slack <= d_desired:
                 # d = greedy_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
                 d = DP_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
-                print e, d, 'd_slack <= d_desired'
+                # print e, d, 'd_slack <= d_desired'
 
             else:
-                d = greedy_assign_buffer_with_lowbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
-
+                # print '######################################################'
+                # print d_slack, d_desired
+                d = DP_assign_buffer_bothbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
             # edge_delay_dict[e] = d
             #update graph
             outer_edge_list.remove(e)
