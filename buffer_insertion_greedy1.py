@@ -118,6 +118,8 @@ def main_progress():
     edge_attr_dict = {}
     edge_delay_dict = {}
     path_latency_dict = {}
+    path_outeredge_dict = {}
+
 
     a_list = []
     for m in module_list:
@@ -251,10 +253,13 @@ def main_progress():
                             path_num+=1
                             path_name = '->'.join(path)
                             path_latency_dict[path_name] = 0.0
+                            path_outeredge_dict[path_name] = []
                             for index, port in enumerate(path):
                                 if index != len(path) - 1:
                                     edge_name = port+'->'+path[index+1]
                                     path_latency_dict[path_name] += edge_delay_dict[edge_name]
+                                    if edge_attr_dict[edge_name] == 'outer':
+                                        path_outeredge_dict[path_name].append(edge_name)
                             part_path_list.append(path_name)
                         print start_port, end_port, path_num
         part_path_list_list.append(part_path_list)
@@ -279,7 +284,12 @@ def main_progress():
     buffer_kinds = ['INVD0', 'BUFFD0', 'DEL1','DEL0']
     buffer_delay_dict = {'INVD0':0.643122, 'BUFFD0':1.396066, 'DEL0':9.4457185, 'DEL1':17.2656825}
     buffer_area_dict = {'INVD0':1.08, 'BUFFD0':1.44, 'DEL0':4.68,'DEL1':6.12}
-    edge_delay_dict, path_latency_dict = greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict)
+
+    outeredge_path_dict = {outer_edge:[] for outer_edge in outer_edge_list}
+    for k, v in path_outeredge_dict.items():
+        for outeredge in v:
+            outeredge_path_dict[outeredge].append(k)
+    edge_delay_dict, path_latency_dict = greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict, path_outeredge_dict, outeredge_path_dict)
 
 def greedy_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict):
     upper_bound = d_slack
@@ -299,17 +309,17 @@ def greedy_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_
 
 def DP_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict):
     sorted_buffer_list = sorted(buffer_kinds, key=lambda x:buffer_delay_dict[x])
-    sorted_delay_list = [buffer_delay_dict[b] for b in sorted_buffer_list]
     cache_dict = {}
-    return dp_max_delay_highbound_only(sorted_delay_list, d_slack, cache_dict)
+    buffer_list = dp_max_delay_highbound_only(sorted_buffer_list, d_slack, cache_dict, buffer_delay_dict)
+    return sum(buffer_delay_dict[i] for i in buffer_list), sum(buffer_area_dict[i] for i in buffer_list)
 
-def dp_max_delay_highbound_only(number_list, high_bound, cache_dict):
-    if number_list[0] > high_bound: return 0.0
+def dp_max_delay_highbound_only(buffer_list, high_bound, cache_dict, buffer_delay_dict):
+    if buffer_delay_dict[buffer_list[0]] > high_bound: return []
     if high_bound in cache_dict:
         # print 'cache hit'
         return cache_dict[high_bound]
     else:
-        result = max(dp_max_delay_highbound_only(number_list, high_bound - n, cache_dict) + n for n in number_list if n < high_bound)
+        result = max([dp_max_delay_highbound_only(buffer_list, high_bound - buffer_delay_dict[n], cache_dict, buffer_delay_dict) +[n] for n in buffer_list if buffer_delay_dict[n] < high_bound], key=lambda x: sum(buffer_delay_dict[i] for i in x))
         cache_dict[high_bound] = result
         return result
 
@@ -318,7 +328,7 @@ def DP_assign_buffer_bothbound(d_slack, d_desired, buffer_kinds, buffer_delay_di
     cache_dict = {}
     buffer_list = dp_min_area_bothbound(sorted_buffer_list, d_slack, d_desired, buffer_delay_dict, buffer_area_dict, cache_dict)
     # print buffer_list, sum(buffer_area_dict[i] for i in buffer_list), sum(buffer_delay_dict[i] for i in buffer_list)
-    return sum(buffer_delay_dict[i] for i in buffer_list)
+    return sum(buffer_delay_dict[i] for i in buffer_list), sum(buffer_area_dict[i] for i in buffer_list)
 
 def dp_min_area_bothbound(buffer_list, high_bound, low_bound, buffer_delay_dict, buffer_area_dict, cache_dict):
     # if low_bound <= buffer_delay_dict[buffer_list[0]] <= high_bound: return [buffer_list[0]]
@@ -336,46 +346,46 @@ def dp_min_area_bothbound(buffer_list, high_bound, low_bound, buffer_delay_dict,
         return result
     # return min(d_slack, d_desired)
 
-def greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
-    added_delay = 0.0
-    outeredge_path_dict = {edge:[p for p in path_list if edge in p] for edge in outer_edge_list}
+def greedy_mostpathsharing_first(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict, path_outeredge_dict, outeredge_path_dict):
+    added_area = 0.0
     short_path_list = [path for path in path_list if path_latency_dict[path] < low_bound]
     print len(short_path_list)
-    outeredge_shortpath_dict = {edge:[p for p in short_path_list if edge in p] for edge in outer_edge_list}
+    outeredge_shortpath_dict = {k:[p for p in v if path_latency_dict[p] < low_bound] for k,v in outeredge_path_dict.items()}
     e = max(outer_edge_list, key=lambda k: len(outeredge_shortpath_dict[k]))
-    outer_edge_list_bak = outer_edge_list[:]
+    start_time = time.time()
     while short_path_list:
-        print e, len(outeredge_shortpath_dict[e]), len(outeredge_path_dict[e])
+        # print e, len(outeredge_shortpath_dict[e]), len(outeredge_path_dict[e])
         if len(outeredge_shortpath_dict[e]) > 0:
             d_slack = high_bound - path_latency_dict[max(outeredge_path_dict[e], key=lambda k: path_latency_dict[k])]
             d_desired = low_bound - path_latency_dict[min(outeredge_path_dict[e], key=lambda k: path_latency_dict[k])]
-
             # d = min(d_slack, d_desired)
-
             if d_slack <= d_desired:
                 # d = greedy_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
-                d = DP_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
-                # print e, d, 'd_slack <= d_desired'
-
+                d, area = DP_assign_buffer_onlyhighbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
             else:
-                # print '######################################################'
-                # print d_slack, d_desired
-                d = DP_assign_buffer_bothbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
-            # edge_delay_dict[e] = d
+                d, area = DP_assign_buffer_bothbound(d_slack, d_desired, buffer_kinds, buffer_delay_dict, buffer_area_dict)
             #update graph
             outer_edge_list.remove(e)
-            added_delay += d
-            for p in outeredge_path_dict[e]:
-                path_latency_dict[p] += d
-            short_path_list = [path for path in path_list if path_latency_dict[path] < low_bound]
-            outeredge_shortpath_dict = {edge:[p for p in short_path_list if edge in p] for edge in outer_edge_list}
-            e = max(outer_edge_list, key=lambda k: len(outeredge_shortpath_dict[k]))
-            print len(short_path_list)
+            added_area += area
+            if d:
+                deleted_shortpath_list = []
+                for p in outeredge_path_dict[e]:
 
+                    path_latency_dict[p] += d
+
+                short_path_list = [path for path in path_list if path_latency_dict[path] < low_bound]
+                outeredge_shortpath_dict = {k:[p for p in v if path_latency_dict[p] < low_bound] for k,v in outeredge_path_dict.items()}
+                e = max(outer_edge_list, key=lambda k: len(outeredge_shortpath_dict[k]))
+            else:
+                e = max(outer_edge_list, key=lambda k: len(outeredge_shortpath_dict[k]))
+            # print len(short_path_list)
+
+    end_time = time.time()
     print "After buffer insertion"
     print "Max path delay", max(path_latency_dict[p] for p in path_list)
     print "Min path delay", min(path_latency_dict[p] for p in path_list)
-    print "Used buffer delay", added_delay
+    print "Used buffer area", added_area
+    print "Execute time:", end_time - start_time
     return edge_delay_dict, path_latency_dict
 
 def discrete_insertion(buffer_kinds, buffer_delay_dict, buffer_area_dict, outer_edge_list, path_list, edge_attr_dict, edge_delay_dict, high_bound, low_bound, path_latency_dict):
